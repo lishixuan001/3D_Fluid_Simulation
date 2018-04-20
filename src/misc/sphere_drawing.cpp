@@ -7,8 +7,8 @@
 #include "CGL/vector3D.h"
 
 // Static data describing points on a sphere
-#define SPHERE_NUM_LAT 40
-#define SPHERE_NUM_LON 40
+#define SPHERE_NUM_LAT 5
+#define SPHERE_NUM_LON 5
 
 #define SPHERE_NUM_VERTICES ((SPHERE_NUM_LAT + 1) * (SPHERE_NUM_LON + 1))
 #define SPHERE_NUM_INDICES (6 * SPHERE_NUM_LAT * SPHERE_NUM_LON)
