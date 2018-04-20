@@ -1,4 +1,4 @@
-# Install script for directory: /Users/xingyifei1998/desktop/cs/CS184/final/src
+# Install script for directory: /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,21 +34,21 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/Users/xingyifei1998/desktop/cs/CS184/final/clothsim")
+   "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/clothsim")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/Users/xingyifei1998/desktop/cs/CS184/final" TYPE EXECUTABLE FILES "/Users/xingyifei1998/desktop/cs/CS184/final/build/clothsim")
-  if(EXISTS "$ENV{DESTDIR}/Users/xingyifei1998/desktop/cs/CS184/final/clothsim" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/xingyifei1998/desktop/cs/CS184/final/clothsim")
+file(INSTALL DESTINATION "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project" TYPE EXECUTABLE FILES "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/clothsim")
+  if(EXISTS "$ENV{DESTDIR}/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/clothsim" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/clothsim")
     execute_process(COMMAND /usr/bin/install_name_tool
-      -delete_rpath "/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui"
-      "$ENV{DESTDIR}/Users/xingyifei1998/desktop/cs/CS184/final/clothsim")
+      -delete_rpath "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui"
+      "$ENV{DESTDIR}/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/clothsim")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/strip" "$ENV{DESTDIR}/Users/xingyifei1998/desktop/cs/CS184/final/clothsim")
+      execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/strip" "$ENV{DESTDIR}/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/clothsim")
     endif()
   endif()
 endif()

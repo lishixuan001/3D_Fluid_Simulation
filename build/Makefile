@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.10.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/xingyifei1998/desktop/cs/CS184/final
+CMAKE_SOURCE_DIR = "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/xingyifei1998/desktop/cs/CS184/final/build
+CMAKE_BINARY_DIR = "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xingyifei1998/desktop/cs/CS184/final/build/CMakeFiles /Users/xingyifei1998/desktop/cs/CS184/final/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CMakeFiles" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xingyifei1998/desktop/cs/CS184/final/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

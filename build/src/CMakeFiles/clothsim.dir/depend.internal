@@ -247,14 +247,14 @@ src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o
  ../ext/nanogui/include/nanogui/vscrollpanel.h
  ../ext/nanogui/include/nanogui/widget.h
  ../ext/nanogui/include/nanogui/window.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/ParticleSimulator.cpp
- /Users/xingyifei1998/desktop/cs/CS184/final/src/ParticleSimulator.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/camera.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/collisionObject.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/misc/camera_info.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/misc/collada_info.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/particles.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/ParticleSimulator.cpp
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/ParticleSimulator.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/camera.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collision/collisionObject.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collision/sphere.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/camera_info.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/collada_info.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/particles.h
 src/CMakeFiles/clothsim.dir/camera.cpp.o
  ../CGL/include/CGL/CGL.h
  ../CGL/include/CGL/matrix3x3.h
@@ -262,10 +262,10 @@ src/CMakeFiles/clothsim.dir/camera.cpp.o
  ../CGL/include/CGL/misc.h
  ../CGL/include/CGL/vector3D.h
  ../CGL/include/CGL/vector4D.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/camera.cpp
- /Users/xingyifei1998/desktop/cs/CS184/final/src/camera.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/misc/camera_info.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/misc/collada_info.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/camera.cpp
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/camera.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/camera_info.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/collada_info.h
 src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o
  ../CGL/include/CGL/CGL.h
  ../CGL/include/CGL/misc.h
@@ -509,10 +509,10 @@ src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o
  ../ext/nanogui/include/nanogui/vscrollpanel.h
  ../ext/nanogui/include/nanogui/widget.h
  ../ext/nanogui/include/nanogui/window.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/collisionObject.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.cpp
- /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/misc/sphere_drawing.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collision/collisionObject.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collision/sphere.cpp
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collision/sphere.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/sphere_drawing.h
 src/CMakeFiles/clothsim.dir/main.cpp.o
  ../CGL/include/CGL/CGL.h
  ../CGL/include/CGL/matrix3x3.h
@@ -759,14 +759,14 @@ src/CMakeFiles/clothsim.dir/main.cpp.o
  ../ext/nanogui/include/nanogui/vscrollpanel.h
  ../ext/nanogui/include/nanogui/widget.h
  ../ext/nanogui/include/nanogui/window.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/ParticleSimulator.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/camera.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/collisionObject.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/main.cpp
- /Users/xingyifei1998/desktop/cs/CS184/final/src/misc/camera_info.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/misc/collada_info.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/particles.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/ParticleSimulator.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/camera.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collision/collisionObject.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collision/sphere.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/main.cpp
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/camera_info.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/collada_info.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/particles.h
 src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.o
  ../CGL/include/CGL/CGL.h
  ../CGL/include/CGL/color.h
@@ -1011,8 +1011,8 @@ src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.o
  ../ext/nanogui/include/nanogui/vscrollpanel.h
  ../ext/nanogui/include/nanogui/widget.h
  ../ext/nanogui/include/nanogui/window.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/misc/sphere_drawing.cpp
- /Users/xingyifei1998/desktop/cs/CS184/final/src/misc/sphere_drawing.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/sphere_drawing.cpp
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/sphere_drawing.h
 src/CMakeFiles/clothsim.dir/particles.cpp.o
  ../CGL/include/CGL/CGL.h
  ../CGL/include/CGL/misc.h
@@ -1256,7 +1256,7 @@ src/CMakeFiles/clothsim.dir/particles.cpp.o
  ../ext/nanogui/include/nanogui/vscrollpanel.h
  ../ext/nanogui/include/nanogui/widget.h
  ../ext/nanogui/include/nanogui/window.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/collisionObject.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.h
- /Users/xingyifei1998/desktop/cs/CS184/final/src/particles.cpp
- /Users/xingyifei1998/desktop/cs/CS184/final/src/particles.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collision/collisionObject.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collision/sphere.h
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/particles.cpp
+ /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/particles.h

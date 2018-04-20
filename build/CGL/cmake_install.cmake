@@ -1,8 +1,8 @@
-# Install script for directory: /Users/xingyifei1998/desktop/cs/CS184/final/CGL
+# Install script for directory: /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/xingyifei1998/desktop/cs/CS184/final/CGL")
+  set(CMAKE_INSTALL_PREFIX "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/cmake_install.cmake")
+  include("/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/cmake_install.cmake")
 
 endif()
 

@@ -21,11 +21,9 @@ particles::particles(double width, double height, int num_width_points,
 particles::~particles() {
 }
 
-void particles::simulate(double frames_per_sec, double simulation_steps, ClothParameters *cp,
+void particles::simulate(double frames_per_sec, double simulation_steps,
                      vector<Vector3D> external_accelerations,
                      vector<CollisionObject *> *collision_objects) {
-  double mass = width * height * cp->density / num_width_points / num_height_points;
-  double delta_t = 1.0f / frames_per_sec / simulation_steps;
 }
 
 

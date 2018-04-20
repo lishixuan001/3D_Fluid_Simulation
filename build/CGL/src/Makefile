@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.10.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/xingyifei1998/desktop/cs/CS184/final
+CMAKE_SOURCE_DIR = "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/xingyifei1998/desktop/cs/CS184/final/build
+CMAKE_BINARY_DIR = "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/xingyifei1998/desktop/cs/CS184/final/build/CMakeFiles /Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/progress.marks
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 CGL/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xingyifei1998/desktop/cs/CS184/final/build/CMakeFiles 0
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CMakeFiles" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/progress.marks"
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 CGL/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 CGL/src/clean
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 CGL/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 CGL/src/preinstall
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 CGL/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 CGL/src/preinstall
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 CGL/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 CGL/src/CMakeFiles/CGL.dir/rule:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 CGL/src/CMakeFiles/CGL.dir/rule
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 CGL/src/CMakeFiles/CGL.dir/rule
 .PHONY : CGL/src/CMakeFiles/CGL.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ CGL: CGL/src/CMakeFiles/CGL.dir/rule
 
 # fast build rule for target.
 CGL/fast:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/build
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/build
 .PHONY : CGL/fast
 
 base64.o: base64.cpp.o
@@ -177,7 +177,7 @@ base64.o: base64.cpp.o
 
 # target to build an object file
 base64.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/base64.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/base64.cpp.o
 .PHONY : base64.cpp.o
 
 base64.i: base64.cpp.i
@@ -186,7 +186,7 @@ base64.i: base64.cpp.i
 
 # target to preprocess a source file
 base64.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/base64.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/base64.cpp.i
 .PHONY : base64.cpp.i
 
 base64.s: base64.cpp.s
@@ -195,7 +195,7 @@ base64.s: base64.cpp.s
 
 # target to generate assembly for a file
 base64.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/base64.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/base64.cpp.s
 .PHONY : base64.cpp.s
 
 color.o: color.cpp.o
@@ -204,7 +204,7 @@ color.o: color.cpp.o
 
 # target to build an object file
 color.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/color.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/color.cpp.o
 .PHONY : color.cpp.o
 
 color.i: color.cpp.i
@@ -213,7 +213,7 @@ color.i: color.cpp.i
 
 # target to preprocess a source file
 color.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/color.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/color.cpp.i
 .PHONY : color.cpp.i
 
 color.s: color.cpp.s
@@ -222,7 +222,7 @@ color.s: color.cpp.s
 
 # target to generate assembly for a file
 color.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/color.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/color.cpp.s
 .PHONY : color.cpp.s
 
 complex.o: complex.cpp.o
@@ -231,7 +231,7 @@ complex.o: complex.cpp.o
 
 # target to build an object file
 complex.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/complex.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/complex.cpp.o
 .PHONY : complex.cpp.o
 
 complex.i: complex.cpp.i
@@ -240,7 +240,7 @@ complex.i: complex.cpp.i
 
 # target to preprocess a source file
 complex.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/complex.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/complex.cpp.i
 .PHONY : complex.cpp.i
 
 complex.s: complex.cpp.s
@@ -249,7 +249,7 @@ complex.s: complex.cpp.s
 
 # target to generate assembly for a file
 complex.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/complex.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/complex.cpp.s
 .PHONY : complex.cpp.s
 
 lodepng.o: lodepng.cpp.o
@@ -258,7 +258,7 @@ lodepng.o: lodepng.cpp.o
 
 # target to build an object file
 lodepng.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.o
 .PHONY : lodepng.cpp.o
 
 lodepng.i: lodepng.cpp.i
@@ -267,7 +267,7 @@ lodepng.i: lodepng.cpp.i
 
 # target to preprocess a source file
 lodepng.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.i
 .PHONY : lodepng.cpp.i
 
 lodepng.s: lodepng.cpp.s
@@ -276,7 +276,7 @@ lodepng.s: lodepng.cpp.s
 
 # target to generate assembly for a file
 lodepng.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.s
 .PHONY : lodepng.cpp.s
 
 matrix3x3.o: matrix3x3.cpp.o
@@ -285,7 +285,7 @@ matrix3x3.o: matrix3x3.cpp.o
 
 # target to build an object file
 matrix3x3.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.o
 .PHONY : matrix3x3.cpp.o
 
 matrix3x3.i: matrix3x3.cpp.i
@@ -294,7 +294,7 @@ matrix3x3.i: matrix3x3.cpp.i
 
 # target to preprocess a source file
 matrix3x3.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.i
 .PHONY : matrix3x3.cpp.i
 
 matrix3x3.s: matrix3x3.cpp.s
@@ -303,7 +303,7 @@ matrix3x3.s: matrix3x3.cpp.s
 
 # target to generate assembly for a file
 matrix3x3.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.s
 .PHONY : matrix3x3.cpp.s
 
 matrix4x4.o: matrix4x4.cpp.o
@@ -312,7 +312,7 @@ matrix4x4.o: matrix4x4.cpp.o
 
 # target to build an object file
 matrix4x4.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.o
 .PHONY : matrix4x4.cpp.o
 
 matrix4x4.i: matrix4x4.cpp.i
@@ -321,7 +321,7 @@ matrix4x4.i: matrix4x4.cpp.i
 
 # target to preprocess a source file
 matrix4x4.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.i
 .PHONY : matrix4x4.cpp.i
 
 matrix4x4.s: matrix4x4.cpp.s
@@ -330,7 +330,7 @@ matrix4x4.s: matrix4x4.cpp.s
 
 # target to generate assembly for a file
 matrix4x4.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.s
 .PHONY : matrix4x4.cpp.s
 
 quaternion.o: quaternion.cpp.o
@@ -339,7 +339,7 @@ quaternion.o: quaternion.cpp.o
 
 # target to build an object file
 quaternion.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.o
 .PHONY : quaternion.cpp.o
 
 quaternion.i: quaternion.cpp.i
@@ -348,7 +348,7 @@ quaternion.i: quaternion.cpp.i
 
 # target to preprocess a source file
 quaternion.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.i
 .PHONY : quaternion.cpp.i
 
 quaternion.s: quaternion.cpp.s
@@ -357,7 +357,7 @@ quaternion.s: quaternion.cpp.s
 
 # target to generate assembly for a file
 quaternion.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.s
 .PHONY : quaternion.cpp.s
 
 spectrum.o: spectrum.cpp.o
@@ -366,7 +366,7 @@ spectrum.o: spectrum.cpp.o
 
 # target to build an object file
 spectrum.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.o
 .PHONY : spectrum.cpp.o
 
 spectrum.i: spectrum.cpp.i
@@ -375,7 +375,7 @@ spectrum.i: spectrum.cpp.i
 
 # target to preprocess a source file
 spectrum.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.i
 .PHONY : spectrum.cpp.i
 
 spectrum.s: spectrum.cpp.s
@@ -384,7 +384,7 @@ spectrum.s: spectrum.cpp.s
 
 # target to generate assembly for a file
 spectrum.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.s
 .PHONY : spectrum.cpp.s
 
 tinyxml2.o: tinyxml2.cpp.o
@@ -393,7 +393,7 @@ tinyxml2.o: tinyxml2.cpp.o
 
 # target to build an object file
 tinyxml2.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.o
 .PHONY : tinyxml2.cpp.o
 
 tinyxml2.i: tinyxml2.cpp.i
@@ -402,7 +402,7 @@ tinyxml2.i: tinyxml2.cpp.i
 
 # target to preprocess a source file
 tinyxml2.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.i
 .PHONY : tinyxml2.cpp.i
 
 tinyxml2.s: tinyxml2.cpp.s
@@ -411,7 +411,7 @@ tinyxml2.s: tinyxml2.cpp.s
 
 # target to generate assembly for a file
 tinyxml2.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.s
 .PHONY : tinyxml2.cpp.s
 
 vector2D.o: vector2D.cpp.o
@@ -420,7 +420,7 @@ vector2D.o: vector2D.cpp.o
 
 # target to build an object file
 vector2D.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.o
 .PHONY : vector2D.cpp.o
 
 vector2D.i: vector2D.cpp.i
@@ -429,7 +429,7 @@ vector2D.i: vector2D.cpp.i
 
 # target to preprocess a source file
 vector2D.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.i
 .PHONY : vector2D.cpp.i
 
 vector2D.s: vector2D.cpp.s
@@ -438,7 +438,7 @@ vector2D.s: vector2D.cpp.s
 
 # target to generate assembly for a file
 vector2D.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.s
 .PHONY : vector2D.cpp.s
 
 vector3D.o: vector3D.cpp.o
@@ -447,7 +447,7 @@ vector3D.o: vector3D.cpp.o
 
 # target to build an object file
 vector3D.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.o
 .PHONY : vector3D.cpp.o
 
 vector3D.i: vector3D.cpp.i
@@ -456,7 +456,7 @@ vector3D.i: vector3D.cpp.i
 
 # target to preprocess a source file
 vector3D.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.i
 .PHONY : vector3D.cpp.i
 
 vector3D.s: vector3D.cpp.s
@@ -465,7 +465,7 @@ vector3D.s: vector3D.cpp.s
 
 # target to generate assembly for a file
 vector3D.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.s
 .PHONY : vector3D.cpp.s
 
 vector4D.o: vector4D.cpp.o
@@ -474,7 +474,7 @@ vector4D.o: vector4D.cpp.o
 
 # target to build an object file
 vector4D.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.o
 .PHONY : vector4D.cpp.o
 
 vector4D.i: vector4D.cpp.i
@@ -483,7 +483,7 @@ vector4D.i: vector4D.cpp.i
 
 # target to preprocess a source file
 vector4D.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.i
 .PHONY : vector4D.cpp.i
 
 vector4D.s: vector4D.cpp.s
@@ -492,7 +492,7 @@ vector4D.s: vector4D.cpp.s
 
 # target to generate assembly for a file
 vector4D.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CGL/src/CMakeFiles/CGL.dir/build.make CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.s
 .PHONY : vector4D.cpp.s
 
 # Help Target
@@ -555,6 +555,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

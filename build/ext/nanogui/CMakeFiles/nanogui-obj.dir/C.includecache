@@ -34,7 +34,7 @@ stdint.h
 inttypes.h
 -
 
-/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/glad/src/glad.c
+/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glad/src/glad.c
 stdio.h
 -
 stdlib.h
@@ -44,15 +44,15 @@ string.h
 glad/glad.h
 -
 
-/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/nanovg/src/fontstash.h
+/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src/fontstash.h
 ft2build.h
 -
 math.h
 -
 stb_truetype.h
-/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/nanovg/src/stb_truetype.h
+/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src/stb_truetype.h
 
-/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/nanovg/src/nanovg.c
+/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src/nanovg.c
 stdlib.h
 -
 stdio.h
@@ -62,17 +62,17 @@ math.h
 memory.h
 -
 nanovg.h
-/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/nanovg/src/nanovg.h
+/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src/nanovg.h
 fontstash.h
-/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/nanovg/src/fontstash.h
+/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src/fontstash.h
 stb_image.h
-/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/nanovg/src/stb_image.h
+/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src/stb_image.h
 
-/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/nanovg/src/nanovg.h
+/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src/nanovg.h
 
-/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/nanovg/src/stb_image.h
+/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src/stb_image.h
 stb_image.h
-/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/nanovg/src/stb_image.h
+/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src/stb_image.h
 stdio.h
 -
 stdarg.h
@@ -98,13 +98,13 @@ intrin.h
 arm_neon.h
 -
 
-/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/nanovg/src/stb_truetype.h
+/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src/stb_truetype.h
 stb_truetype.h
-/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/nanovg/src/stb_truetype.h
+/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src/stb_truetype.h
 stdio.h
 -
 stb_truetype.h
-/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/nanovg/src/stb_truetype.h
+/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src/stb_truetype.h
 math.h
 -
 math.h
