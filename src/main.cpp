@@ -134,13 +134,18 @@ void incompleteObjectError(const char *object, const char *attribute) {
 }
 
 void create_particles(vector<CollisionObject *>* objects) {
-  Vector3D origin = Vector3D(0.5, 0.2, 0.5);
+  Vector3D origin = Vector3D(0, 0, 0);
   double radius, friction;
   radius=0.01;
   friction=0.3;
-  for (int i = 0; i < 10; i++) {
-    Sphere *s = new Sphere(origin+i*Vector3D(0.01, 0.01, 0.01), radius, friction);
-    objects->push_back(s);
+
+  for (int i = 0; i < 4; i++) {
+    for (int j = 0; j < 4; j++) {
+      for (int k = 0; k < 4; k++) {
+        Sphere *s = new Sphere(origin+Vector3D(0.02*i, 0.02*j, 0.02*k), radius, friction);
+        objects->push_back(s);
+      }
+    }
   }
 }
 
@@ -150,9 +155,7 @@ int main(int argc, char **argv) {
   createGLContexts();
   app = new ParticleSimulator(screen);
   app->loadCollisionObjects(&objects);
-  cout<<'s'<<endl;
   app->init();
-  cout<<'b'<<endl;
   screen->setVisible(true);
   screen->performLayout();
   setGLFWCallbacks();

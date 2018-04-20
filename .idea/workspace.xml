@@ -17,82 +17,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="769640a3-ccfb-4b89-8343-9986140ffb61" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/clothsim" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/camera.cpp.o" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.o" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/1" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/10" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/11" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/12" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/13" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/14" afterPath="$PROJECT_DIR$/build/CMakeFiles/Progress/14" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/15" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/16" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/21" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/22" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/23" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/24" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/25" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/26" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/27" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/28" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/29" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/30" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/31" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/32" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/33" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/34" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/35" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/36" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/37" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/38" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/39" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/4" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/40" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/41" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/42" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/43" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/44" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/45" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/46" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/47" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/48" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/49" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/50" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/51" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/52" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/53" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/54" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/55" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/56" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/57" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/58" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/59" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/6" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/60" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/61" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/62" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/63" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/64" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/65" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/66" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/67" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/68" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/7" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/8" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/9" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/count.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/CXX.includecache" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/CXX.includecache" />
+      <change beforePath="$PROJECT_DIR$/build/clothsim" afterPath="$PROJECT_DIR$/build/clothsim" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/main.cpp.o" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/main.cpp.o" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/particles.cpp.o" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/particles.cpp.o" />
       <change beforePath="$PROJECT_DIR$/src/ParticleSimulator.cpp" afterPath="$PROJECT_DIR$/src/ParticleSimulator.cpp" />
-      <change beforePath="$PROJECT_DIR$/src/ParticleSimulator.h" afterPath="$PROJECT_DIR$/src/ParticleSimulator.h" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -106,11 +35,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="133" column="1" lean-forward="true" selection-start-line="133" selection-start-column="1" selection-end-line="133" selection-end-column="1" />
+            <state relative-caret-position="1188">
+              <caret line="161" column="42" lean-forward="false" selection-start-line="161" selection-start-column="42" selection-end-line="161" selection-end-column="42" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -118,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParticleSimulator.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ParticleSimulator.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ParticleSimulator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2108">
-              <caret line="124" column="13" lean-forward="false" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
+            <state relative-caret-position="425">
+              <caret line="25" column="62" lean-forward="true" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -143,8 +72,8 @@
       <file leaf-file-name="particles.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/particles.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="413">
+              <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -155,14 +84,43 @@
       <file leaf-file-name="particles.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/particles.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+            <state relative-caret-position="255">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="e#41#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sphere.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/collision/sphere.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="sphere.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/collision/sphere.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="51" lean-forward="true" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>create_particles</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -173,6 +131,7 @@
         <option value="$PROJECT_DIR$/src/particles.h" />
         <option value="$PROJECT_DIR$/src/particles.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
       </list>
     </option>
   </component>
@@ -212,6 +171,12 @@
               <item name="ClothSim" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="CS_184_Final_Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClothSim" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="CS_184_Final_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="collision" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -283,12 +248,12 @@
       <updated>1524191126372</updated>
       <workItem from="1524191127780" duration="990000" />
       <workItem from="1524192281483" duration="114000" />
-      <workItem from="1524192423882" duration="1011000" />
+      <workItem from="1524192423882" duration="2451000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2115000" />
+    <option name="totallyTimeSpent" value="3555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -348,7 +313,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="e#41#65#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -410,7 +377,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="e#41#65#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -486,12 +455,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ParticleSimulator.cpp">
+    <entry file="file://$PROJECT_DIR$/src/Spheres.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="124" column="13" lean-forward="false" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="161" column="42" lean-forward="false" selection-start-line="161" selection-start-column="42" selection-end-line="161" selection-end-column="42" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/particles.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#41#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/collision/sphere.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="51" lean-forward="true" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/collision/sphere.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/particles.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -504,30 +519,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/particles.cpp">
+    <entry file="file://$PROJECT_DIR$/src/ParticleSimulator.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        <state relative-caret-position="425">
+          <caret line="25" column="62" lean-forward="true" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/particles.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="133" column="1" lean-forward="true" selection-start-line="133" selection-start-column="1" selection-end-line="133" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
