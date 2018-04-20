@@ -103,7 +103,7 @@ void ParticleSimulator::drawContents() {
     vector<Vector3D> external_accelerations = {gravity};
 
     for (int i = 0; i < simulation_steps; i++) {
-      particles->simulate(frames_per_sec, simulation_steps, cp, external_accelerations, collision_objects);
+      particles->simulate(frames_per_sec, simulation_steps, external_accelerations, collision_objects);
     }
   }
 
@@ -132,6 +132,7 @@ void ParticleSimulator::drawContents() {
   case NORMALS:
     break;
   case PHONG:
+    Vector3D cp = camera.position();
     shader.setUniform("in_color", color);
     shader.setUniform("eye", Vector3f(cp.x, cp.y, cp.z));
     shader.setUniform("light", Vector3f(0.5, 2, 2));
@@ -341,16 +342,7 @@ void ParticleSimulator::initGUI(Screen *screen) {
     layout->setSpacing(0, 10);
     panel->setLayout(layout);
 
-    new Label(panel, "density :", "sans-bold");
-
-    FloatBox<double> *fb = new FloatBox<double>(panel);
-    fb->setEditable(true);
-    fb->setFixedSize(Vector2i(100, 20));
-    fb->setFontSize(14);
-    fb->setValue(cp->density / 10);
-    fb->setUnits("g/cm^2");
-    fb->setSpinnable(true);
-    fb->setCallback([this](float value) { cp->density = (double)(value * 10); });
+    
   }
 
   // Simulation constants

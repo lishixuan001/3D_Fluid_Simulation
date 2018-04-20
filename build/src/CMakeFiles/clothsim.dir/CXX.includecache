@@ -1521,6 +1521,8 @@ particles.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/particles.h
 collision/sphere.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.h
+CGL/vector3D.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/CGL/vector3D.h
 
 /Users/xingyifei1998/desktop/cs/CS184/final/src/particles.h
 unordered_set

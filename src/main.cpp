@@ -150,7 +150,9 @@ int main(int argc, char **argv) {
   createGLContexts();
   app = new ParticleSimulator(screen);
   app->loadCollisionObjects(&objects);
+  cout<<'s'<<endl;
   app->init();
+  cout<<'b'<<endl;
   screen->setVisible(true);
   screen->performLayout();
   setGLFWCallbacks();
