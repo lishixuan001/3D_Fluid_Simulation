@@ -249,6 +249,7 @@ src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o
  ../ext/nanogui/include/nanogui/window.h
  /Users/xingyifei1998/desktop/cs/CS184/final/src/ParticleSimulator.cpp
  /Users/xingyifei1998/desktop/cs/CS184/final/src/ParticleSimulator.h
+ /Users/xingyifei1998/desktop/cs/CS184/final/src/Spheres.h
  /Users/xingyifei1998/desktop/cs/CS184/final/src/camera.h
  /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/collisionObject.h
  /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.h
@@ -760,6 +761,7 @@ src/CMakeFiles/clothsim.dir/main.cpp.o
  ../ext/nanogui/include/nanogui/widget.h
  ../ext/nanogui/include/nanogui/window.h
  /Users/xingyifei1998/desktop/cs/CS184/final/src/ParticleSimulator.h
+ /Users/xingyifei1998/desktop/cs/CS184/final/src/Spheres.h
  /Users/xingyifei1998/desktop/cs/CS184/final/src/camera.h
  /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/collisionObject.h
  /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.h
@@ -1256,6 +1258,7 @@ src/CMakeFiles/clothsim.dir/particles.cpp.o
  ../ext/nanogui/include/nanogui/vscrollpanel.h
  ../ext/nanogui/include/nanogui/widget.h
  ../ext/nanogui/include/nanogui/window.h
+ /Users/xingyifei1998/desktop/cs/CS184/final/src/Spheres.h
  /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/collisionObject.h
  /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.h
  /Users/xingyifei1998/desktop/cs/CS184/final/src/particles.cpp

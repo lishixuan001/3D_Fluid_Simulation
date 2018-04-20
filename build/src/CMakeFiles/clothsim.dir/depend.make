@@ -248,6 +248,7 @@ src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o: ../ext/nanogui/include/nano
 src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o: ../ext/nanogui/include/nanogui/window.h
 src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o: ../src/ParticleSimulator.cpp
 src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o: ../src/ParticleSimulator.h
+src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o: ../src/Spheres.h
 src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o: ../src/camera.h
 src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o: ../src/collision/collisionObject.h
 src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o: ../src/collision/sphere.h
@@ -759,6 +760,7 @@ src/CMakeFiles/clothsim.dir/main.cpp.o: ../ext/nanogui/include/nanogui/vscrollpa
 src/CMakeFiles/clothsim.dir/main.cpp.o: ../ext/nanogui/include/nanogui/widget.h
 src/CMakeFiles/clothsim.dir/main.cpp.o: ../ext/nanogui/include/nanogui/window.h
 src/CMakeFiles/clothsim.dir/main.cpp.o: ../src/ParticleSimulator.h
+src/CMakeFiles/clothsim.dir/main.cpp.o: ../src/Spheres.h
 src/CMakeFiles/clothsim.dir/main.cpp.o: ../src/camera.h
 src/CMakeFiles/clothsim.dir/main.cpp.o: ../src/collision/collisionObject.h
 src/CMakeFiles/clothsim.dir/main.cpp.o: ../src/collision/sphere.h
@@ -1255,6 +1257,7 @@ src/CMakeFiles/clothsim.dir/particles.cpp.o: ../ext/nanogui/include/nanogui/tool
 src/CMakeFiles/clothsim.dir/particles.cpp.o: ../ext/nanogui/include/nanogui/vscrollpanel.h
 src/CMakeFiles/clothsim.dir/particles.cpp.o: ../ext/nanogui/include/nanogui/widget.h
 src/CMakeFiles/clothsim.dir/particles.cpp.o: ../ext/nanogui/include/nanogui/window.h
+src/CMakeFiles/clothsim.dir/particles.cpp.o: ../src/Spheres.h
 src/CMakeFiles/clothsim.dir/particles.cpp.o: ../src/collision/collisionObject.h
 src/CMakeFiles/clothsim.dir/particles.cpp.o: ../src/collision/sphere.h
 src/CMakeFiles/clothsim.dir/particles.cpp.o: ../src/particles.cpp

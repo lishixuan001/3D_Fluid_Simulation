@@ -1410,6 +1410,14 @@ particles.h
 collision/collisionObject.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/collisionObject.h
 
+/Users/xingyifei1998/desktop/cs/CS184/final/src/Spheres.h
+CGL/CGL.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/CGL/CGL.h
+CGL/misc.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/CGL/misc.h
+CGL/vector3D.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/CGL/vector3D.h
+
 /Users/xingyifei1998/desktop/cs/CS184/final/src/camera.cpp
 camera.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/camera.h
@@ -1531,6 +1539,8 @@ unordered_map
 -
 vector
 -
+Spheres.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/Spheres.h
 CGL/CGL.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/CGL/CGL.h
 CGL/misc.h

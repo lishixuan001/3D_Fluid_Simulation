@@ -138,6 +138,11 @@ void create_particles(vector<CollisionObject *>* objects) {
   double radius, friction;
   radius=0.01;
   friction=0.3;
+  Sphere *s = new Sphere(origin, radius, friction);
+  // for (int i = -5; i < 6; i++) {
+  //   Sphere *s = new Sphere(origin+i*Vector3D(0.02, 0.02, 0.02), radius, friction);
+  //   objects->push_back(s);
+  // }
   for (int i = 0; i < 10; i++) {
     for (int j = 0; j <10; j++) {
       for (int k = 0; k<10; k++) {
@@ -154,9 +159,7 @@ int main(int argc, char **argv) {
   createGLContexts();
   app = new ParticleSimulator(screen);
   app->loadCollisionObjects(&objects);
-  cout<<'s'<<endl;
   app->init();
-  cout<<'b'<<endl;
   screen->setVisible(true);
   screen->performLayout();
   setGLFWCallbacks();
