@@ -46,7 +46,7 @@ private:
   CGL::Vector3D gravity = CGL::Vector3D(0, -9.8, 0);
   nanogui::Color color = nanogui::Color(1.0f, 0.0f, 0.0f, 1.0f);
 
-  ClothParameters *cp;
+  particles *particles;
   vector<CollisionObject *> *collision_objects;
 
   // OpenGL attributes
