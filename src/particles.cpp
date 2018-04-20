@@ -4,8 +4,8 @@
 #include <vector>
 
 #include "particles.h"
-#include "collision/plane.h"
 #include "collision/sphere.h"
+#include "CGL/vector3D.h"
 
 using namespace std;
 

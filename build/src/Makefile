@@ -225,33 +225,6 @@ camera.cpp.s:
 	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/camera.cpp.s
 .PHONY : camera.cpp.s
 
-collision/plane.o: collision/plane.cpp.o
-
-.PHONY : collision/plane.o
-
-# target to build an object file
-collision/plane.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/collision/plane.cpp.o
-.PHONY : collision/plane.cpp.o
-
-collision/plane.i: collision/plane.cpp.i
-
-.PHONY : collision/plane.i
-
-# target to preprocess a source file
-collision/plane.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/collision/plane.cpp.i
-.PHONY : collision/plane.cpp.i
-
-collision/plane.s: collision/plane.cpp.s
-
-.PHONY : collision/plane.s
-
-# target to generate assembly for a file
-collision/plane.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/collision/plane.cpp.s
-.PHONY : collision/plane.cpp.s
-
 collision/sphere.o: collision/sphere.cpp.o
 
 .PHONY : collision/sphere.o
@@ -379,9 +352,6 @@ help:
 	@echo "... camera.o"
 	@echo "... camera.i"
 	@echo "... camera.s"
-	@echo "... collision/plane.o"
-	@echo "... collision/plane.i"
-	@echo "... collision/plane.s"
 	@echo "... collision/sphere.o"
 	@echo "... collision/sphere.i"
 	@echo "... collision/sphere.s"

@@ -1,5 +1,5 @@
-#ifndef CGL_CLOTH_SIMULATOR_H
-#define CGL_CLOTH_SIMULATOR_H
+#ifndef CGL_PARTICLE_SIMULATOR_H
+#define CGL_PARTICLE_SIMULATOR_H
 
 #include <nanogui/nanogui.h>
 

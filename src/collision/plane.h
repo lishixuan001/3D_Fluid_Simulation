@@ -5,6 +5,7 @@
 #include <nanogui/nanogui.h>
 #include "CGL/CGL.h"
 #include "collisionObject.h"
+#include "CGL/vector3D.h"
 
 
 using namespace nanogui;

@@ -133,7 +133,7 @@ void incompleteObjectError(const char *object, const char *attribute) {
   exit(-1);
 }
 
-def create_particles() {
+void create_particles(vector<CollisionObject *>* objects) {
   Vector3D origin = Vector3D(0.5, 0.2, 0.5);
   double radius, friction;
   radius=0.01;
@@ -145,7 +145,8 @@ def create_particles() {
 }
 
 int main(int argc, char **argv) {
-  create_particles();
+  vector<CollisionObject *> objects;
+  create_particles(&objects);
   createGLContexts();
   app = new ParticleSimulator(screen);
   app->loadCollisionObjects(&objects);

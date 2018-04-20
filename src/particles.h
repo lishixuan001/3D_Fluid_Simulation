@@ -14,31 +14,6 @@ using namespace std;
 
 enum e_orientation { HORIZONTAL = 0, VERTICAL = 1 };
 
-struct ClothParameters {
-  ClothParameters() {}
-  ClothParameters(bool enable_structural_constraints,
-                  bool enable_shearing_constraints,
-                  bool enable_bending_constraints, double damping,
-                  double density, double ks)
-      : enable_structural_constraints(enable_structural_constraints),
-        enable_shearing_constraints(enable_shearing_constraints),
-        enable_bending_constraints(enable_bending_constraints),
-        damping(damping), density(density), ks(ks) {}
-  ~ClothParameters() {}
-
-  // Global simulation parameters
-
-  bool enable_structural_constraints;
-  bool enable_shearing_constraints;
-  bool enable_bending_constraints;
-
-  double damping;
-
-  // Mass-spring parameters
-  double density;
-  double ks;
-};
-
 struct particles {
   particles() {}
   particles(double width, double height, int num_width_points,

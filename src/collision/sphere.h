@@ -2,6 +2,7 @@
 #define COLLISIONOBJECT_SPHERE_H
 
 #include "collisionObject.h"
+#include "CGL/vector3D.h"
 
 using namespace CGL;
 using namespace std;
@@ -14,9 +15,9 @@ public:
 
   void render(GLShader &shader);
   void collide();
+  Vector3D origin;
 
 private:
-  Vector3D origin;
   double radius;
   double radius2;
 

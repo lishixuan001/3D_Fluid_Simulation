@@ -8,7 +8,6 @@
 
 #include "camera.h"
 #include "particles.h"
-#include "collision/plane.h"
 #include "collision/sphere.h"
 #include "misc/camera_info.h"
 
@@ -65,10 +64,10 @@ void ParticleSimulator::init() {
 
   // Try to intelligently figure out the camera target
 
-  Vector3D avg_pm_position(0, 0, 0);
+  Vector3D avg_object_position(0, 0, 0);
 
-  for (auto &the_objects : collision_objects) {
-    avg_object_position += the_objects.origin / collision_objects.size();
+  for (auto &the_objects : *collision_objects) {
+    avg_object_position += the_objects->origin / collision_objects->size();
   }
 
   CGL::Vector3D target(avg_object_position.x, avg_object_position.y / 2,
