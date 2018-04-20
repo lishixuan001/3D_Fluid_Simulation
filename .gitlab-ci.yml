@@ -1,0 +1,14 @@
+image: registry.gitlab.com/cs184/clothsim_internal
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+  - build
+
+clothsim:
+  stage: build
+  script:
+    - mkdir build
+    - cd build
+    - cmake ..
+    - make

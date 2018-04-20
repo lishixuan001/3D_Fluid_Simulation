@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
+<title>CS 184 Mesh Editor</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2018</h1>
+<h1 align="middle">Project 4: Cloth Simulator</h1>
+<h2 align="middle">Shixuan (Wayne) Li, CS184-aan</h2>
+
+<br><br>
+
+<div>
+
+<h2 align="middle">Overview</h2>
+<p>
+  This project is about cloth simulation with a mass spring system. External forces and
+  collitions are considered in the movement of the cloth. We did cloth (mesh-like)
+  collisions with plane, sphere, and self-collition, with main point of manipulation
+  to point mass.
+</p>
+
+<h2 align="middle">Part I: Masses and springs</h2>
+<p align="center">
+  Here are presentations of scene/pinned2.json with structure of the point masses and springs.
+  Four images are shown for different stages of the process.
+</p>
+<div align="middle">
+    <table style="width=100%">
+        <tr>
+            <td>
+                <img src="images/part1-1.png" align="middle" width="400px"/>
+                <figcaption align="middle">Stage 1</figcaption>
+            </td>
+            <td>
+                <img src="images/part1-2.png" align="middle" width="400px"/>
+                <figcaption align="middle">Stage 2</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/part1-3.png" align="middle" width="400px"/>
+                <figcaption align="middle">Stage 3</figcaption>
+            </td>
+            <td>
+                <img src="images/part1-4.png" align="middle" width="400px"/>
+                <figcaption align="middle">Stage 4</figcaption>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p>
+  Here shows what the wireframe looks like (1) without any shearing constraints, (2) with only shearing constraints, and (3) with all constraints.
+</p>
+<div align="middle">
+    <table style="width=100%">
+        <tr>
+            <td>
+                <img src="images/part1-onlyStructure.png" align="middle" width="400px"/>
+                <figcaption align="middle">Only Structural Constraint</figcaption>
+            </td>
+            <td>
+                <img src="images/part1-structandbend.png" align="middle" width="400px"/>
+                <figcaption align="middle">Structural and Bending Constraints</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/part1-onlyShearing.png" align="middle" width="400px"/>
+                <figcaption align="middle">Only Shearing Constraint</figcaption>
+            </td>
+            <td>
+                <img src="images/part1-everything.png" align="middle" width="400px"/>
+                <figcaption align="middle">All Constraints</figcaption>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<h2 align="middle">Part II: Simulation via Numerical Integration</h2>
+<p>
+  "ks" is a parameter we use in the calculation of the restraining force between two ends
+  of a spring. Thus, increasing "ks" will result in a "tighter" cloth, which refers to that
+  more force is required to stretch the cloth. On the other hand, a smaller "ks" will result
+  in a more "loose" cloth. The following examples are images of the cloth with the "ks"
+  value as 500, 5000, and 50000 N/m. As we can see, a smaller ks made the cloth more
+  "un-sensative" to external forces as the sphere made limited figure changes since the
+  spring forces are limited to "shrink" or "systole". However, when we increase the "ks"
+  value, it is obvious that the cloth systole must faster, looks more "powerful" since the
+  tightness of the springs. Among the tests, an interesting thing is how sensitive the cloth
+  is when there is a super high "ks" value. It is just like a mesh of springs falling down, which
+  reminds me of the ancient armours. The super small "ks" value is more like foam falling down, somehow
+  as if it is still floating.
+</p>
+<div align="middle">
+    <table style="width=100%">
+        <tr>
+            <td>
+                <img src="images/part2-500-1.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=500; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-500-2.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=500; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-500-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=500; Stage=3</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/part2-5000-1.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=5000; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-5000-2.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=5000; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-5000-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=5000; Stage=3</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/part2-50000-1.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=50000; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-50000-2.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=50000; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-50000-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=50000; Stage=3</figcaption>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p>
+  Density represent the units of mass per volume. Thus, increasing density means increasing
+  mass for unit volume. Since F = m * a, and we are in a spring system, increasing density
+  also means an increase in total mass of the spring and the force each spring will make.
+  Thus, under same acceleration(a), more forces are made. This also means there will be more
+  movement in the Verlet Integration steps. During movement, an increase of mass cannot literally make the cloth
+  to be tighter, but it made the cloth "harder to stop", which means that the cloth will
+  move more when there's higher density and move smaller under lower density. Well, in static status,
+  a higher density means "harder to move" since it needs more forces to change its shape or movement.
+  Below are some comparison. It is really interesting that in slow motion (since we are simulating in time steps),
+  we can see the details that for a "heavy" mesh, how some parts are "over-reacting"(high potential to move), while other
+  parts are still static (this happens when the cloth first touch the sphere). On the other hand,
+  the "super light" ones reacts generally slow and thus when each part actually moves, it is almost the whole cloth
+  is moving and thus has more "inner-relation" collisions within the springs. We can also see that in the final stage,
+  the one with higher density is more vertical in shape.
+</p>
+<div align="middle">
+    <table style="width=100%">
+        <tr>
+            <td>
+                <img src="images/part2-1-1.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=1g/cm^2; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-1-2.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=1g/cm^2; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-1-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=1g/cm^2; Stage=3</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/part2-15-1.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=15g/cm^2; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-15-2.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=15g/cm^2; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-15-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=15g/cm^2; Stage=3</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/part2-100-1.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=100g/cm^2; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-100-2.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=100g/cm^2; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-100-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=100g/cm^2; Stage=3</figcaption>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p>
+  Damping force represents the loss of energy, which may comes from friction, heat, collision,
+  etc. The representation of damping force can be directly shown as the spring's velocity
+  during movement. Increasing the damping force will decreace the velocity. Note that the
+  velocity here represents the distance spring travels in unit step of simulation. In case
+  of simulation process, a slower velocity results in lower swings and movements of the cloth.
+  Thus, on the other hand, an decreased damping results in higher velocity for springs. The speed
+  will result in more movements. Examples shown below. It is really interesting that for a high-damping
+  cloth simulation model, the cloth is "floating" and is just like the reaction when we have a low "ks" but
+  much slower and the reason for the effect is different. For a low damping force model, it is just like a movement in
+  vaccum which almost no external forces can be imposed.
+</p>
+<div align="middle">
+    <table style="width=100%">
+        <tr>
+            <td>
+                <img src="images/part2-0045977-1.png" align="middle" width="250px"/>
+                <figcaption align="middle">Damp=0.045977%; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-0045977-2.png" align="middle" width="250px"/>
+                <figcaption align="middle">Damp=0.045977%; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-0045977-3.png" align="middle" width="250px"/>
+                <figcaption align="middle">Damp=0.045977%; Stage=3</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-0045977-4.png" align="middle" width="250px"/>
+                <figcaption align="middle">Damp=0.045977%; Stage=4</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/part2-02-1.png" align="middle" width="250px"/>
+                <figcaption align="middle">Damp=0.2%; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-02-2.png" align="middle" width="250px"/>
+                <figcaption align="middle">Damp=0.2%; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-02-3.png" align="middle" width="250px"/>
+                <figcaption align="middle">Damp=0.2%; Stage=3</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-02-4.png" align="middle" width="250px"/>
+                <figcaption align="middle">Damp=0.2%; Stage=4</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/part2-0954023-1.png" align="middle" width="250px"/>
+                <figcaption align="middle">Damp=0.954023%; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-0954023-2.png" align="middle" width="250px"/>
+                <figcaption align="middle">Damp=0.954023%; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-0954023-3.png" align="middle" width="250px"/>
+                <figcaption align="middle">Damp=0.954023%; Stage=3</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-0954023-4.png" align="middle" width="250px"/>
+                <figcaption align="middle">Damp=0.954023%; Stage=4</figcaption>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p>Shaded cloth from scene/pinned4.json in its final resting state</p>
+<div align="middle">
+    <table style="width=100%">
+        <tr>
+            <td>
+                <img src="images/part2-final.png" align="middle" width="400px"/>
+                <figcaption align="middle">Value=default; Stage=final</figcaption>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<h2 align="middle">Part III: Handling Collisions with Other Objects</h2>
+<p>
+    Following are shaded cloth from scene/sphere.json in its final resting state on the sphere
+    using the default ks = 5000 as well as with ks = 500 and ks = 50000. Comparing the three images,
+    it is obvious that the smaller the ks value is, the tighter the cloth is wrapped around the sphere.
+    To explain the fact, we need to first notice the definition of ks that ks is the spring's constant. Thus
+    a higher ks means the intentional force potential for a distance of spring. When ks = 50000, the force generated, or between the ends of
+    a spring is so strong that the simple gravity can hardly change the force balance which is shown by the shape.
+    Some parts of the cloth are upright by itself without touching the sphere surface. On the opposite side, when ks = 500, the force between the rested springs
+    is not that strong that gravity can still stretch the springs and thus the cloth to make it close to the surface of the sphere.
+    Well, the situation of ks = 5000, is in the middle, and thus shows an result in between among the three final stages.
+</p>
+<div align="middle">
+    <table style="width=100%">
+        <tr>
+            <td>
+                <img src="images/part2-500-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=500; Stage=final</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-5000-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=5000; Stage=final</figcaption>
+            </td>
+            <td>
+                <img src="images/part2-50000-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=50000; Stage=final</figcaption>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p>Below shows two types of "shaded cloth lying peacefully at rest on the plane". </p>
+<div align="middle">
+    <table style="width=100%">
+        <tr>
+            <td>
+                <img src="images/part3-lying1.png" align="middle" width="400px"/>
+                <figcaption align="middle">Lying in Plane</figcaption>
+            </td>
+            <td>
+                <img src="images/part3-lying2.png" align="middle" width="400px"/>
+                <figcaption align="middle">Lying after falling vertically</figcaption>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<h2 align="middle">Part IV: Handling self-collisions</h2>
+<p>Here shows three stages how the cloth falls with self-collision</p>
+<div align="middle">
+    <table style="width=100%">
+        <tr>
+            <td>
+                <img src="images/part4-1.png" align="middle" width="300px"/>
+                <figcaption align="middle">Simulation=mesh, Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-2.png" align="middle" width="300px"/>
+                <figcaption align="middle">Simulation=mesh, Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">Simulation=mesh, Stage=3</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/part4-4.png" align="middle" width="300px"/>
+                <figcaption align="middle">Simulation=shaded, Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-5.png" align="middle" width="300px"/>
+                <figcaption align="middle">Simulation=shaded, Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-6.png" align="middle" width="300px"/>
+                <figcaption align="middle">Simulation=shaded, Stage=3</figcaption>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<p>
+  First Let's take a look of what if we change the value of ks while keeping other parameters
+  the same. When we have a low ks = 500, the spring constant is smaller, thus the force potential between the ends of a
+  spring decreases. Thus, the gravity force can reason for major influence to the cloth. In comparison, we can see that
+  when ks is small, the cloth falls more directly, sharpely, and vertically. And in the rest stage, the model with
+  small ks is more densed and wrapped in smaller area and shape. However, when we increase the ks value to 50000, we are
+  increasing the spring constant of the springs. Thus the force potential between the two ends of a spring is higher and thus
+  the cloth cannot wrap up that easily since there are more inner forces resulted to the collisions and the change of shape.
+  As we can see, the image which has ks = 50000 shows that the cloth is less wrapped but there are many out-of-vertical deformations.
+  When in default situation when ks = 5000, we have the effect in between.
+</p>
+<div align="middle">
+    <table style="width=100%">
+        <tr>
+            <td>
+                <img src="images/part4-500-1.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=500; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-500-2.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=500; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-500-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=500; Stage=3</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/part4-4.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=5000; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-5.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=5000; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-6.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=5000; Stage=3</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/part4-50000-1.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=50000; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-50000-2.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=50000; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-50000-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">ks=50000; Stage=3</figcaption>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<p>
+    Then, keeping other parameters as default, we change the density values from default (15g/cm^2), to decreased (1g/cm^2),
+    and increased (100g/cm^2). It is obvious that when the density is increased, we can see the cloth falling down in a
+    "line", which means that they fall with higher "density". The cloth just straightly falling down rather than swinging during the process.
+    This is because that since the density, which also represent the mass and the effect of gravity, is so high, some other
+    forces such as frictions cannot really move the cloth too much on other directions. In the final stage, we can more obviously see that the cloth with higher
+    density has more densed wrapped area.
+</p>
+<div align="middle">
+    <table style="width=100%">
+        <tr>
+            <td>
+                <img src="images/part4-1-1.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=1g/cm^2; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-1-2.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=1g/cm^2; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-1-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=1g/cm^2; Stage=3</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/part4-4.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=15g/cm^2; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-5.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=15g/cm^2; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-6.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=15g/cm^2; Stage=3</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/part4-100-1.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=100g/cm^2; Stage=1</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-100-2.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=100g/cm^2; Stage=2</figcaption>
+            </td>
+            <td>
+                <img src="images/part4-100-3.png" align="middle" width="300px"/>
+                <figcaption align="middle">Density=100g/cm^2; Stage=3</figcaption>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
