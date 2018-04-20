@@ -63,7 +63,6 @@ void ParticleSimulator::init() {
   camera_info.fClip = 10000;
 
   // Try to intelligently figure out the camera target
-
   Vector3D avg_object_position(0, 0, 0);
 
   for (auto &the_objects : *collision_objects) {
@@ -73,13 +72,13 @@ void ParticleSimulator::init() {
   CGL::Vector3D target(avg_object_position.x, avg_object_position.y / 2,
                        avg_object_position.z);
   CGL::Vector3D c_dir(0., 0., 0.);
-  canonical_view_distance = max(particles->width, particles->height) * 0.9;
+  cout<<"next"<<endl;
+  canonical_view_distance = max(1, 1) * 0.9;
+  cout<<"now"<<endl;
   scroll_rate = canonical_view_distance / 10;
-
   view_distance = canonical_view_distance * 2;
   min_view_distance = canonical_view_distance / 10.0;
   max_view_distance = canonical_view_distance * 20.0;
-
   // canonicalCamera is a copy used for view resets
 
   camera.place(target, acos(c_dir.y), atan2(c_dir.x, c_dir.z), view_distance,
@@ -89,7 +88,6 @@ void ParticleSimulator::init() {
 
   screen_w = default_window_size(0);
   screen_h = default_window_size(1);
-
   camera.configure(camera_info, screen_w, screen_h);
   canonicalCamera.configure(camera_info, screen_w, screen_h);
 }
