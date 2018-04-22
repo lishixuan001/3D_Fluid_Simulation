@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/include/GLFW/glfw3.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/include/GLFW/glfw3.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 stddef.h
 -
 stdint.h
@@ -46,6 +50,7 @@ GL/glext.h
 GL/glu.h
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_init.m
 internal.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
@@ -53,6 +58,15 @@ sys/param.h
 -
 
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_joystick.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_init.m
+internal.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+sys/param.h
+-
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_joystick.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 IOKit/IOKitLib.h
 -
 IOKit/IOCFPlugIn.h
@@ -62,9 +76,15 @@ IOKit/hid/IOHIDLib.h
 IOKit/hid/IOHIDKeys.h
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_joystick.m
 internal.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_joystick.m
+internal.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 unistd.h
 -
 ctype.h
@@ -80,9 +100,15 @@ CoreFoundation/CoreFoundation.h
 Kernel/IOKit/hidsystem/IOHIDUsageTables.h
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_monitor.m
 internal.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_monitor.m
+internal.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 stdlib.h
 -
 stdlib.h
@@ -100,7 +126,11 @@ CoreVideo/CVDisplayLink.h
 ApplicationServices/ApplicationServices.h
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_platform.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_platform.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 stdint.h
 -
 dlfcn.h
@@ -114,6 +144,7 @@ Carbon/Carbon.h
 ApplicationServices/ApplicationServices.h
 -
 posix_tls.h
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_tls.h
 cocoa_joystick.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_joystick.h
@@ -129,6 +160,23 @@ mach/mach_time.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_window.m
 internal.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_tls.h
+cocoa_joystick.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_joystick.h
+nsgl_context.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/nsgl_context.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_time.c
+internal.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+mach/mach_time.h
+-
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_window.m
+internal.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 float.h
 -
 string.h
@@ -136,9 +184,15 @@ string.h
 crt_externs.h
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/context.c
 internal.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/context.c
+internal.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 assert.h
 -
 stdio.h
@@ -150,6 +204,7 @@ limits.h
 stdio.h
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/egl_context.h
 EGL/eglplatform.h
 -
@@ -159,6 +214,17 @@ EGL/eglplatform.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/init.c
 internal.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/egl_context.h
+EGL/eglplatform.h
+-
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/glx_context.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/init.c
+internal.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 string.h
 -
 stdlib.h
@@ -168,9 +234,15 @@ stdio.h
 stdarg.h
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/input.c
 internal.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/input.c
+internal.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 assert.h
 -
 float.h
@@ -178,6 +250,7 @@ float.h
 stdlib.h
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
 glfw_config.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/glfw_config.h
@@ -199,6 +272,29 @@ regex.h
 -
 
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/mir_platform.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+glfw_config.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/glfw_config.h
+../include/GLFW/glfw3.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/include/GLFW/glfw3.h
+cocoa_platform.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_platform.h
+win32_platform.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/win32_platform.h
+x11_platform.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/x11_platform.h
+wl_platform.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/wl_platform.h
+mir_platform.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/mir_platform.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/linux_joystick.h
+regex.h
+-
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/mir_platform.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 sys/queue.h
 -
 pthread.h
@@ -208,6 +304,7 @@ dlfcn.h
 mir_toolkit/mir_client_library.h
 -
 posix_tls.h
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_tls.h
 posix_time.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_time.h
@@ -221,6 +318,21 @@ egl_context.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/monitor.c
 internal.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_tls.h
+posix_time.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_time.h
+linux_joystick.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/linux_joystick.h
+xkb_unicode.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/xkb_unicode.h
+egl_context.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/egl_context.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/monitor.c
+internal.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 assert.h
 -
 math.h
@@ -234,6 +346,7 @@ stdlib.h
 limits.h
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/nsgl_context.h
 
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/nsgl_context.m
@@ -255,6 +368,29 @@ pthread.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/vulkan.c
 internal.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/nsgl_context.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/nsgl_context.m
+internal.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_time.h
+stdint.h
+-
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_tls.c
+internal.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_tls.h
+pthread.h
+-
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/vulkan.c
+internal.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 assert.h
 -
 string.h
@@ -262,11 +398,19 @@ string.h
 stdlib.h
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/wgl_context.h
 
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/win32_joystick.h
 
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/win32_platform.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/wgl_context.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/win32_joystick.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/win32_platform.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 wctype.h
 -
 windows.h
@@ -282,6 +426,7 @@ dbt.h
 malloc.h
 -
 win32_joystick.h
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/win32_joystick.h
 wgl_context.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/wgl_context.h
@@ -291,6 +436,17 @@ egl_context.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/window.c
 internal.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/win32_joystick.h
+wgl_context.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/wgl_context.h
+egl_context.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/egl_context.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/window.c
+internal.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/internal.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 assert.h
 -
 string.h
@@ -300,7 +456,11 @@ stdlib.h
 float.h
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/wl_platform.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/wl_platform.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 wayland-client.h
 -
 xkbcommon/xkbcommon.h
@@ -308,6 +468,7 @@ xkbcommon/xkbcommon.h
 dlfcn.h
 -
 posix_tls.h
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_tls.h
 posix_time.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_time.h
@@ -323,6 +484,23 @@ wayland-pointer-constraints-unstable-v1-client-protocol.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/wayland-pointer-constraints-unstable-v1-client-protocol.h
 
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/x11_platform.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_tls.h
+posix_time.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_time.h
+linux_joystick.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/linux_joystick.h
+xkb_unicode.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/xkb_unicode.h
+egl_context.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/egl_context.h
+wayland-relative-pointer-unstable-v1-client-protocol.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/wayland-relative-pointer-unstable-v1-client-protocol.h
+wayland-pointer-constraints-unstable-v1-client-protocol.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/wayland-pointer-constraints-unstable-v1-client-protocol.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/x11_platform.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 unistd.h
 -
 signal.h
@@ -348,6 +526,7 @@ X11/extensions/Xinerama.h
 X11/extensions/xf86vmode.h
 -
 posix_tls.h
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_tls.h
 posix_time.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_time.h
@@ -361,6 +540,21 @@ egl_context.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/egl_context.h
 
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/xkb_unicode.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_tls.h
+posix_time.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_time.h
+linux_joystick.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/linux_joystick.h
+xkb_unicode.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/xkb_unicode.h
+glx_context.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/glx_context.h
+egl_context.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/egl_context.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/xkb_unicode.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 
 ext/nanogui/ext_build/glfw/src/glfw_config.h
 

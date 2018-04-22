@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -136,6 +136,7 @@ ostream
 cmath
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/base64.cpp
 base64.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/base64.h
@@ -145,6 +146,17 @@ iostream
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/color.cpp
 color.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/color.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/base64.cpp
+base64.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/base64.h
+iostream
+-
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/color.cpp
+color.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/color.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 stdio.h
 -
 string.h
@@ -154,6 +166,7 @@ ostream
 sstream
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/complex.cpp
 complex.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/complex.h
@@ -161,6 +174,15 @@ complex.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/lodepng.cpp
 lodepng.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/lodepng.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/complex.cpp
+complex.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/complex.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/lodepng.cpp
+lodepng.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/lodepng.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 stdio.h
 -
 stdlib.h
@@ -168,22 +190,35 @@ stdlib.h
 fstream
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/matrix3x3.cpp
 matrix3x3.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/matrix3x3.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/matrix3x3.cpp
+matrix3x3.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/matrix3x3.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 iostream
 -
 cmath
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/matrix4x4.cpp
 matrix4x4.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/matrix4x4.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/matrix4x4.cpp
+matrix4x4.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/matrix4x4.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 iostream
 -
 cmath
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/quaternion.cpp
 quaternion.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/quaternion.h
@@ -191,6 +226,15 @@ quaternion.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/spectrum.cpp
 spectrum.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/spectrum.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/quaternion.cpp
+quaternion.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/quaternion.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/spectrum.cpp
+spectrum.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/spectrum.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 stdio.h
 -
 string.h
@@ -200,9 +244,15 @@ ostream
 sstream
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/tinyxml2.cpp
 tinyxml2.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/tinyxml2.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/tinyxml2.cpp
+tinyxml2.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/tinyxml2.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 new
 -
 stddef.h
@@ -210,6 +260,7 @@ stddef.h
 cstddef
 -
 
+<<<<<<< HEAD
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/vector2D.cpp
 vector2D.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/vector2D.h
@@ -221,4 +272,17 @@ vector3D.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/vector4D.cpp
 vector4D.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/vector4D.h
+=======
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/vector2D.cpp
+vector2D.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/vector2D.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/vector3D.cpp
+vector3D.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/vector3D.h
+
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/vector4D.cpp
+vector4D.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/CGL/src/vector4D.h
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 

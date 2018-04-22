@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+<<<<<<< HEAD
   "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_init.m" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_init.m.o"
   "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_joystick.m" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_joystick.m.o"
   "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_monitor.m" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_monitor.m.o"
@@ -17,6 +18,21 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_tls.c" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o"
   "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/vulkan.c" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o"
   "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/window.c" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o"
+=======
+  "/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_init.m" "/Users/user/CS184/test/Apr22/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_init.m.o"
+  "/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_joystick.m" "/Users/user/CS184/test/Apr22/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_joystick.m.o"
+  "/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_monitor.m" "/Users/user/CS184/test/Apr22/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_monitor.m.o"
+  "/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_time.c" "/Users/user/CS184/test/Apr22/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_time.c.o"
+  "/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/cocoa_window.m" "/Users/user/CS184/test/Apr22/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_window.m.o"
+  "/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/context.c" "/Users/user/CS184/test/Apr22/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o"
+  "/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/init.c" "/Users/user/CS184/test/Apr22/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o"
+  "/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/input.c" "/Users/user/CS184/test/Apr22/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o"
+  "/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/monitor.c" "/Users/user/CS184/test/Apr22/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o"
+  "/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/nsgl_context.m" "/Users/user/CS184/test/Apr22/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/nsgl_context.m.o"
+  "/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/posix_tls.c" "/Users/user/CS184/test/Apr22/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o"
+  "/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/vulkan.c" "/Users/user/CS184/test/Apr22/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o"
+  "/Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src/window.c" "/Users/user/CS184/test/Apr22/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o"
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
   )
 set(CMAKE_C_COMPILER_ID "Clang")
 

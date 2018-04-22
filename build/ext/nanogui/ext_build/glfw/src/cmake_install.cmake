@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src
+=======
+# Install script for directory: /Users/user/CS184/test/Apr22/CS_184_Final_Project/ext/nanogui/ext/glfw/src
+>>>>>>> 37df4d8225864e7081fb0b6aa0d5396c70cc4439
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -25,10 +29,5 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   else()
     set(CMAKE_INSTALL_COMPONENT)
   endif()
-endif()
-
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
