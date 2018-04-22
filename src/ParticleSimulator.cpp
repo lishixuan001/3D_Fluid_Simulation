@@ -72,9 +72,8 @@ void ParticleSimulator::init() {
   CGL::Vector3D target(avg_object_position.x, avg_object_position.y / 2,
                        avg_object_position.z);
   CGL::Vector3D c_dir(0., 0., 0.);
-  cout<<"next"<<endl;
+  
   canonical_view_distance = max(1, 1) * 0.9;
-  cout<<"now"<<endl;
   scroll_rate = canonical_view_distance / 10;
   view_distance = canonical_view_distance * 2;
   min_view_distance = canonical_view_distance / 10.0;

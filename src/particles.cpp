@@ -9,14 +9,26 @@
 
 using namespace std;
 
-particles::particles(double width, double height, int num_width_points,
-             int num_height_points, float thickness) {
+particles::particles(double width, double height, double length, int num_width_points,
+             int num_height_points, int num_length_points) {
   this->width = width;
   this->height = height;
+  this->length = length;
   this->num_width_points = num_width_points;
   this->num_height_points = num_height_points;
-  this->thickness = thickness;
+  this->num_length_points = num_length_points;
+  // buildGrid();
 }
+
+// void particles::buildGrid() {
+//   for (int i=0; i<num_height_points; i++) {
+//     for (int j=0; j<num_width_points; j++) {
+//       for (int k=0; k<num_length_points; k++) {
+//         particle_list.emplace_back(PointMass(Vector3D(j*ww, 1.0, i*hh), false));
+//       }
+//     }
+//   }
+// }
 
 particles::~particles() {
 }

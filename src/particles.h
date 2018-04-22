@@ -4,7 +4,7 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <vector>
-
+#include "Spheres.h"
 #include "CGL/CGL.h"
 #include "CGL/misc.h"
 #include "collision/collisionObject.h"
@@ -16,8 +16,8 @@ enum e_orientation { HORIZONTAL = 0, VERTICAL = 1 };
 
 struct particles {
   particles() {}
-  particles(double width, double height, int num_width_points,
-        int num_height_points, float thickness);
+  particles(double width, double height, double length, int num_width_points,
+        int num_height_points, int num_length_points);
   ~particles();
 
   void simulate(double frames_per_sec, double simulation_steps,
@@ -30,10 +30,13 @@ struct particles {
   // Cloth properties
   double width;
   double height;
+  double length;
   int num_width_points;
   int num_height_points;
-  double thickness;
+  int num_length_points;
   e_orientation orientation;
+
+  vector<Spheres> particle_list;
 
 };
 
