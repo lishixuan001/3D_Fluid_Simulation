@@ -36,7 +36,7 @@ struct particles {
   int num_length_points;
   e_orientation orientation;
 
-  vector<Spheres> particle_list;
+  vector<Sphere> particle_list;
 
 };
 

@@ -1485,8 +1485,6 @@ collision/sphere.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collision/sphere.h
 ParticleSimulator.h
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/ParticleSimulator.h
-omp.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/omp.h
 
 /Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/camera_info.h
 collada_info.h
