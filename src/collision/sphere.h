@@ -3,6 +3,10 @@
 
 #include "collisionObject.h"
 #include "CGL/vector3D.h"
+#include "CGL/CGL.h"
+#include "CGL/misc.h"
+#include "CGL/vector3D.h"
+
 
 using namespace CGL;
 using namespace std;
@@ -10,34 +14,29 @@ using namespace std;
 struct Sphere : public CollisionObject {
 public:
     // Modified by Jiannan
-    Sphere(const Vector3D &origin, double radius, double friction)
-            : origin(origin), radius(radius), radius2(radius * radius),
-              friction(friction) {
+    Sphere(const Vector3D &origin, double radius)
+            : origin(origin), radius(radius){
         velocity = Vector3D();
         predicted_position = origin;
         delta_p  = Vector3D();
         lambda   = 0;
-        Neighbor = std::vector<Sphere>();
+        vector<Sphere*> Neighbor;
     }
 
     void render(GLShader &shader);
     void collide();
 
     // Added by Jiannan
+    Vector3D normal();
     Vector3D origin;
     Vector3D velocity;
     Vector3D predicted_position;
     Vector3D delta_p;
-    vector<Sphere> Neighbor;
+    vector<Sphere*> Neighbor;
     double lambda;
+    double radius;
     // End Add
 
-
-private:
-    double radius;
-    double radius2;
-
-    double friction;
 };
 
 #endif /* COLLISIONOBJECT_SPHERE_H */

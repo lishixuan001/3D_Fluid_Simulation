@@ -4,9 +4,9 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <vector>
-#include "Spheres.h"
 #include "CGL/CGL.h"
 #include "CGL/misc.h"
+#include "collision/sphere.h"
 #include "collision/collisionObject.h"
 
 using namespace CGL;
@@ -21,12 +21,28 @@ struct particles {
   ~particles();
 
   void simulate(double frames_per_sec, double simulation_steps,
-                vector<Vector3D> external_accelerations,
-                vector<CollisionObject *> *collision_objects);
-
+                           Vector3D external_forces,vector<CollisionObject *> *collision_objects);
   void reset();
   float hash_position(Vector3D pos);
+    
+  vector<Sphere*> findNeighbors(Sphere i){
+        return vector<Sphere*>();
+    }
+  
+  double findLambda(Sphere i){
+      return 0.0;
+    }
 
+  Vector3D findDeltaP(Sphere i){
+        return Vector3D();
+    }
+    
+    void perform_Collision_Detection(Sphere i){
+        return;
+    }
+    
+    
+    
   // Cloth properties
   double width;
   double height;

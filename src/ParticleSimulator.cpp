@@ -97,7 +97,7 @@ void ParticleSimulator::drawContents() {
   glEnable(GL_DEPTH_TEST);
 
   if (!is_paused) {
-    vector<Vector3D> external_accelerations = {gravity};
+    Vector3D external_accelerations = gravity;
 
     for (int i = 0; i < simulation_steps; i++) {
       particles->simulate(frames_per_sec, simulation_steps, external_accelerations, collision_objects);

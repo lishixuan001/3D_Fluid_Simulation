@@ -4,9 +4,7 @@
 #include <vector>
 
 #include "particles.h"
-#include "collision/sphere.h"
 #include "CGL/vector3D.h"
-
 using namespace std;
 
 particles::particles(double width, double height, double length, int num_width_points,
@@ -24,7 +22,7 @@ particles::~particles() {
 }
 
 void particles::simulate(double frames_per_sec, double simulation_steps,
-                     vector3D external_forces,
+                     Vector3D external_forces,
                      vector<CollisionObject *> *collision_objects) {
 
   double delta_t = 1.0f / frames_per_sec / simulation_steps;
@@ -40,6 +38,7 @@ void particles::simulate(double frames_per_sec, double simulation_steps,
     i.Neighbor = findNeighbors(i);// Note that, we try to find neighbors of predicted position of i
   }
 
+  int MAX_iter =100;
   for (int iter=0; iter < MAX_iter ; iter++)
   {
     for (Sphere i: particle_list){
