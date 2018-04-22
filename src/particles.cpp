@@ -20,27 +20,49 @@ particles::particles(double width, double height, double length, int num_width_p
   // buildGrid();
 }
 
-// void particles::buildGrid() {
-//   for (int i=0; i<num_height_points; i++) {
-//     for (int j=0; j<num_width_points; j++) {
-//       for (int k=0; k<num_length_points; k++) {
-//         particle_list.emplace_back(PointMass(Vector3D(j*ww, 1.0, i*hh), false));
-//       }
-//     }
-//   }
-// }
-
 particles::~particles() {
 }
 
 void particles::simulate(double frames_per_sec, double simulation_steps,
-                     vector<Vector3D> external_accelerations,
+                     vector3D external_forces,
                      vector<CollisionObject *> *collision_objects) {
-    
-    
-    
-    
-    
+
+  double delta_t = 1.0f / frames_per_sec / simulation_steps;
+
+  for (Sphere i : particle_list)
+  {
+    i.velocity += delta_t * external_forces;
+    i.predicted_position = i.origin + delta_t * i.velocity;
+  }
+
+  for (Sphere i : particle_list)
+  {
+    i.Neighbor = findNeighbors(i);// Note that, we try to find neighbors of predicted position of i
+  }
+
+  for (int iter=0; iter < MAX_iter ; iter++)
+  {
+    for (Sphere i: particle_list){
+      i.lambda   = findLambda(i);     // see equation (1) - (9)
+    }
+    for (Sphere i: particle_list){
+      i.delta_p  = findDeltaP(i);     // see eqaution (1) - (9). Change of position
+      perform_Collision_Detection(i); // if collsion, change delta_p;
+    }
+    for (Sphere i: particle_list){
+      i.predicted_position += i.delta_p;
+    }
+  }
+
+  for (Sphere i : particle_list){
+    i.velocity = (i.predicted_position - i.origin) / delta_t;
+
+    // apply vorticity confinement and XSPH viscosity
+    // Not sure what to do
+
+    i.origin = i.predicted_position;
+
+  }
 }
 
 

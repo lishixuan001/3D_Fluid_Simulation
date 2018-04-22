@@ -138,14 +138,10 @@ void create_particles(vector<CollisionObject *>* objects) {
   double radius, friction;
   radius=0.01;
   friction=0.3;
-  Sphere *s = new Sphere(origin, radius, friction);
-  // for (int i = -5; i < 6; i++) {
-  //   Sphere *s = new Sphere(origin+i*Vector3D(0.02, 0.02, 0.02), radius, friction);
-  //   objects->push_back(s);
-  // }
+
   for (int i = 0; i < 10; i++) {
-    for (int j = 0; j <10; j++) {
-      for (int k = 0; k<10; k++) {
+    for (int j = 0; j < 10; j++) {
+      for (int k = 0; k < 10; k++) {
         Sphere *s = new Sphere(origin+Vector3D(0.02*i, 0.02*j, 0.02*k), radius, friction);
         objects->push_back(s);
       }
