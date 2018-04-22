@@ -36,6 +36,11 @@ particles::~particles() {
 void particles::simulate(double frames_per_sec, double simulation_steps,
                      vector<Vector3D> external_accelerations,
                      vector<CollisionObject *> *collision_objects) {
+    
+    
+    
+    
+    
 }
 
 
