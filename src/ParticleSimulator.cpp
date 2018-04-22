@@ -8,7 +8,7 @@
 
 #include "camera.h"
 #include "particles.h"
-#include "collision/sphere.h"
+#include "sphere.h"
 #include "misc/camera_info.h"
 
 using namespace nanogui;
@@ -42,9 +42,9 @@ ParticleSimulator::~ParticleSimulator() {
   if (collision_objects) delete collision_objects;
 }
 
-
 void ParticleSimulator::loadCollisionObjects(vector<CollisionObject *> *objects) { this->collision_objects = objects;}
 
+void ParticleSimulator::loadParticle(particles *part) { this->part = part; }
 /**
  * Initializes the cloth simulation and spawns a new thread to separate
  * rendering from simulation.
@@ -63,17 +63,16 @@ void ParticleSimulator::init() {
   camera_info.fClip = 10000;
 
   // Try to intelligently figure out the camera target
-  Vector3D avg_object_position(0, 0, 0);
-
-  for (auto &the_objects : *collision_objects) {
-    avg_object_position += the_objects->origin / collision_objects->size();
+  Vector3D avg_object_position(0, 0, 0); 
+  cout<<part->particle_list.size()<<endl;
+  for (auto &the_objects : part->particle_list) {
+    avg_object_position += the_objects.origin / part->particle_list.size();
   }
-
   CGL::Vector3D target(avg_object_position.x, avg_object_position.y / 2,
                        avg_object_position.z);
   CGL::Vector3D c_dir(0., 0., 0.);
   
-  canonical_view_distance = max(1, 1) * 0.9;
+  canonical_view_distance = max(part->width, part->height) * 0.9;
   scroll_rate = canonical_view_distance / 10;
   view_distance = canonical_view_distance * 2;
   min_view_distance = canonical_view_distance / 10.0;
@@ -100,7 +99,7 @@ void ParticleSimulator::drawContents() {
     vector<Vector3D> external_accelerations = {gravity};
 
     for (int i = 0; i < simulation_steps; i++) {
-      particles->simulate(frames_per_sec, simulation_steps, external_accelerations, collision_objects);
+      part->simulate(frames_per_sec, simulation_steps, external_accelerations);
     }
   }
 
@@ -136,8 +135,8 @@ void ParticleSimulator::drawContents() {
     break;
   }
 
-  for (CollisionObject *co : *collision_objects) {
-    co->render(shader);
+  for (Sphere s : part->particle_list) {
+    s.render(shader);
   }
 }
 
@@ -282,7 +281,7 @@ bool ParticleSimulator::keyCallbackEvent(int key, int scancode, int action,
       break;
     case 'r':
     case 'R':
-      particles->reset();
+      part->reset();
       break;
     case ' ':
       resetCamera();

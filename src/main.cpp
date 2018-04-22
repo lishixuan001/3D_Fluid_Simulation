@@ -8,8 +8,9 @@
 #include <unordered_set>
 
 #include "CGL/CGL.h"
-#include "collision/sphere.h"
+#include "sphere.h"
 #include "ParticleSimulator.h"
+#include "particles.h"
 
 typedef uint32_t gid_t;
 
@@ -133,32 +134,42 @@ void incompleteObjectError(const char *object, const char *attribute) {
   exit(-1);
 }
 
-void create_particles(vector<CollisionObject *>* objects) {
-  Vector3D origin = Vector3D(0, 0, 0);
-  double radius, friction;
-  radius=0.01;
-  friction=0.3;
-  Sphere *s = new Sphere(origin, radius, friction);
-  // for (int i = -5; i < 6; i++) {
-  //   Sphere *s = new Sphere(origin+i*Vector3D(0.02, 0.02, 0.02), radius, friction);
-  //   objects->push_back(s);
+void create_particles(particles *part) {
+  // Vector3D origin = Vector3D(0, 0, 0);
+  // double radius, friction;
+  // radius=0.01;
+  // friction=0.3;
+  // Sphere *s = new Sphere(origin, radius, friction);
+  // // for (int i = -5; i < 6; i++) {
+  // //   Sphere *s = new Sphere(origin+i*Vector3D(0.02, 0.02, 0.02), radius, friction);
+  // //   objects->push_back(s);
+  // // }
+
+  // for (int i = 0; i < 20; i++) {
+  //   for (int j = 0; j <20; j++) {
+  //     for (int k = 0; k<20; k++) {
+  //       Sphere *s = new Sphere(origin+Vector3D(0.01*i, 0.01*j, 0.01*k), radius, friction);
+  //       objects->push_back(s);
+  //     }
+  //   }
   // }
-  for (int i = 0; i < 10; i++) {
-    for (int j = 0; j <10; j++) {
-      for (int k = 0; k<10; k++) {
-        Sphere *s = new Sphere(origin+Vector3D(0.02*i, 0.02*j, 0.02*k), radius, friction);
-        objects->push_back(s);
-      }
-    }
-  }
+  part->width = 1.0;
+  part->height = 1.0;
+  part->length = 1.0;
+  part->num_width_points = 10;
+  part->num_height_points = 10;
+  part->num_length_points = 10;
+  part->radius=0.01;
+  part->friction=0.3;
 }
 
 int main(int argc, char **argv) {
-  vector<CollisionObject *> objects;
-  create_particles(&objects);
+  particles particle;
+  create_particles(&particle);
+  particle.buildGrid();
   createGLContexts();
   app = new ParticleSimulator(screen);
-  app->loadCollisionObjects(&objects);
+  app->loadParticle(&particle);
   app->init();
   screen->setVisible(true);
   screen->performLayout();

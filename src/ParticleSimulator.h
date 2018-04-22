@@ -15,6 +15,7 @@ public:
   ~ParticleSimulator();
 
   void init();
+  void loadParticle(particles *part);
 
   void loadCollisionObjects(vector<CollisionObject *> *objects);
   virtual bool isAlive();
@@ -46,7 +47,7 @@ private:
   CGL::Vector3D gravity = CGL::Vector3D(0, -9.8, 0);
   nanogui::Color color = nanogui::Color(1.0f, 0.0f, 0.0f, 1.0f);
 
-  particles *particles;
+  particles *part;
   vector<CollisionObject *> *collision_objects;
 
   // OpenGL attributes

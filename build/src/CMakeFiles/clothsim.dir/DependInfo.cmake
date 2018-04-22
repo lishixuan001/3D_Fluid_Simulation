@@ -6,10 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/xingyifei1998/desktop/cs/CS184/final/src/ParticleSimulator.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o"
   "/Users/xingyifei1998/desktop/cs/CS184/final/src/camera.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/clothsim.dir/camera.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o"
   "/Users/xingyifei1998/desktop/cs/CS184/final/src/main.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/clothsim.dir/main.cpp.o"
   "/Users/xingyifei1998/desktop/cs/CS184/final/src/misc/sphere_drawing.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.o"
   "/Users/xingyifei1998/desktop/cs/CS184/final/src/particles.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/clothsim.dir/particles.cpp.o"
+  "/Users/xingyifei1998/desktop/cs/CS184/final/src/sphere.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/clothsim.dir/sphere.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

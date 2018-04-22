@@ -1,6 +1,6 @@
 #include <nanogui/nanogui.h>
 
-#include "../misc/sphere_drawing.h"
+#include "./misc/sphere_drawing.h"
 #include "sphere.h"
 
 using namespace nanogui;

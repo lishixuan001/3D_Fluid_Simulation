@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/clothsim.dir/particles.cpp.o"
-  "CMakeFiles/clothsim.dir/collision/sphere.cpp.o"
+  "CMakeFiles/clothsim.dir/sphere.cpp.o"
   "CMakeFiles/clothsim.dir/main.cpp.o"
   "CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o"
   "CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.o"

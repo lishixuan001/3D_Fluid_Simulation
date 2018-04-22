@@ -1380,6 +1380,12 @@ vector
 nanogui/widget.h
 -
 
+/Users/xingyifei1998/desktop/cs/CS184/final/src/./misc/sphere_drawing.h
+nanogui/nanogui.h
+-
+CGL/CGL.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/./misc/CGL/CGL.h
+
 /Users/xingyifei1998/desktop/cs/CS184/final/src/ParticleSimulator.cpp
 cmath
 -
@@ -1395,8 +1401,8 @@ camera.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/camera.h
 particles.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/particles.h
-collision/sphere.h
-/Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.h
+sphere.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/sphere.h
 misc/camera_info.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/misc/camera_info.h
 
@@ -1409,14 +1415,6 @@ particles.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/particles.h
 collision/collisionObject.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/collisionObject.h
-
-/Users/xingyifei1998/desktop/cs/CS184/final/src/Spheres.h
-CGL/CGL.h
-/Users/xingyifei1998/desktop/cs/CS184/final/src/CGL/CGL.h
-CGL/misc.h
-/Users/xingyifei1998/desktop/cs/CS184/final/src/CGL/misc.h
-CGL/vector3D.h
-/Users/xingyifei1998/desktop/cs/CS184/final/src/CGL/vector3D.h
 
 /Users/xingyifei1998/desktop/cs/CS184/final/src/camera.cpp
 camera.h
@@ -1448,20 +1446,6 @@ nanogui/nanogui.h
 CGL/vector3D.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/CGL/vector3D.h
 
-/Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.cpp
-nanogui/nanogui.h
--
-../misc/sphere_drawing.h
-/Users/xingyifei1998/desktop/cs/CS184/final/src/misc/sphere_drawing.h
-sphere.h
-/Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.h
-
-/Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.h
-collisionObject.h
-/Users/xingyifei1998/desktop/cs/CS184/final/src/collision/collisionObject.h
-CGL/vector3D.h
-/Users/xingyifei1998/desktop/cs/CS184/final/src/collision/CGL/vector3D.h
-
 /Users/xingyifei1998/desktop/cs/CS184/final/src/main.cpp
 getopt.h
 -
@@ -1481,10 +1465,12 @@ unordered_set
 -
 CGL/CGL.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/CGL/CGL.h
-collision/sphere.h
-/Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.h
+sphere.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/sphere.h
 ParticleSimulator.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/ParticleSimulator.h
+particles.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/particles.h
 
 /Users/xingyifei1998/desktop/cs/CS184/final/src/misc/camera_info.h
 collada_info.h
@@ -1527,8 +1513,8 @@ vector
 -
 particles.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/particles.h
-collision/sphere.h
-/Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.h
+sphere.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/sphere.h
 CGL/vector3D.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/CGL/vector3D.h
 
@@ -1539,12 +1525,24 @@ unordered_map
 -
 vector
 -
-Spheres.h
-/Users/xingyifei1998/desktop/cs/CS184/final/src/Spheres.h
 CGL/CGL.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/CGL/CGL.h
 CGL/misc.h
 /Users/xingyifei1998/desktop/cs/CS184/final/src/CGL/misc.h
-collision/collisionObject.h
-/Users/xingyifei1998/desktop/cs/CS184/final/src/collision/collisionObject.h
+sphere.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/sphere.h
+
+/Users/xingyifei1998/desktop/cs/CS184/final/src/sphere.cpp
+nanogui/nanogui.h
+-
+./misc/sphere_drawing.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/./misc/sphere_drawing.h
+sphere.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/sphere.h
+
+/Users/xingyifei1998/desktop/cs/CS184/final/src/sphere.h
+nanogui/nanogui.h
+-
+CGL/vector3D.h
+/Users/xingyifei1998/desktop/cs/CS184/final/src/CGL/vector3D.h
 

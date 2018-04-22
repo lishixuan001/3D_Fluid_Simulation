@@ -81,28 +81,28 @@ src/CMakeFiles/clothsim.dir/particles.cpp.o.provides: src/CMakeFiles/clothsim.di
 src/CMakeFiles/clothsim.dir/particles.cpp.o.provides.build: src/CMakeFiles/clothsim.dir/particles.cpp.o
 
 
-src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o: src/CMakeFiles/clothsim.dir/flags.make
-src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o: ../src/collision/sphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/xingyifei1998/desktop/cs/CS184/final/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o"
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build/src && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clothsim.dir/collision/sphere.cpp.o -c /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.cpp
+src/CMakeFiles/clothsim.dir/sphere.cpp.o: src/CMakeFiles/clothsim.dir/flags.make
+src/CMakeFiles/clothsim.dir/sphere.cpp.o: ../src/sphere.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/xingyifei1998/desktop/cs/CS184/final/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/clothsim.dir/sphere.cpp.o"
+	cd /Users/xingyifei1998/desktop/cs/CS184/final/build/src && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clothsim.dir/sphere.cpp.o -c /Users/xingyifei1998/desktop/cs/CS184/final/src/sphere.cpp
 
-src/CMakeFiles/clothsim.dir/collision/sphere.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clothsim.dir/collision/sphere.cpp.i"
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.cpp > CMakeFiles/clothsim.dir/collision/sphere.cpp.i
+src/CMakeFiles/clothsim.dir/sphere.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clothsim.dir/sphere.cpp.i"
+	cd /Users/xingyifei1998/desktop/cs/CS184/final/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/xingyifei1998/desktop/cs/CS184/final/src/sphere.cpp > CMakeFiles/clothsim.dir/sphere.cpp.i
 
-src/CMakeFiles/clothsim.dir/collision/sphere.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clothsim.dir/collision/sphere.cpp.s"
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/xingyifei1998/desktop/cs/CS184/final/src/collision/sphere.cpp -o CMakeFiles/clothsim.dir/collision/sphere.cpp.s
+src/CMakeFiles/clothsim.dir/sphere.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clothsim.dir/sphere.cpp.s"
+	cd /Users/xingyifei1998/desktop/cs/CS184/final/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/xingyifei1998/desktop/cs/CS184/final/src/sphere.cpp -o CMakeFiles/clothsim.dir/sphere.cpp.s
 
-src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o.requires:
+src/CMakeFiles/clothsim.dir/sphere.cpp.o.requires:
 
-.PHONY : src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o.requires
+.PHONY : src/CMakeFiles/clothsim.dir/sphere.cpp.o.requires
 
-src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o.provides: src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o.provides.build
-.PHONY : src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o.provides
+src/CMakeFiles/clothsim.dir/sphere.cpp.o.provides: src/CMakeFiles/clothsim.dir/sphere.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/sphere.cpp.o.provides.build
+.PHONY : src/CMakeFiles/clothsim.dir/sphere.cpp.o.provides
 
-src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o.provides.build: src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o
+src/CMakeFiles/clothsim.dir/sphere.cpp.o.provides.build: src/CMakeFiles/clothsim.dir/sphere.cpp.o
 
 
 src/CMakeFiles/clothsim.dir/main.cpp.o: src/CMakeFiles/clothsim.dir/flags.make
@@ -204,7 +204,7 @@ src/CMakeFiles/clothsim.dir/camera.cpp.o.provides.build: src/CMakeFiles/clothsim
 # Object files for target clothsim
 clothsim_OBJECTS = \
 "CMakeFiles/clothsim.dir/particles.cpp.o" \
-"CMakeFiles/clothsim.dir/collision/sphere.cpp.o" \
+"CMakeFiles/clothsim.dir/sphere.cpp.o" \
 "CMakeFiles/clothsim.dir/main.cpp.o" \
 "CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o" \
 "CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.o" \
@@ -214,7 +214,7 @@ clothsim_OBJECTS = \
 clothsim_EXTERNAL_OBJECTS =
 
 clothsim: src/CMakeFiles/clothsim.dir/particles.cpp.o
-clothsim: src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o
+clothsim: src/CMakeFiles/clothsim.dir/sphere.cpp.o
 clothsim: src/CMakeFiles/clothsim.dir/main.cpp.o
 clothsim: src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o
 clothsim: src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.o
@@ -233,7 +233,7 @@ src/CMakeFiles/clothsim.dir/build: clothsim
 .PHONY : src/CMakeFiles/clothsim.dir/build
 
 src/CMakeFiles/clothsim.dir/requires: src/CMakeFiles/clothsim.dir/particles.cpp.o.requires
-src/CMakeFiles/clothsim.dir/requires: src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o.requires
+src/CMakeFiles/clothsim.dir/requires: src/CMakeFiles/clothsim.dir/sphere.cpp.o.requires
 src/CMakeFiles/clothsim.dir/requires: src/CMakeFiles/clothsim.dir/main.cpp.o.requires
 src/CMakeFiles/clothsim.dir/requires: src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o.requires
 src/CMakeFiles/clothsim.dir/requires: src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.o.requires

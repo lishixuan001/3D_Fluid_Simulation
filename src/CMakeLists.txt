@@ -6,7 +6,7 @@ set(CLOTHSIM_VIEWER_SOURCE
     particles.cpp
 
     # Collision objects
-    collision/sphere.cpp
+    sphere.cpp
 
     # Application
     main.cpp

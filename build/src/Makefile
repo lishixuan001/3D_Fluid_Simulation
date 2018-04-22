@@ -225,33 +225,6 @@ camera.cpp.s:
 	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/camera.cpp.s
 .PHONY : camera.cpp.s
 
-collision/sphere.o: collision/sphere.cpp.o
-
-.PHONY : collision/sphere.o
-
-# target to build an object file
-collision/sphere.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/collision/sphere.cpp.o
-.PHONY : collision/sphere.cpp.o
-
-collision/sphere.i: collision/sphere.cpp.i
-
-.PHONY : collision/sphere.i
-
-# target to preprocess a source file
-collision/sphere.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/collision/sphere.cpp.i
-.PHONY : collision/sphere.cpp.i
-
-collision/sphere.s: collision/sphere.cpp.s
-
-.PHONY : collision/sphere.s
-
-# target to generate assembly for a file
-collision/sphere.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/collision/sphere.cpp.s
-.PHONY : collision/sphere.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -333,6 +306,33 @@ particles.cpp.s:
 	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/particles.cpp.s
 .PHONY : particles.cpp.s
 
+sphere.o: sphere.cpp.o
+
+.PHONY : sphere.o
+
+# target to build an object file
+sphere.cpp.o:
+	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/sphere.cpp.o
+.PHONY : sphere.cpp.o
+
+sphere.i: sphere.cpp.i
+
+.PHONY : sphere.i
+
+# target to preprocess a source file
+sphere.cpp.i:
+	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/sphere.cpp.i
+.PHONY : sphere.cpp.i
+
+sphere.s: sphere.cpp.s
+
+.PHONY : sphere.s
+
+# target to generate assembly for a file
+sphere.cpp.s:
+	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/sphere.cpp.s
+.PHONY : sphere.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -352,9 +352,6 @@ help:
 	@echo "... camera.o"
 	@echo "... camera.i"
 	@echo "... camera.s"
-	@echo "... collision/sphere.o"
-	@echo "... collision/sphere.i"
-	@echo "... collision/sphere.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -364,6 +361,9 @@ help:
 	@echo "... particles.o"
 	@echo "... particles.i"
 	@echo "... particles.s"
+	@echo "... sphere.o"
+	@echo "... sphere.i"
+	@echo "... sphere.s"
 .PHONY : help
 
 
