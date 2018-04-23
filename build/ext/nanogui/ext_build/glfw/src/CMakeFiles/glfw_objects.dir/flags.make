@@ -6,5 +6,5 @@ C_FLAGS =  -Wno-deprecated-declarations -g -fPIC   -Wall -Wno-deprecated-declara
 
 C_DEFINES = -D_GLFW_USE_CONFIG_H
 
-C_INCLUDES = -I/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/glfw/include -I/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/glfw/src -I/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src 
+C_INCLUDES = -I"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/include" -I"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src" -I"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src" 
 

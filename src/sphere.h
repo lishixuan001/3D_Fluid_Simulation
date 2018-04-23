@@ -11,18 +11,22 @@ using namespace nanogui;
 struct Sphere {
 public:
   Sphere(const Vector3D &origin, double radius, double friction)
-      : lastOrigin(origin), origin(origin), radius(radius), radius2(radius * radius),friction(friction) {
+      : last_origin(origin), origin(origin), radius(radius), friction(friction) {
         
 }
   Vector3D origin;
   double radius;
   void render(GLShader &shader);
   void collide();
-  Vector3D lastOrigin;
+  Vector3D last_origin;
   Vector3D force;
   double friction;
-  double radius2;
   double lambda;
+
+    Vector3D velocity;
+    Vector3D predicted_position;
+    Vector3D delta_p;
+    vector<Sphere*> neighbors;
 };
 
 

@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.10.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/xingyifei1998/desktop/cs/CS184/final
+CMAKE_SOURCE_DIR = "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/xingyifei1998/desktop/cs/CS184/final/build
+CMAKE_BINARY_DIR = "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/xingyifei1998/desktop/cs/CS184/final/build/CMakeFiles /Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/CMakeFiles/progress.marks
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 CGL/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xingyifei1998/desktop/cs/CS184/final/build/CMakeFiles 0
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CMakeFiles" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/CMakeFiles/progress.marks"
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 CGL/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 CGL/clean
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 CGL/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,17 +143,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 CGL/preinstall
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 CGL/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 CGL/preinstall
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 CGL/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -179,6 +179,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

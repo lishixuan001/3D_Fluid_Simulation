@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.10.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/xingyifei1998/desktop/cs/CS184/final
+CMAKE_SOURCE_DIR = "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/xingyifei1998/desktop/cs/CS184/final/build
+CMAKE_BINARY_DIR = "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build"
 
 # Include any dependencies generated for this target.
 include ext/nanogui/CMakeFiles/nanogui.dir/depend.make
@@ -62,51 +62,51 @@ nanogui_OBJECTS =
 
 # External object files for target nanogui
 nanogui_EXTERNAL_OBJECTS = \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/ext/nanovg/src/nanovg.c.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/ext/glad/src/glad.c.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/darwin.mm.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/nanogui_resources.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/glutil.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/common.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/widget.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/theme.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/layout.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/screen.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/label.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/window.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/popup.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/checkbox.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/button.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/popupbutton.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/combobox.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/progressbar.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/slider.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/messagedialog.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/textbox.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/imagepanel.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/imageview.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/vscrollpanel.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/colorwheel.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/colorpicker.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/graph.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/stackedwidget.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/tabheader.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/tabwidget.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/glcanvas.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/serializer.cpp.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_init.m.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_joystick.m.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_monitor.m.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_window.m.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_time.c.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o" \
-"/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/nsgl_context.m.o"
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/ext/nanovg/src/nanovg.c.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/ext/glad/src/glad.c.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/darwin.mm.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/nanogui_resources.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/glutil.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/common.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/widget.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/theme.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/layout.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/screen.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/label.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/window.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/popup.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/checkbox.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/button.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/popupbutton.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/combobox.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/progressbar.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/slider.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/messagedialog.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/textbox.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/imagepanel.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/imageview.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/vscrollpanel.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/colorwheel.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/colorpicker.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/graph.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/stackedwidget.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/tabheader.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/tabwidget.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/glcanvas.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/serializer.cpp.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_init.m.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_joystick.m.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_monitor.m.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_window.m.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_time.c.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o" \
+"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/nsgl_context.m.o"
 
 ext/nanogui/libnanogui.dylib: ext/nanogui/CMakeFiles/nanogui-obj.dir/ext/nanovg/src/nanovg.c.o
 ext/nanogui/libnanogui.dylib: ext/nanogui/CMakeFiles/nanogui-obj.dir/ext/glad/src/glad.c.o
@@ -155,8 +155,8 @@ ext/nanogui/libnanogui.dylib: ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_obj
 ext/nanogui/libnanogui.dylib: ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/nsgl_context.m.o
 ext/nanogui/libnanogui.dylib: ext/nanogui/CMakeFiles/nanogui.dir/build.make
 ext/nanogui/libnanogui.dylib: ext/nanogui/CMakeFiles/nanogui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/xingyifei1998/desktop/cs/CS184/final/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library libnanogui.dylib"
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nanogui.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library libnanogui.dylib"
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nanogui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 ext/nanogui/CMakeFiles/nanogui.dir/build: ext/nanogui/libnanogui.dylib
@@ -168,10 +168,10 @@ ext/nanogui/CMakeFiles/nanogui.dir/requires:
 .PHONY : ext/nanogui/CMakeFiles/nanogui.dir/requires
 
 ext/nanogui/CMakeFiles/nanogui.dir/clean:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui && $(CMAKE_COMMAND) -P CMakeFiles/nanogui.dir/cmake_clean.cmake
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui" && $(CMAKE_COMMAND) -P CMakeFiles/nanogui.dir/cmake_clean.cmake
 .PHONY : ext/nanogui/CMakeFiles/nanogui.dir/clean
 
 ext/nanogui/CMakeFiles/nanogui.dir/depend:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/xingyifei1998/desktop/cs/CS184/final /Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui /Users/xingyifei1998/desktop/cs/CS184/final/build /Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui /Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : ext/nanogui/CMakeFiles/nanogui.dir/depend
 

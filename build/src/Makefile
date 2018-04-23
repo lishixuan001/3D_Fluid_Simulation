@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.10.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/xingyifei1998/desktop/cs/CS184/final
+CMAKE_SOURCE_DIR = "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/xingyifei1998/desktop/cs/CS184/final/build
+CMAKE_BINARY_DIR = "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/xingyifei1998/desktop/cs/CS184/final/build/CMakeFiles /Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/progress.marks
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xingyifei1998/desktop/cs/CS184/final/build/CMakeFiles 0
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CMakeFiles" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/src/CMakeFiles/progress.marks"
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/clothsim.dir/rule:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/clothsim.dir/rule
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/clothsim.dir/rule
 .PHONY : src/CMakeFiles/clothsim.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ clothsim: src/CMakeFiles/clothsim.dir/rule
 
 # fast build rule for target.
 clothsim/fast:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/build
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/build
 .PHONY : clothsim/fast
 
 ParticleSimulator.o: ParticleSimulator.cpp.o
@@ -177,7 +177,7 @@ ParticleSimulator.o: ParticleSimulator.cpp.o
 
 # target to build an object file
 ParticleSimulator.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o
 .PHONY : ParticleSimulator.cpp.o
 
 ParticleSimulator.i: ParticleSimulator.cpp.i
@@ -186,7 +186,7 @@ ParticleSimulator.i: ParticleSimulator.cpp.i
 
 # target to preprocess a source file
 ParticleSimulator.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.i
 .PHONY : ParticleSimulator.cpp.i
 
 ParticleSimulator.s: ParticleSimulator.cpp.s
@@ -195,7 +195,7 @@ ParticleSimulator.s: ParticleSimulator.cpp.s
 
 # target to generate assembly for a file
 ParticleSimulator.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.s
 .PHONY : ParticleSimulator.cpp.s
 
 camera.o: camera.cpp.o
@@ -204,7 +204,7 @@ camera.o: camera.cpp.o
 
 # target to build an object file
 camera.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/camera.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/camera.cpp.o
 .PHONY : camera.cpp.o
 
 camera.i: camera.cpp.i
@@ -213,7 +213,7 @@ camera.i: camera.cpp.i
 
 # target to preprocess a source file
 camera.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/camera.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/camera.cpp.i
 .PHONY : camera.cpp.i
 
 camera.s: camera.cpp.s
@@ -222,7 +222,7 @@ camera.s: camera.cpp.s
 
 # target to generate assembly for a file
 camera.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/camera.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/camera.cpp.s
 .PHONY : camera.cpp.s
 
 main.o: main.cpp.o
@@ -231,7 +231,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/main.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -240,7 +240,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/main.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -249,7 +249,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/main.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 misc/sphere_drawing.o: misc/sphere_drawing.cpp.o
@@ -258,7 +258,7 @@ misc/sphere_drawing.o: misc/sphere_drawing.cpp.o
 
 # target to build an object file
 misc/sphere_drawing.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.o
 .PHONY : misc/sphere_drawing.cpp.o
 
 misc/sphere_drawing.i: misc/sphere_drawing.cpp.i
@@ -267,7 +267,7 @@ misc/sphere_drawing.i: misc/sphere_drawing.cpp.i
 
 # target to preprocess a source file
 misc/sphere_drawing.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.i
 .PHONY : misc/sphere_drawing.cpp.i
 
 misc/sphere_drawing.s: misc/sphere_drawing.cpp.s
@@ -276,7 +276,7 @@ misc/sphere_drawing.s: misc/sphere_drawing.cpp.s
 
 # target to generate assembly for a file
 misc/sphere_drawing.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.s
 .PHONY : misc/sphere_drawing.cpp.s
 
 particles.o: particles.cpp.o
@@ -285,7 +285,7 @@ particles.o: particles.cpp.o
 
 # target to build an object file
 particles.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/particles.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/particles.cpp.o
 .PHONY : particles.cpp.o
 
 particles.i: particles.cpp.i
@@ -294,7 +294,7 @@ particles.i: particles.cpp.i
 
 # target to preprocess a source file
 particles.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/particles.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/particles.cpp.i
 .PHONY : particles.cpp.i
 
 particles.s: particles.cpp.s
@@ -303,8 +303,35 @@ particles.s: particles.cpp.s
 
 # target to generate assembly for a file
 particles.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/particles.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/particles.cpp.s
 .PHONY : particles.cpp.s
+
+plane.o: plane.cpp.o
+
+.PHONY : plane.o
+
+# target to build an object file
+plane.cpp.o:
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/plane.cpp.o
+.PHONY : plane.cpp.o
+
+plane.i: plane.cpp.i
+
+.PHONY : plane.i
+
+# target to preprocess a source file
+plane.cpp.i:
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/plane.cpp.i
+.PHONY : plane.cpp.i
+
+plane.s: plane.cpp.s
+
+.PHONY : plane.s
+
+# target to generate assembly for a file
+plane.cpp.s:
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/plane.cpp.s
+.PHONY : plane.cpp.s
 
 sphere.o: sphere.cpp.o
 
@@ -312,7 +339,7 @@ sphere.o: sphere.cpp.o
 
 # target to build an object file
 sphere.cpp.o:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/sphere.cpp.o
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/sphere.cpp.o
 .PHONY : sphere.cpp.o
 
 sphere.i: sphere.cpp.i
@@ -321,7 +348,7 @@ sphere.i: sphere.cpp.i
 
 # target to preprocess a source file
 sphere.cpp.i:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/sphere.cpp.i
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/sphere.cpp.i
 .PHONY : sphere.cpp.i
 
 sphere.s: sphere.cpp.s
@@ -330,7 +357,7 @@ sphere.s: sphere.cpp.s
 
 # target to generate assembly for a file
 sphere.cpp.s:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/sphere.cpp.s
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(MAKE) -f src/CMakeFiles/clothsim.dir/build.make src/CMakeFiles/clothsim.dir/sphere.cpp.s
 .PHONY : sphere.cpp.s
 
 # Help Target
@@ -361,6 +388,9 @@ help:
 	@echo "... particles.o"
 	@echo "... particles.i"
 	@echo "... particles.s"
+	@echo "... plane.o"
+	@echo "... plane.i"
+	@echo "... plane.s"
 	@echo "... sphere.o"
 	@echo "... sphere.i"
 	@echo "... sphere.s"
@@ -375,6 +405,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/xingyifei1998/desktop/cs/CS184/final/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -11,6 +11,7 @@
 #include "sphere.h"
 #include "ParticleSimulator.h"
 #include "particles.h"
+#include "plane.h"
 
 typedef uint32_t gid_t;
 
@@ -135,42 +136,41 @@ void incompleteObjectError(const char *object, const char *attribute) {
 }
 
 void create_particles(particles *part) {
-  // Vector3D origin = Vector3D(0, 0, 0);
-  // double radius, friction;
-  // radius=0.01;
-  // friction=0.3;
-  // Sphere *s = new Sphere(origin, radius, friction);
-  // // for (int i = -5; i < 6; i++) {
-  // //   Sphere *s = new Sphere(origin+i*Vector3D(0.02, 0.02, 0.02), radius, friction);
-  // //   objects->push_back(s);
-  // // }
-
-  // for (int i = 0; i < 20; i++) {
-  //   for (int j = 0; j <20; j++) {
-  //     for (int k = 0; k<20; k++) {
-  //       Sphere *s = new Sphere(origin+Vector3D(0.01*i, 0.01*j, 0.01*k), radius, friction);
-  //       objects->push_back(s);
-  //     }
-  //   }
-  // }
   part->width = 1.0;
   part->height = 1.0;
   part->length = 1.0;
-  part->num_width_points = 10;
-  part->num_height_points = 10;
-  part->num_length_points = 10;
+  part->num_width_points = 3;
+  part->num_height_points = 3;
+  part->num_length_points = 3;
   part->radius=0.01;
   part->friction=0.3;
 }
 
+void loadObjects(vector<CollisionObject *>* objects) {
+    Vector3D point = Vector3D(0, 0, 0);
+    Vector3D normal = Vector3D(0, 1, 0);
+    double friction = 0.5;
+    auto *plane_bottom = new Plane(point, normal, friction);
+
+    objects->push_back(plane_bottom);
+}
+
 int main(int argc, char **argv) {
+  vector<CollisionObject *> objects;
   particles particle;
   create_particles(&particle);
   particle.buildGrid();
+
+  loadObjects(&objects);
+
   createGLContexts();
+
   app = new ParticleSimulator(screen);
+
   app->loadParticle(&particle);
+  app->loadCollisionObjects(&objects);
   app->init();
+
   screen->setVisible(true);
   screen->performLayout();
   setGLFWCallbacks();

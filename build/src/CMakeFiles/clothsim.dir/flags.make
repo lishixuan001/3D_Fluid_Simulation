@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -m64 -g -g   -Wno-deprecated-declarations -Wno-c++11-ext
 
 CXX_DEFINES = -DGLAD_GLAPI_EXPORT -DNANOGUI_GLAD -DNANOGUI_SHARED -DNVG_SHARED
 
-CXX_INCLUDES = -I/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/include -I/Users/xingyifei1998/desktop/cs/CS184/final/CGL/include -I/usr/local/include/freetype2 -I/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/glad/include -I/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/glfw/include -I/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/nanovg/src -I/Users/xingyifei1998/desktop/cs/CS184/final/ext/nanogui/ext/eigen 
+CXX_INCLUDES = -I"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/include" -I"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/include" -I/Library/Frameworks/Mono.framework/Headers -I/usr/local/include/freetype2 -I"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glad/include" -I"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/include" -I"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src" -I"/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/eigen" 
 

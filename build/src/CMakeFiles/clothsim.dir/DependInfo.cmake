@@ -4,12 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/xingyifei1998/desktop/cs/CS184/final/src/ParticleSimulator.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/src/camera.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/clothsim.dir/camera.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/src/main.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/clothsim.dir/main.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/src/misc/sphere_drawing.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/src/particles.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/clothsim.dir/particles.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/src/sphere.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/src/CMakeFiles/clothsim.dir/sphere.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/ParticleSimulator.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/camera.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/src/CMakeFiles/clothsim.dir/camera.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/main.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/src/CMakeFiles/clothsim.dir/main.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/sphere_drawing.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/src/CMakeFiles/clothsim.dir/misc/sphere_drawing.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/particles.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/src/CMakeFiles/clothsim.dir/particles.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/plane.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/src/CMakeFiles/clothsim.dir/plane.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/sphere.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/src/CMakeFiles/clothsim.dir/sphere.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
@@ -25,6 +26,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../ext/nanogui/include"
   "../CGL/include"
+  "/Library/Frameworks/Mono.framework/Headers"
   "/usr/local/include/freetype2"
   "../ext/nanogui/ext/glad/include"
   "../ext/nanogui/ext/glfw/include"
@@ -34,8 +36,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/CGL.dir/DependInfo.cmake"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui.dir/DependInfo.cmake"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/CGL.dir/DependInfo.cmake"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

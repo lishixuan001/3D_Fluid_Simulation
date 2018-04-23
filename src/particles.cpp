@@ -6,6 +6,8 @@
 #include "particles.h"
 #include "sphere.h"
 #include "CGL/vector3D.h"
+#include "collisionObject.h"
+#include "plane.h"
 
 using namespace std;
 
@@ -19,15 +21,16 @@ particles::particles(double width, double height, double length, int num_width_p
   this->num_length_points = num_length_points;
   this->radius = radius;
   this->friction = friction;
-  this->origin=Vector3D(0, 0, 0);
-  buildGrid();
+  this->origin = Vector3D(3, 3, 3);
+//  buildGrid();
 }
 
 void particles::buildGrid() {
   for (int i=0; i<num_height_points; i++) {
     for (int j=0; j<num_width_points; j++) {
       for (int k=0; k<num_length_points; k++) {
-        particle_list.emplace_back(Sphere(origin+radius*Vector3D(i, j, k), radius, friction));
+        Sphere sp = Sphere(origin+Vector3D(2*radius*i, 2*radius*j, 2*radius*k), radius, friction);
+        particle_list.emplace_back(sp);
       }
     }
   }
@@ -36,70 +39,21 @@ void particles::buildGrid() {
 particles::~particles() {
 }
 
-// void particles::simulate(double frames_per_sec, double simulation_steps,
-//                      vector<Vector3D> external_accelerations) {
-//   for (int i=0; i<num_height_points; i++) {
-//     for (int j=0; j<num_width_points; j++) {
-//       for (int k=0; k<num_length_points; k++) {
-//         particle_list[i*j*i+i*j*k].radius=particle_list[i+i*j+i*j*k].radius*1.001;
-//       }
-//     }
-//   }
-// }
-
-// void particles::simulate(double frames_per_sec, double simulation_steps,
-//                      Vector3D external_forces,
-//                      vector<CollisionObject *> *collision_objects) {
-//   double delta_t = 1.0f / frames_per_sec / simulation_steps;
-//   for (Sphere i : particle_list) {
-//     i.lastOrigin = i.origin;
-//     i.origin += delta_t * delta_t * external_forces;
-//   }
-
-//   // for (Sphere i : particle_list)
-//   // {
-//   //   i.Neighbor = findNeighbors(i);// Note that, we try to find neighbors of predicted position of i
-//   // }
-
-//   int MAX_iter =100;
-//   for (int iter=0; iter < MAX_iter ; iter++)
-//   {
-//     for (Sphere i: particle_list){
-//       i.lambda = findLambda(i);     // see equation (1) - (9)
-//     }
-//     for (Sphere i: particle_list){
-//       i.delta_p  = findDeltaP(i);     // see eqaution (1) - (9). Change of position
-//       perform_Collision_Detection(i); // if collsion, change delta_p;
-//     }
-//     for (Sphere i: particle_list){
-//       i.predicted_position += i.delta_p;
-//     }
-//   }
-
-//   for (Sphere i : particle_list){
-//     i.velocity = (i.predicted_position - i.origin) / delta_t;
-
-//     // apply vorticity confinement and XSPH viscosity
-//     // Not sure what to do
-
-//     i.origin = i.predicted_position;
-
-//   }
-// }
-void particles::simulate(double frames_per_sec, double simulation_steps,
-                     Vector3D external_forces,
-                     vector<CollisionObject *> *collision_objects) {
+void particles::simulate(double frames_per_sec, double simulation_steps, vector<Vector3D> external_forces,
+                         vector<CollisionObject *> *collision_objects) {
 
   double delta_t = 1.0f / frames_per_sec / simulation_steps;
 
-  for (Sphere i : particle_list) {
-    i.velocity += delta_t * external_forces;
-    i.predicted_position = i.origin + delta_t * i.velocity;
+  for (Sphere &sp : particle_list) {
+    for (const Vector3D &external_force : external_forces) {
+        sp.velocity += delta_t * external_force;
+    }
+    sp.predicted_position = sp.origin + delta_t * sp.velocity;
   }
 
 //  for (Sphere i : particle_list)
 //  {
-//    i.Neighbor = findNeighbors(i);// Note that, we try to find neighbors of predicted position of i
+//    i.neighbors = findNeighbors(i);// Note that, we try to find neighbors of predicted position of i
 //  }
 //
 //  for (Sphere i: particle_list) {
@@ -115,18 +69,22 @@ void particles::simulate(double frames_per_sec, double simulation_steps,
 //    i.predicted_position += i.delta_p;
 //  }
 
-    for (Sphere sp : particle_list) {
+    for (Sphere &sp : particle_list) {
+        sp.velocity = (sp.predicted_position - sp.origin) / delta_t;
+        sp.last_origin = sp.origin;
+        sp.origin = sp.predicted_position;
+    }
+
+    build_spatial_map();
+    for (Sphere &sp : particle_list) {
         self_collide(sp, simulation_steps);
     }
 
-  for (Sphere i : particle_list) {
-    i.velocity = (i.predicted_position - i.origin) / delta_t;
-
-    // apply vorticity confinement and XSPH viscosity
-    // Not sure what to do
-
-    i.origin = i.predicted_position;
-  }
+//    for (Sphere &sp : particle_list) {
+//        for (CollisionObject *co : *collision_objects) {
+//            co->collide(sp);
+//        }
+//    }
 }
 
 double pow(double num, int index) {
@@ -146,12 +104,13 @@ void particles::self_collide(Sphere sp, double simulation_steps) {
     float cases = 0;
 
     for (Sphere* item : *map[position]) {
+
         Vector3D distanceDiff = sp.origin - item->origin;
         bool isSelf = (item == &sp);
         bool tooClose = sqrt(pow(distanceDiff[0], 2) +
                              pow(distanceDiff[1], 2) +
                              pow(distanceDiff[2], 2)) < (2 * sp.radius);
-        if (!isSelf && !tooClose) {
+        if (!isSelf && tooClose) {
             Vector3D correction = distanceDiff.unit() * 2 * sp.radius - distanceDiff;
             corrections += correction;
             cases += 1;
@@ -220,19 +179,6 @@ float particles::hash_position(Vector3D pos) {
     return getHash(array);
 }
 
-
-// float particles::hash_position(Vector3D pos) {
-//   // TODO (Part 4.1): Hash a 3D position into a unique float identifier that represents
-//   // membership in some uniquely identified 3D box volume.
-//   float w = 3 * width / num_width_points;
-//   float h = 3 * height / num_height_points;
-//   float t = max(w,h);
-//   int a = (int) floor(pos.x / w);
-//   int b = (int) floor(pos.y / h);
-//   int c = (int) floor(pos.z / t);
-//   return (31*a+b)*31+c;
-
-// }
 
 ///////////////////////////////////////////////////////
 /// YOU DO NOT NEED TO REFER TO ANY CODE BELOW THIS ///

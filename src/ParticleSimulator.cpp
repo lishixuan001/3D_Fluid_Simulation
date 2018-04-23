@@ -63,8 +63,7 @@ void ParticleSimulator::init() {
   camera_info.fClip = 10000;
 
   // Try to intelligently figure out the camera target
-  Vector3D avg_object_position(0, 0, 0); 
-  cout<<part->particle_list.size()<<endl;
+  Vector3D avg_object_position(0, 0, 0);
   for (auto &the_objects : part->particle_list) {
     avg_object_position += the_objects.origin / part->particle_list.size();
   }
@@ -96,10 +95,10 @@ void ParticleSimulator::drawContents() {
   glEnable(GL_DEPTH_TEST);
 
   if (!is_paused) {
-    vector<Vector3D> external_accelerations = {gravity};
+    vector<Vector3D> external_forces = {gravity};
 
     for (int i = 0; i < simulation_steps; i++) {
-      part->simulate(frames_per_sec, simulation_steps, external_accelerations);
+      part->simulate(frames_per_sec, simulation_steps, external_forces, collision_objects);
     }
   }
 
@@ -138,6 +137,10 @@ void ParticleSimulator::drawContents() {
   for (Sphere s : part->particle_list) {
     s.render(shader);
   }
+
+//    for (CollisionObject *co : *collision_objects) {
+//        co->render(shader);
+//    }
 }
 
 

@@ -4,18 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/xingyifei1998/desktop/cs/CS184/final/CGL/src/base64.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/CGL.dir/base64.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/CGL/src/color.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/CGL.dir/color.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/CGL/src/complex.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/CGL.dir/complex.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/CGL/src/lodepng.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/CGL/src/matrix3x3.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/CGL/src/matrix4x4.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/CGL/src/quaternion.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/CGL/src/spectrum.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/CGL/src/tinyxml2.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/CGL/src/vector2D.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/CGL/src/vector3D.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.o"
-  "/Users/xingyifei1998/desktop/cs/CS184/final/CGL/src/vector4D.cpp" "/Users/xingyifei1998/desktop/cs/CS184/final/build/CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/base64.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/CGL.dir/base64.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/color.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/CGL.dir/color.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/complex.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/CGL.dir/complex.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/lodepng.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/matrix3x3.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/matrix4x4.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/quaternion.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/spectrum.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/tinyxml2.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/vector2D.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/vector3D.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.o"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/vector4D.cpp" "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
@@ -31,6 +31,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../ext/nanogui/include"
   "../CGL/include"
+  "/Library/Frameworks/Mono.framework/Headers"
   "/usr/local/include/freetype2"
   "../ext/nanogui/ext/glad/include"
   "../ext/nanogui/ext/glfw/include"
@@ -41,7 +42,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/xingyifei1998/desktop/cs/CS184/final/build/ext/nanogui/CMakeFiles/nanogui.dir/DependInfo.cmake"
+  "/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/build/ext/nanogui/CMakeFiles/nanogui.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

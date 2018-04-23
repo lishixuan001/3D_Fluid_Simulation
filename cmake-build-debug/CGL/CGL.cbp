@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CGL"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CGL\;CMake Files\CGL\src\;CMake Files\ext\;CMake Files\ext\nanogui\;CMake Files\ext\nanogui\ext\;CMake Files\ext\nanogui\ext\glfw\;CMake Files\ext\nanogui\ext\glfw\CMake\;CMake Files\ext\nanogui\ext\glfw\CMake\modules\;CMake Files\ext\nanogui\ext\glfw\src\;CMake Files\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lishixuan/Documents/Classes/CS\ 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lishixuan/Documents/Classes/CS\ 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lishixuan/Documents/Classes/CS\ 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lishixuan/Documents/Classes/CS\ 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CGL">
+				<Option output="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/src/libCGL.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DNANOGUI_SHARED"/>
+					<Add option="-DNVG_SHARED"/>
+					<Add option="-DGLAD_GLAPI_EXPORT"/>
+					<Add option="-DNANOGUI_GLAD"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/include"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/include"/>
+					<Add directory="/Library/Frameworks/Mono.framework/Headers"/>
+					<Add directory="/usr/local/include/freetype2"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glad/include"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/include"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/eigen"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/include/CGL"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lishixuan/Documents/Classes/CS\ 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 CGL"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lishixuan/Documents/Classes/CS\ 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lishixuan/Documents/Classes/CS\ 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lishixuan/Documents/Classes/CS\ 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CGL/fast">
+				<Option output="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/src/libCGL.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DNANOGUI_SHARED"/>
+					<Add option="-DNVG_SHARED"/>
+					<Add option="-DGLAD_GLAPI_EXPORT"/>
+					<Add option="-DNANOGUI_GLAD"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/include"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/include"/>
+					<Add directory="/Library/Frameworks/Mono.framework/Headers"/>
+					<Add directory="/usr/local/include/freetype2"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glad/include"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/include"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/nanovg/src"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/eigen"/>
+					<Add directory="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/include/CGL"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lishixuan/Documents/Classes/CS\ 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 CGL/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lishixuan/Documents/Classes/CS\ 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lishixuan/Documents/Classes/CS\ 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lishixuan/Documents/Classes/CS\ 184/Projects/CS_184_Final_Project/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/base64.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/color.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/complex.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/lodepng.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/matrix3x3.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/matrix4x4.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/quaternion.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/spectrum.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/tinyxml2.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/vector2D.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/vector3D.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/vector4D.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\CGL\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\CGL\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\CGL\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/CGL/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\CGL\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/CMake/modules/FindVulkan.cmake">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\CMake\modules\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/CMake/modules/FindVulkan.cmake">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\CMake\modules\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/CMake/modules/FindVulkan.cmake">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\CMake\modules\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/ext/nanogui/ext/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
