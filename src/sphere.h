@@ -22,6 +22,8 @@ public:
   Vector3D force;
   double friction;
   double lambda;
+  double C;//contrain
+  Vector3D C_Gradient;
 
     Vector3D velocity;
     Vector3D predicted_position;

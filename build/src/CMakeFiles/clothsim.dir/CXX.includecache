@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -1380,13 +1380,13 @@ vector
 nanogui/widget.h
 -
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/./misc/sphere_drawing.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/./misc/sphere_drawing.h
 nanogui/nanogui.h
 -
 CGL/CGL.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/./misc/CGL/CGL.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/./misc/CGL/CGL.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/ParticleSimulator.cpp
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/ParticleSimulator.cpp
 cmath
 -
 glad/glad.h
@@ -1396,29 +1396,29 @@ CGL/vector3D.h
 nanogui/nanogui.h
 -
 ParticleSimulator.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/ParticleSimulator.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/ParticleSimulator.h
 camera.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/camera.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/camera.h
 particles.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/particles.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/particles.h
 sphere.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/sphere.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/sphere.h
 misc/camera_info.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/camera_info.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/misc/camera_info.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/ParticleSimulator.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/ParticleSimulator.h
 nanogui/nanogui.h
 -
 camera.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/camera.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/camera.h
 particles.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/particles.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/particles.h
 collisionObject.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collisionObject.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/collisionObject.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/camera.cpp
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/camera.cpp
 camera.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/camera.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/camera.h
 fstream
 -
 iostream
@@ -1426,27 +1426,27 @@ iostream
 sstream
 -
 CGL/misc.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/CGL/misc.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/CGL/misc.h
 CGL/vector3D.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/CGL/vector3D.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/CGL/vector3D.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/camera.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/camera.h
 iostream
 -
 CGL/matrix3x3.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/CGL/matrix3x3.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/CGL/matrix3x3.h
 misc/camera_info.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/camera_info.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/misc/camera_info.h
 math.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/math.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/math.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collisionObject.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/collisionObject.h
 nanogui/nanogui.h
 -
 CGL/vector3D.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/CGL/vector3D.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/CGL/vector3D.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/main.cpp
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/main.cpp
 getopt.h
 -
 iostream
@@ -1464,47 +1464,47 @@ unistd.h
 unordered_set
 -
 CGL/CGL.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/CGL/CGL.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/CGL/CGL.h
 sphere.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/sphere.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/sphere.h
 ParticleSimulator.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/ParticleSimulator.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/ParticleSimulator.h
 particles.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/particles.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/particles.h
 plane.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/plane.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/plane.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/camera_info.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/misc/camera_info.h
 collada_info.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/collada_info.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/misc/collada_info.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/collada_info.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/misc/collada_info.h
 string
 -
 vector
 -
 CGL/matrix4x4.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/CGL/matrix4x4.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/misc/CGL/matrix4x4.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/sphere_drawing.cpp
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/misc/sphere_drawing.cpp
 cmath
 -
 nanogui/nanogui.h
 -
 sphere_drawing.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/sphere_drawing.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/misc/sphere_drawing.h
 CGL/color.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/CGL/color.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/misc/CGL/color.h
 CGL/vector3D.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/CGL/vector3D.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/misc/CGL/vector3D.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/sphere_drawing.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/misc/sphere_drawing.h
 nanogui/nanogui.h
 -
 CGL/CGL.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/misc/CGL/CGL.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/misc/CGL/CGL.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/particles.cpp
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/particles.cpp
 iostream
 -
 math.h
@@ -1514,17 +1514,17 @@ random
 vector
 -
 particles.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/particles.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/particles.h
 sphere.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/sphere.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/sphere.h
 CGL/vector3D.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/CGL/vector3D.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/CGL/vector3D.h
 collisionObject.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collisionObject.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/collisionObject.h
 plane.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/plane.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/plane.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/particles.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/particles.h
 unordered_set
 -
 unordered_map
@@ -1532,47 +1532,47 @@ unordered_map
 vector
 -
 CGL/CGL.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/CGL/CGL.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/CGL/CGL.h
 CGL/misc.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/CGL/misc.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/CGL/misc.h
 sphere.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/sphere.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/sphere.h
 collisionObject.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collisionObject.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/collisionObject.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/plane.cpp
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/plane.cpp
 iostream
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/iostream
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/iostream
 nanogui/nanogui.h
 -
 ParticleSimulator.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/ParticleSimulator.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/ParticleSimulator.h
 plane.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/plane.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/plane.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/plane.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/plane.h
 vector
 -
 nanogui/nanogui.h
 -
 CGL/CGL.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/CGL/CGL.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/CGL/CGL.h
 collisionObject.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/collisionObject.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/collisionObject.h
 CGL/vector3D.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/CGL/vector3D.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/CGL/vector3D.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/sphere.cpp
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/sphere.cpp
 nanogui/nanogui.h
 -
 ./misc/sphere_drawing.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/./misc/sphere_drawing.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/./misc/sphere_drawing.h
 sphere.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/sphere.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/sphere.h
 
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/sphere.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/sphere.h
 nanogui/nanogui.h
 -
 CGL/vector3D.h
-/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/src/CGL/vector3D.h
+/Users/user/CS184/test/Apr22/CS_184_Final_Project/src/CGL/vector3D.h
 

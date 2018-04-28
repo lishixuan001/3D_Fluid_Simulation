@@ -16,12 +16,12 @@ particles::particles(double width, double height, double length, int num_width_p
   this->width = width;
   this->height = height;
   this->length = length;
-  this->num_width_points = num_width_points;
-  this->num_height_points = num_height_points;
-  this->num_length_points = num_length_points;
-  this->radius = radius;
+  this->num_width_points = 5;//num_width_points;
+    this->num_height_points = 5;//num_height_points;
+    this->num_length_points = 5;//num_length_points;
+    this->radius = 1;//radius;
   this->friction = friction;
-  this->origin = Vector3D(3, 3, 3);
+  this->origin = Vector3D(0, 0, 0);
 //  buildGrid();
 }
 
@@ -29,8 +29,10 @@ void particles::buildGrid() {
   for (int i=0; i<num_height_points; i++) {
     for (int j=0; j<num_width_points; j++) {
       for (int k=0; k<num_length_points; k++) {
-        Sphere sp = Sphere(origin+Vector3D(2*radius*i, 2*radius*j, 2*radius*k), radius, friction);
+        Sphere sp = Sphere(origin+2*Vector3D(radius*i, radius*j, radius*k), radius, friction);
+        sp.velocity = Vector3D(0,0.1,0);
         particle_list.emplace_back(sp);
+        cout<<sp.origin<<endl;
       }
     }
   }
@@ -51,34 +53,74 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
     sp.predicted_position = sp.origin + delta_t * sp.velocity;
   }
 
-//  for (Sphere i : particle_list)
-//  {
-//    i.neighbors = findNeighbors(i);// Note that, we try to find neighbors of predicted position of i
-//  }
-//
-//  for (Sphere i: particle_list) {
-//    i.lambda = findLambda(i);     // see equation (1) - (9)
-//  }
-//
-//  for (Sphere i: particle_list) {
-//    i.delta_p = findDeltaP(i);     // see eqaution (1) - (9). Change of position
-//    perform_Collision_Detection(i); // if collsion, change delta_p;
-//  }
-//
-//  for (Sphere i: particle_list) {
-//    i.predicted_position += i.delta_p;
-//  }
+    
+  // Brute force finding neighbor
+  // Set h=1.5, with r=1, m = 1
+  //Assume rest(start) density is 1. Find current density
+  double h=1.1;
+  for (Sphere i : particle_list){
+      i.C = 0.0;
+      for (Sphere j: particle_list){
+      	  if (j.origin == i.origin)continue; // may exists bug, want to skip i
+
+          Vector3D distij = (i.predicted_position-j.predicted_position);
+          //cout<<i.origin<<endl;
+          //cout<<j.origin<<endl;          
+          //cout<<distij<<"!"<<endl;
+          if ( distij.norm()<h){
+              i.neighbors.push_back(&j);// Note that, we try to find neighbors of predicted position of i
+              i.C  +=   pow((pow(h,2) - pow((distij.norm()),2)),3) * 315/(64*PI*pow(h,9)); //May be the wrong W, poly6 used
+          }
+      }
+      i.C = i.C/1.0 - 1;
+      //cout<<i.C<<endl;
+  }
+  
+  //find Lambda
+  for (Sphere i : particle_list){
+      i.lambda = 0.0;
+      double temp=0.0;
+      Vector3D temp_Gradient;
+      for (Sphere* j: i.neighbors){
+          if (j->origin == i.origin)continue; // may exists bug, want to skip i
+          Vector3D dist = i.predicted_position-j->predicted_position;
+          j->C_Gradient = 6*pow((pow(h,2)-pow(dist.norm(),2)),2)* dist;//May be the wrong W, poly6 used
+          temp_Gradient +=j->C_Gradient;
+          temp			+=pow((j->C_Gradient).norm(),2);
+      }      
+      i.C_Gradient = temp_Gradient;
+      temp		  += pow((i.C_Gradient).norm(),2);
+      i.lambda     = -i.C/temp;
+  }
+  
+  for (Sphere i: particle_list) {
+  	  i.delta_p    = i.C_Gradient * i.lambda;
+    //perform_Collision_Detection(i); // if collsion, change delta_p;
+  }
+  
+  
+  
+
+  for (Sphere i: particle_list) {
+    i.predicted_position += i.delta_p;
+  }
 
     for (Sphere &sp : particle_list) {
+    	if (sp.predicted_position.y<0){
+    		sp.predicted_position.y = 0;
+    		//double rand_direction    =
+    		//i.predicted_position.x += i.predicted_position.y/2;
+    		//i.predicted_position.y += i.predicted_position.y/2;
+    	}
         sp.velocity = (sp.predicted_position - sp.origin) / delta_t;
         sp.last_origin = sp.origin;
         sp.origin = sp.predicted_position;
     }
 
-    build_spatial_map();
-    for (Sphere &sp : particle_list) {
-        self_collide(sp, simulation_steps);
-    }
+//    build_spatial_map();
+//    for (Sphere &sp : particle_list) {
+//        self_collide(sp, simulation_steps);
+//    }
 
 //    for (Sphere &sp : particle_list) {
 //        for (CollisionObject *co : *collision_objects) {
