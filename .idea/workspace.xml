@@ -17,73 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="769640a3-ccfb-4b89-8343-9986140ffb61" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/1" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/10" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/11" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/12" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/13" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/14" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/22" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/23" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/24" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/25" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/26" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/27" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/28" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/29" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/30" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/31" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/32" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/33" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/34" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/35" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/36" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/37" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/38" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/39" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/4" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/40" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/41" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/42" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/43" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/44" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/45" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/46" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/47" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/48" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/49" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/50" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/51" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/52" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/53" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/54" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/55" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/56" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/57" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/58" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/59" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/6" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/60" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/61" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/62" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/63" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/64" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/65" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/66" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/67" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/68" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/69" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/7" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/8" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/9" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/count.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/clothsim" afterPath="$PROJECT_DIR$/build/clothsim" />
       <change beforePath="$PROJECT_DIR$/src/particles.cpp" afterPath="$PROJECT_DIR$/src/particles.cpp" />
-      <change beforePath="$PROJECT_DIR$/src/sphere.h" afterPath="$PROJECT_DIR$/src/sphere.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -125,8 +59,8 @@
           <file leaf-file-name="particles.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/particles.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="519">
-                  <caret line="82" column="41" lean-forward="false" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+                <state relative-caret-position="360">
+                  <caret line="86" column="15" lean-forward="false" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
                   </folding>
@@ -347,15 +281,16 @@
       <workItem from="1524192423882" duration="5356000" />
       <workItem from="1524409251353" duration="18208000" />
       <workItem from="1524504531627" duration="4559000" />
-      <workItem from="1524947948504" duration="1691000" />
+      <workItem from="1524947948504" duration="1815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30918000" />
+    <option name="totallyTimeSpent" value="31042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12473573" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -364,7 +299,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2164846" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2164846" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -763,8 +698,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/particles.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="82" column="41" lean-forward="false" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+        <state relative-caret-position="360">
+          <caret line="86" column="15" lean-forward="false" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

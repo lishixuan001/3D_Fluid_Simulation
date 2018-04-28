@@ -76,35 +76,6 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
       i.C = i.C / rho - 1;
   }
 
-  //find Lambda
-<<<<<<< HEAD
-  for (Sphere &i : particle_list){
-=======
-  for (Sphere i : particle_list){
-      //cout<<i.C<<endl;
->>>>>>> 27b561cd0a6fcb33897226e2ede8bd773955eb94
-      i.lambda = 0.0;
-      double temp=0.0;
-      Vector3D temp_Gradient;
-      for (Sphere *j : i.neighbors){
-          if (j->origin == i.origin)continue; // may exists bug, want to skip i
-<<<<<<< HEAD
-          Vector3D dist = i.predicted_position - j->predicted_position;
-          j->C_Gradient = 6 * pow((pow(h, 2) - pow(dist.norm(), 2)), 2) * dist;//May be the wrong W, poly6 used
-          temp_Gradient += j->C_Gradient;
-          temp += pow((j->C_Gradient).norm(),2);
-      }
-=======
-          Vector3D dist =  i.predicted_position-j->predicted_position;
-          j->C_Gradient =  6*pow((pow(h,2)-pow(dist.norm(),2)),2)* dist;//May be the wrong W, poly6 used
-          temp_Gradient += j->C_Gradient;
-          temp			+= pow((j->C_Gradient).norm(),2);
-      }      
->>>>>>> 27b561cd0a6fcb33897226e2ede8bd773955eb94
-      i.C_Gradient = temp_Gradient;
-      temp += pow((i.C_Gradient).norm(),2);
-      i.lambda = -i.C/temp;
-  }
   
   for (Sphere &sp : particle_list) {
   	  sp.delta_p = sp.C_Gradient * sp.lambda;
