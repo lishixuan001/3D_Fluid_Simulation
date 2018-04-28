@@ -57,47 +57,47 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
   // Brute force finding neighbor
   // Set h=0.02, with r=0.01, m = 1
   double h=0.02;
-  for (Sphere i : particle_list){
+  for (Sphere &i : particle_list){
       i.C = 0.0;
-      for (Sphere j: particle_list){
-          Vector3D distij = (i.predicted_position-j.predicted_position);
-          if ( distij.norm()<h){
-              i.neighbors.push_back(&j);// Note that, we try to find neighbors of predicted position of i
-              i.C  +=   pow((pow(h,2) - pow((distij.norm()),2)),3) * 315/(64*PI*pow(h,9)); 
+      for (Sphere &j: particle_list){
+          Vector3D distij = (i.predicted_position - j.predicted_position);
+          if (distij.norm() < h) {
+              i.neighbors.push_back(j);// Note that, we try to find neighbors of predicted position of i
+              i.C += pow((pow(h,2) - pow((distij.norm()),2)),3) * 315/(64 * PI * pow(h,9));
               //May be the wrong W, poly6 used // checked and correct
           }
       }
-      double rho =pow(pow(h,2),3.0) * 315/(64*PI*pow(h,9.0));
-      i.C = i.C/rho - 1;
+      double rho = pow(pow(h, 2), 3.0) * 315 / (64 * PI * pow(h, 9.0));
+      i.C = i.C / rho - 1;
   }
   
   //find Lambda
-  for (Sphere i : particle_list){
+  for (Sphere &i : particle_list){
       i.lambda = 0.0;
       double temp=0.0;
       Vector3D temp_Gradient;
-      for (Sphere* j: i.neighbors){
-          if (j->origin == i.origin)continue; // may exists bug, want to skip i
-          Vector3D dist = i.predicted_position-j->predicted_position;
-          j->C_Gradient = 6*pow((pow(h,2)-pow(dist.norm(),2)),2)* dist;//May be the wrong W, poly6 used
-          temp_Gradient +=j->C_Gradient;
-          temp			+=pow((j->C_Gradient).norm(),2);
+      for (Sphere &j : i.neighbors){
+          if (j.origin == i.origin)continue; // may exists bug, want to skip i
+          Vector3D dist = i.predicted_position-j.predicted_position;
+          j.C_Gradient = 6*pow((pow(h,2)-pow(dist.norm(),2)),2)* dist;//May be the wrong W, poly6 used
+          temp_Gradient += j.C_Gradient;
+          temp += pow((j.C_Gradient).norm(),2);
       }      
       i.C_Gradient = temp_Gradient;
-      temp		  += pow((i.C_Gradient).norm(),2);
-      i.lambda     = -i.C/temp;
+      temp += pow((i.C_Gradient).norm(),2);
+      i.lambda = -i.C/temp;
   }
   
-  for (Sphere i: particle_list) {
-  	  i.delta_p    = i.C_Gradient * i.lambda;
-    //perform_Collision_Detection(i); // if collsion, change delta_p;
+  for (Sphere &sp : particle_list) {
+  	  sp.delta_p = sp.C_Gradient * sp.lambda;
+    //perform_Collision_Detection(sp); // if collsion, change delta_p;
   }
   
   
   
 
-  for (Sphere i: particle_list) {
-    i.predicted_position += i.delta_p;
+  for (Sphere &sp : particle_list) {
+    sp.predicted_position += sp.delta_p;
   }
 
     for (Sphere &sp : particle_list) {
@@ -112,10 +112,10 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
         sp.origin = sp.predicted_position;
     }
 
-//    build_spatial_map();
-//    for (Sphere &sp : particle_list) {
-//        self_collide(sp, simulation_steps);
-//    }
+    build_spatial_map();
+    for (Sphere &sp : particle_list) {
+        self_collide(sp, simulation_steps);
+    }
 
 //    for (Sphere &sp : particle_list) {
 //        for (CollisionObject *co : *collision_objects) {
