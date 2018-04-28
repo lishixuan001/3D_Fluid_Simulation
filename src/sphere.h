@@ -22,7 +22,7 @@ public:
   Vector3D force;
   double friction;
   double lambda;
-  double C;//contrain
+  double C;//constrain
   Vector3D C_Gradient;
 
     Vector3D velocity;

@@ -19,7 +19,7 @@ particles::particles(double width, double height, double length, int num_width_p
   this->num_width_points = 5;//num_width_points;
     this->num_height_points = 5;//num_height_points;
     this->num_length_points = 5;//num_length_points;
-    this->radius = 1;//radius;
+    this->radius = radius;
   this->friction = friction;
   this->origin = Vector3D(0, 0, 0);
 //  buildGrid();
@@ -29,7 +29,7 @@ void particles::buildGrid() {
   for (int i=0; i<num_height_points; i++) {
     for (int j=0; j<num_width_points; j++) {
       for (int k=0; k<num_length_points; k++) {
-        Sphere sp = Sphere(origin+2*Vector3D(radius*i, radius*j, radius*k), radius, friction);
+        Sphere sp = Sphere(origin+3*Vector3D(radius*i, radius*j, radius*k), radius, friction);
         sp.velocity = Vector3D(0,0.1,0);
         particle_list.emplace_back(sp);
         cout<<sp.origin<<endl;
@@ -55,25 +55,20 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
 
     
   // Brute force finding neighbor
-  // Set h=1.5, with r=1, m = 1
-  //Assume rest(start) density is 1. Find current density
-  double h=1.1;
+  // Set h=0.02, with r=0.01, m = 1
+  double h=0.02;
   for (Sphere i : particle_list){
       i.C = 0.0;
       for (Sphere j: particle_list){
-      	  if (j.origin == i.origin)continue; // may exists bug, want to skip i
-
           Vector3D distij = (i.predicted_position-j.predicted_position);
-          //cout<<i.origin<<endl;
-          //cout<<j.origin<<endl;          
-          //cout<<distij<<"!"<<endl;
           if ( distij.norm()<h){
               i.neighbors.push_back(&j);// Note that, we try to find neighbors of predicted position of i
-              i.C  +=   pow((pow(h,2) - pow((distij.norm()),2)),3) * 315/(64*PI*pow(h,9)); //May be the wrong W, poly6 used
+              i.C  +=   pow((pow(h,2) - pow((distij.norm()),2)),3) * 315/(64*PI*pow(h,9)); 
+              //May be the wrong W, poly6 used // checked and correct
           }
       }
-      i.C = i.C/1.0 - 1;
-      //cout<<i.C<<endl;
+      double rho =pow(pow(h,2),3.0) * 315/(64*PI*pow(h,9.0));
+      i.C = i.C/rho - 1;
   }
   
   //find Lambda
