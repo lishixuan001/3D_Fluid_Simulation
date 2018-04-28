@@ -50,7 +50,12 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
     for (const Vector3D &external_force : external_forces) {
         sp.velocity += delta_t * external_force;
     }
-    sp.predicted_position = sp.origin + delta_t * sp.velocity;
+    sp.predicted_position   = sp.origin + delta_t * sp.velocity;
+    if (sp.predicted_position.y <0)
+    {
+        sp.predicted_position.y = 0;
+        sp.velocity.y           = 0;
+    }
   }
 
     
@@ -72,17 +77,30 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
   }
 
   //find Lambda
+<<<<<<< HEAD
   for (Sphere &i : particle_list){
+=======
+  for (Sphere i : particle_list){
+      //cout<<i.C<<endl;
+>>>>>>> 27b561cd0a6fcb33897226e2ede8bd773955eb94
       i.lambda = 0.0;
       double temp=0.0;
       Vector3D temp_Gradient;
       for (Sphere *j : i.neighbors){
           if (j->origin == i.origin)continue; // may exists bug, want to skip i
+<<<<<<< HEAD
           Vector3D dist = i.predicted_position - j->predicted_position;
           j->C_Gradient = 6 * pow((pow(h, 2) - pow(dist.norm(), 2)), 2) * dist;//May be the wrong W, poly6 used
           temp_Gradient += j->C_Gradient;
           temp += pow((j->C_Gradient).norm(),2);
       }
+=======
+          Vector3D dist =  i.predicted_position-j->predicted_position;
+          j->C_Gradient =  6*pow((pow(h,2)-pow(dist.norm(),2)),2)* dist;//May be the wrong W, poly6 used
+          temp_Gradient += j->C_Gradient;
+          temp			+= pow((j->C_Gradient).norm(),2);
+      }      
+>>>>>>> 27b561cd0a6fcb33897226e2ede8bd773955eb94
       i.C_Gradient = temp_Gradient;
       temp += pow((i.C_Gradient).norm(),2);
       i.lambda = -i.C/temp;
@@ -101,9 +119,9 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
     for (Sphere &sp : particle_list) {
     	if (sp.predicted_position.y<0){
     		sp.predicted_position.y = 0;
-    		//double rand_direction    =
-    		//i.predicted_position.x += i.predicted_position.y/2;
-    		//i.predicted_position.y += i.predicted_position.y/2;
+//    		double rand_direction   = rand()/RAND_MAX*2*PI;
+//    		s.predicted_position.x += s.predicted_position.y * cos(rand_direction);
+//    		s.predicted_position.z += s.predicted_position.y * sin(rand_direction);
     	}
         sp.velocity = (sp.predicted_position - sp.origin) / delta_t;
         sp.last_origin = sp.origin;
