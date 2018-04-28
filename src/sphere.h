@@ -23,12 +23,15 @@ public:
   double friction;
   double lambda;
   double C;//constrain
+  double rho;
   Vector3D C_Gradient;
+  Vector3D temp_Gradient;
+    
 
     Vector3D velocity;
     Vector3D predicted_position;
     Vector3D delta_p;
-    vector<Sphere> neighbors;
+    vector<Sphere*> neighbors;
 };
 
 
