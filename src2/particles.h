@@ -27,7 +27,6 @@ struct particles {
   float hash_position(Vector3D pos);
   void build_spatial_map();
   void buildGrid();
-  vector<Sphere*> find_neighbors(Sphere &sp);
 
   // Cloth properties
   double width;

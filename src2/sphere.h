@@ -11,10 +11,9 @@ using namespace nanogui;
 struct Sphere {
 public:
   Sphere(const Vector3D &origin, double radius, double friction)
-      : last_origin(origin), origin(origin), radius(radius), friction(friction), start_position(origin){
+      : last_origin(origin), origin(origin), radius(radius), friction(friction) {
         
 }
-  Vector3D start_position;
   Vector3D origin;
   double radius;
   void render(GLShader &shader);
