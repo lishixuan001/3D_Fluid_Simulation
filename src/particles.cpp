@@ -51,7 +51,7 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
             sp.velocity += delta_t * external_force;
         }
         sp.predicted_position   = sp.origin + delta_t * sp.velocity;
-        if (sp.predicted_position.y <0)
+        if (sp.predicted_position.y < 0)
         {
             sp.predicted_position.y = 0;
             sp.velocity.y           = 0;
@@ -62,17 +62,20 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
     // Brute force finding neighbor
     // Set h=0.02, with r=0.01, m = 1
     double h = 2 * particle_list[0].radius;
-    for (Sphere &i : particle_list){
+    for (Sphere &i : particle_list) {
         i.C = 0.0;
-        for (Sphere &j: particle_list){
+        for (Sphere &j: particle_list) {
             Vector3D distij = (i.predicted_position - j.predicted_position);
-            if ( distij.norm() < h){
+
+            cout << "norm1: " << distij.norm() << endl;
+
+            if (distij.norm() < h){
                 i.neighbors.push_back(j);// Note that, we try to find neighbors of predicted position of i
-                i.C += pow((pow(h,2) - pow((distij.norm()),2)),3) * 315 / (64 * PI * pow(h, 9));
+                i.C += pow((pow(h, 2) - pow((distij.norm()), 2)), 3) * 315 / (64 * PI * pow(h, 9));
                 //May be the wrong W, poly6 used // checked and correct
             }
         }
-        double rho = pow(pow(h,2),3.0) * 315/(64*PI*pow(h,9.0));
+        double rho = pow(pow(h, 2), 3.0) * 315 / (64 * PI * pow(h, 9.0));
         i.C = i.C / rho - 1;
     }
 
@@ -80,16 +83,19 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
     for (Sphere &i : particle_list){
         i.lambda = 0.0;
         double temp = 0.0;
-        Vector3D temp_Gradient;
+        Vector3D temp_Gradient = Vector3D(0, 0, 0);
         for (Sphere &j : i.neighbors){
-            if (j.origin == i.origin)continue; // may exists bug, want to skip i
+            if (&i == &j) continue; // may exists bug, want to skip i
             Vector3D dist = i.predicted_position - j.predicted_position;
+
+            cout << "norm2: " << dist.norm() << endl;
+
             j.C_Gradient = 6 * pow((pow(h, 2) - pow(dist.norm(), 2)), 2) * dist;//May be the wrong W, poly6 used
             temp_Gradient += j.C_Gradient;
             temp += pow((j.C_Gradient).norm(), 2);
         }
         i.C_Gradient = temp_Gradient;
-        temp += pow((i.C_Gradient).norm(),2);
+        temp += pow((i.C_Gradient).norm(), 2);
         i.lambda = -i.C / temp;
     }
 
