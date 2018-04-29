@@ -41,6 +41,11 @@ struct particles {
   float friction;
   e_orientation orientation;
 
+    double bounce_rate;
+    double x_bounce;
+    double y_bounce;
+    double z_bounce;
+
   vector<Sphere> particle_list;
 
   // Spatial hashing

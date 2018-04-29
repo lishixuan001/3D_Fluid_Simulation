@@ -139,9 +139,9 @@ void create_particles(particles *part) {
   part->width = 1.0;
   part->height = 1.0;
   part->length = 1.0;
-  part->num_width_points = 3;
-  part->num_height_points = 3;
-  part->num_length_points = 3;
+  part->num_width_points = 10;
+  part->num_height_points = 10;
+  part->num_length_points = 10;
   part->radius=0.01;
   part->friction=0.3;
 }
