@@ -30,6 +30,7 @@ public:
     
 
     Vector3D velocity;
+    Vector3D next_velocity;
     Vector3D predicted_position;
     Vector3D delta_p;
     vector<Sphere*> neighbors;

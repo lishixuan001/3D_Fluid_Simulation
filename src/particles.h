@@ -46,6 +46,8 @@ struct particles {
     double y_bounce;
     double z_bounce;
 
+
+
   vector<Sphere> particle_list;
 
   // Spatial hashing

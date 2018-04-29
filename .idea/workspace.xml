@@ -18,7 +18,15 @@
   <component name="ChangeListManager">
     <list default="true" id="769640a3-ccfb-4b89-8343-9986140ffb61" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/build/clothsim" afterPath="$PROJECT_DIR$/build/clothsim" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/ParticleSimulator.cpp.o" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/main.cpp.o" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/main.cpp.o" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/particles.cpp.o" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/particles.cpp.o" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/plane.cpp.o" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/plane.cpp.o" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/sphere.cpp.o" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/clothsim.dir/sphere.cpp.o" />
       <change beforePath="$PROJECT_DIR$/src/particles.cpp" afterPath="$PROJECT_DIR$/src/particles.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/particles.h" afterPath="$PROJECT_DIR$/src/particles.h" />
+      <change beforePath="$PROJECT_DIR$/src/sphere.h" afterPath="$PROJECT_DIR$/src/sphere.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +42,18 @@
       <file leaf-file-name="particles.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/particles.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="45" column="20" lean-forward="false" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+            <state relative-caret-position="559">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sphere.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sphere.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -45,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="457">
-              <caret line="161" column="23" lean-forward="true" selection-start-line="161" selection-start-column="23" selection-end-line="161" selection-end-column="23" />
+              <caret line="161" column="23" lean-forward="false" selection-start-line="161" selection-start-column="23" selection-end-line="161" selection-end-column="23" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -68,8 +86,8 @@
       <file leaf-file-name="particles.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/particles.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="223" column="76" lean-forward="true" selection-start-line="223" selection-start-column="76" selection-end-line="223" selection-end-column="76" />
+            <state relative-caret-position="472">
+              <caret line="147" column="48" lean-forward="false" selection-start-line="147" selection-start-column="48" selection-end-line="147" selection-end-column="48" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -133,10 +151,10 @@
         <option value="$PROJECT_DIR$/src/collisionObject.h" />
         <option value="$PROJECT_DIR$/src/plane.cpp" />
         <option value="$PROJECT_DIR$/src/ParticleSimulator.cpp" />
-        <option value="$PROJECT_DIR$/src/sphere.h" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
-        <option value="$PROJECT_DIR$/src/particles.h" />
         <option value="$PROJECT_DIR$/src/ParticleSimulator.h" />
+        <option value="$PROJECT_DIR$/src/particles.h" />
+        <option value="$PROJECT_DIR$/src/sphere.h" />
         <option value="$PROJECT_DIR$/src/particles.cpp" />
       </list>
     </option>
@@ -253,12 +271,12 @@
       <workItem from="1524409251353" duration="18208000" />
       <workItem from="1524504531627" duration="4559000" />
       <workItem from="1524947948504" duration="1854000" />
-      <workItem from="1524950860840" duration="9198000" />
+      <workItem from="1524950860840" duration="10916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40279000" />
+    <option name="totallyTimeSpent" value="41997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="462" y="0" width="1458" height="1080" extended-state="6" />
@@ -612,14 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sphere.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/plane.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -653,7 +663,7 @@
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
-          <caret line="161" column="23" lean-forward="true" selection-start-line="161" selection-start-column="23" selection-end-line="161" selection-end-column="23" />
+          <caret line="161" column="23" lean-forward="false" selection-start-line="161" selection-start-column="23" selection-end-line="161" selection-end-column="23" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -662,16 +672,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/particles.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="45" column="20" lean-forward="false" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+        <state relative-caret-position="559">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sphere.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/particles.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="223" column="76" lean-forward="true" selection-start-line="223" selection-start-column="76" selection-end-line="223" selection-end-column="76" />
+        <state relative-caret-position="472">
+          <caret line="147" column="48" lean-forward="false" selection-start-line="147" selection-start-column="48" selection-end-line="147" selection-end-column="48" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

@@ -69,6 +69,10 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
 //            sp.predicted_position.y = 0;
 //            sp.velocity.y           = 0;
 //        }
+        if (sp.last_origin.y == 0 && sp.origin.y == 0) {
+            sp.velocity.y = 0;
+        }
+
     }
 
 
@@ -121,14 +125,37 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
 
     for (Sphere &i: particle_list) {
         i.delta_p = i.C_Gradient * i.lambda;
+        i.predicted_position += i.delta_p * 0.000001;
         //perform_Collision_Detection(i); // if collsion, change delta_p;
     }
+
+
+//    // FIXME: 这里往下的两个section是避免小球之间的互相重合
+//    for (Sphere &i: particle_list) {
+//        for (Sphere &j : particle_list) {
+//            double distance = sqrt(pow(i.predicted_position.x - j.predicted_position.x, 2) +
+//                                   pow(i.predicted_position.y - j.predicted_position.y, 2) +
+//                                   pow(i.predicted_position.z - j.predicted_position.z, 2));
+//            if (distance <= 2 * radius) {
+//                Vector3D vectori = i.predicted_position - i.origin;
+//                Vector3D vectorj = j.predicted_position - j.origin;
+//                double dotProduct = dot(vectori, vectorj);
+//                double lengthi = sqrt(pow(vectori.x, 2) + pow(vectori.y, 2) + pow(vectori.z, 2));
+//                double lengthj = sqrt(pow(vectorj.x, 2) + pow(vectorj.y, 2) + pow(vectorj.z, 2));
+//                double cosAngle = dotProduct / (lengthi * lengthj);
 //
+//                if (cosAngle <= 0) {
+//                    i.next_velocity = i.velocity + j.velocity; // FIXME: 这里可以完善反弹方程
+//                } else {
+//                    i.next_velocity = i.velocity - j.velocity; // FIXME: 这里可以完善反弹方程
+//                }
+//            }
+//        }
+//    }
 //
-    for (Sphere &i: particle_list) {
-        //cout << "\ndelta_p2" << i.delta_p << endl;
-        i.predicted_position += i.delta_p * 0.000001;
-    }
+//    for (Sphere &i: particle_list) {
+//        i.velocity = i.next_velocity;
+//    }
 
     for (Sphere &sp : particle_list) {
         int isEdge = 1;
@@ -146,16 +173,10 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
             local_origin.x = sp.origin.x + dx_offset;
             local_origin.z = sp.origin.z + dz_offset;
 
+//            cout << "velocity1: " << sp.velocity << endl;
             sp.velocity.y = -sp.velocity.y * bounce_rate;
-
-//            sp.predicted_position = local_origin + delta_t * sp.velocity;
-
-            Vector3D direction = Vector3D(0, 0, 0);
-            direction.x = sp.predicted_position.x;
-            direction.y = 0;
-            direction.z = sp.predicted_position.z;
-
-            sp.predicted_position.y = direction.y + delta_t * sp.velocity.y;
+//            cout << "velocity2: " << sp.velocity << endl;
+            sp.predicted_position = local_origin + delta_t * sp.velocity;
 
 //            cout << "pred2: " << sp.predicted_position << endl;
 
@@ -165,18 +186,15 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
             isEdge = 0;
 
             Vector3D local_origin = Vector3D(0, 0, 0);
-            Vector3D direction = Vector3D(0, 0, 0);
             double delta_y = sp.predicted_position.y - sp.origin.y;
             double delta_z = sp.predicted_position.z - sp.origin.z;
             double ratio;
             if (sp.predicted_position.x < -0.35) {
                 ratio = (sp.origin.x + x_bounce)/ (sp.origin.x - sp.predicted_position.x);
                 local_origin.x = -0.35;
-                direction.x = -0.35;
             } else {
                 ratio = (sp.origin.x - x_bounce)/ (sp.origin.x - sp.predicted_position.x);
                 local_origin.x = 0.35;
-                direction.x = 0.35;
             }
             double dy_offset = delta_y * ratio;
             double dz_offset = delta_z * ratio;
@@ -184,31 +202,22 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
             local_origin.z = sp.origin.z + dz_offset;
 
             sp.velocity.x = -sp.velocity.x * bounce_rate;
-//            sp.predicted_position = local_origin + delta_t * sp.velocity;
-
-
-            direction.y = sp.predicted_position.y;
-            direction.z = sp.predicted_position.z;
-
-            sp.predicted_position.x = direction.x + delta_t * sp.velocity.x;
+            sp.predicted_position = local_origin + delta_t * sp.velocity;
         }
 
         if (sp.predicted_position.z < -z_bounce || sp.predicted_position.z > z_bounce) {
             isEdge = 0;
 
             Vector3D local_origin = Vector3D(0, 0, 0);
-            Vector3D direction = Vector3D(0, 0, 0);
             double delta_y = sp.predicted_position.y - sp.origin.y;
             double delta_x = sp.predicted_position.x - sp.origin.x;
             double ratio;
             if (sp.predicted_position.z < -0.35) {
                 ratio = (sp.origin.z + z_bounce) / (sp.origin.z - sp.predicted_position.z);
                 local_origin.z = -0.35;
-                direction.z = -0.35;
             } else {
                 ratio = (sp.origin.z - z_bounce) / (sp.origin.z - sp.predicted_position.z);
                 local_origin.z = 0.35;
-                direction.z = 0.35;
             }
             double dy_offset = delta_y * ratio;
             double dx_offset = delta_x * ratio;
@@ -216,12 +225,7 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
             local_origin.x = sp.origin.x + dx_offset;
 
             sp.velocity.z = -sp.velocity.z * bounce_rate;
-//            sp.predicted_position = local_origin + delta_t * sp.velocity;
-
-            direction.y = sp.predicted_position.y;
-            direction.x = sp.predicted_position.x;
-
-            sp.predicted_position.z = direction.z + delta_t * sp.velocity.z;
+            sp.predicted_position = local_origin + delta_t * sp.velocity;
         }
 
 
