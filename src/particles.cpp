@@ -124,7 +124,14 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
                 if (j->origin == i.origin)continue; // if origin is the same, gradient will be zero.
                 Vector3D dist = i.predicted_position - j->predicted_position;
                 double   r    = dist.norm();
-                i.delta_p += (i.lambda+j->lambda) * (-45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist);
+                
+                // Equation(13) k=0.1, delQ = 0.1*h, n=4
+                double S_corr = -0.001 * pow ( pow((h*h-r*r)/(h*h),3.0) ,4);
+                //cout<<S_corr<<endl;
+                //cout<<i.lambda<< "  ?  "<<j->lambda<<endl;
+                //S_corr has to be tuned!
+                
+                i.delta_p += (S_corr+i.lambda+j->lambda) * (-45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist);
             }
             i.delta_p/=i.rho;
             //cout<<"delta p!! "<<i.delta_p<<endl;
@@ -157,6 +164,17 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
     //cout<<endl<<endl;
     
     for (Sphere &sp: particle_list) {
+        // Now apply Vorticity Confinement and Viscosity!!! So excited!!
+        Vector3D omega = Vector3D(0.0,0.0,0.0);
+        for (Sphere* j:i.neighbors){
+            Vector3D dist = i.predicted_position - j->predicted_position;
+            double   r    = dist.norm();
+            j->temp_Gradient =  -45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist;
+            omega += (j.velocity-i.velocity) * j->temp_Gradient;
+        }
+        // to be continued.... Sleep now
+        
+        
         sp.last_origin = sp.origin;
         sp.origin = sp.predicted_position;
         sp.velocity = (sp.origin-sp.last_origin)/delta_t;
