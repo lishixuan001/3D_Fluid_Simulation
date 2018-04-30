@@ -16,9 +16,9 @@ particles::particles(double width, double height, double length, int num_width_p
     this->width = width;
     this->height = height;
     this->length = length;
-    this->num_width_points = 3;//num_width_points;
-    this->num_height_points = 3;//num_height_points;
-    this->num_length_points = 3;//num_length_points;
+    this->num_width_points = 5;//num_width_points;
+    this->num_height_points = 5;//num_height_points;
+    this->num_length_points = 5;//num_length_points;
     this->radius = radius;
     this->friction = friction;
     this->origin = Vector3D(0, 0, 0);
@@ -30,7 +30,7 @@ particles::particles(double width, double height, double length, int num_width_p
 }
 
 void particles::buildGrid() {
-    origin =Vector3D(-0.03,0.1,0);
+    origin =Vector3D(-0.06,0.2,-0.06);
     num_length_points = 5;
     num_width_points  = 5;
     num_height_points = 5;
@@ -42,7 +42,7 @@ void particles::buildGrid() {
     for (int i=0; i<num_height_points; i++) {
         for (int j=0; j<num_width_points; j++) {
             for (int k=0; k<num_length_points; k++) {
-                Sphere sp = Sphere(origin+Vector3D(2.5*radius*i, 3*radius*j, 3*radius*k), radius, friction);
+                Sphere sp = Sphere(origin+Vector3D(3*radius*i, 3*radius*j, 3*radius*k), radius, friction);
                 sp.velocity = Vector3D(0,0,0);
                 particle_list.emplace_back(sp);
                 //cout<<sp.origin<<endl;
@@ -64,11 +64,6 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
             sp.velocity += delta_t * external_force;
         }
         sp.predicted_position   = sp.origin + delta_t * sp.velocity;
-//        if (sp.predicted_position.y < 0)
-//        {
-//            sp.predicted_position.y = 0;
-//            sp.velocity.y           = 0;
-//        }
         if (sp.last_origin.y == 0 && sp.origin.y == 0) {
             sp.velocity.y = 0;
         }
@@ -76,165 +71,95 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
     }
 
 
-    // Brute force finding neighbor
+    // Brute force finding neighbor and find C
     // Set h=0.02, with r=0.01, m = 1
-    double h = 5 * particle_list[0].radius;
+    double h = 2 * 3 * particle_list[0].radius;
+    double epsilon = pow(10,-10);
     for (Sphere &i : particle_list){
+        //cout<<i.origin<<endl;
         i.C = 0.0;
         i.neighbors.clear();
         for (Sphere &j: particle_list){
             Vector3D distij = (i.predicted_position - j.origin);
-            if ( distij.norm() < h){
+            double   r      = distij.norm();
+            if ( r < h){
                 Sphere* to_push = &j;
-                //cout<<to_push<<endl;
                 i.neighbors.push_back(&j);
-                i.C += -pow((pow(h,2) - pow((distij.norm()),2)),3) * 315 / (64 * PI * pow(h, 9));
-                //May be the wrong W, poly6 used // checked and correct
+                i.C += pow((pow(h,2.0) - pow(r,2.0)),3.0) * 315.0 / (64.0 * PI * pow(h, 9.0));
             }
         }
-        i.rho = pow(pow(h,2),3.0) * 315/(64*PI*pow(h,9.0));
+        i.rho = pow(pow(h,2.0),3.0) * 315.0/(64.0*PI*pow(h,9.0));
         i.C = i.C / i.rho - 1;
-    }
-
-
-
-    //find Lambda
-    for (Sphere &i : particle_list){
-        i.lambda = 0.0;
-        double temp = 0.0;
-        Vector3D temp_Gradient;
-        i.rho    = 15/PI/pow(h,3);
-        for (Sphere* j : i.neighbors){
-            if (j->origin == i.origin)continue; // may exists bug, want to skip i
-            Vector3D dist = i.predicted_position - j->predicted_position;
-            j->temp_Gradient =  15/(PI*pow(h,6))*(3*(h-dist.norm()))/i.rho/dist.norm() * dist;
-            temp_Gradient += j->temp_Gradient;
-            temp += pow((j->temp_Gradient).norm(), 2);
-        }
-        i.C_Gradient = temp_Gradient;
-        temp += pow((i.C_Gradient).norm(),2);
-        if (i.C==0 or temp==0){
-            i.lambda=0;
-        }
-        else {
-            i.lambda = -i.C / temp;
-        }
-        //cout<<i.origin<<" "<<i.C<<" "<<temp<<endl;
+        //cout<<i.C<<"~~!"<<endl;
     }
     //cout<<endl;
+    
 
-    for (Sphere &i: particle_list) {
-        i.delta_p = i.C_Gradient * i.lambda;
-        i.predicted_position += i.delta_p * 0.000001;
-        //perform_Collision_Detection(i); // if collsion, change delta_p;
+    for (int iter=0;iter<1;iter++){  //<simulation_steps
+        //find Lambda
+        for (Sphere &i : particle_list){
+            i.lambda = 0.0;
+            i.C_Gradient =0.0;
+            double Sum_Gradient_Squared = 0.0;
+            i.rho    = 15/PI/pow(h,3);
+            for (Sphere* j : i.neighbors){
+                //cout<<i.origin<<" and j: "<<j->origin<<endl;
+                if (j->origin == i.origin)continue; // if origin is the same, gradient will be zero.
+                Vector3D dist = i.predicted_position - j->predicted_position;
+                double   r    = dist.norm();
+                j->temp_Gradient =  -45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist;
+                i.C_Gradient -= j->temp_Gradient;
+                Sum_Gradient_Squared += pow((j->temp_Gradient).norm(), 2);
+            }
+            Sum_Gradient_Squared += pow((i.C_Gradient).norm(),2);
+            i.lambda = -i.C / (Sum_Gradient_Squared + epsilon);
+
+            //cout<<i.origin<<" "<<i.lambda<<" t: "<<i.C_Gradient<<endl;
+        }
+
+        for (Sphere &i: particle_list) {
+            //i.delta_p = i.C_Gradient * i.lambda;
+            i.delta_p = Vector3D(0.0,0.0,0.0);
+            for (Sphere* j: i.neighbors){
+                if (j->origin == i.origin)continue; // if origin is the same, gradient will be zero.
+                Vector3D dist = i.predicted_position - j->predicted_position;
+                double   r    = dist.norm();
+                i.delta_p += (i.lambda+j->lambda) * (-45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist);
+            }
+            i.delta_p/=i.rho;
+            //cout<<"delta p!! "<<i.delta_p<<endl;
+            if (i.delta_p.y+i.predicted_position.y<0){
+                //double change = i.delta_p.norm();
+                i.delta_p.y   = -i.predicted_position.y; //thus final y is 0
+            }
+            if (i.delta_p.y+i.predicted_position.y>0.5){
+                //double change = i.delta_p.norm();
+                i.delta_p.y   = 0.5-i.predicted_position.y; //thus final y is 0
+            }
+            if (i.delta_p.x+i.predicted_position.x>0.1){
+                i.delta_p.x   = 0.1-i.predicted_position.x; //thus final y is 0
+            }
+            if (i.delta_p.x+i.predicted_position.x<-0.1){
+                i.delta_p.x   = -0.1-i.predicted_position.x; //thus final y is 0
+            }
+            if (i.delta_p.z+i.predicted_position.z>0.1){
+                i.delta_p.z   = 0.1-i.predicted_position.z; //thus final y is 0
+            }
+            if (i.delta_p.z+i.predicted_position.z<-0.1){
+                i.delta_p.z   = -0.1-i.predicted_position.z; //thus final y is 0
+            }
+            //perform_Collision_Detection(i); // if collsion, change delta_p;
+        }
+        for (Sphere &i: particle_list) {
+            i.predicted_position += i.delta_p*0.02;
+        }
     }
-
-
-//    // FIXME: 这里往下的两个section是避免小球之间的互相重合
-//    for (Sphere &i: particle_list) {
-//        for (Sphere &j : particle_list) {
-//            double distance = sqrt(pow(i.predicted_position.x - j.predicted_position.x, 2) +
-//                                   pow(i.predicted_position.y - j.predicted_position.y, 2) +
-//                                   pow(i.predicted_position.z - j.predicted_position.z, 2));
-//            if (distance <= 2 * radius) {
-//                Vector3D vectori = i.predicted_position - i.origin;
-//                Vector3D vectorj = j.predicted_position - j.origin;
-//                double dotProduct = dot(vectori, vectorj);
-//                double lengthi = sqrt(pow(vectori.x, 2) + pow(vectori.y, 2) + pow(vectori.z, 2));
-//                double lengthj = sqrt(pow(vectorj.x, 2) + pow(vectorj.y, 2) + pow(vectorj.z, 2));
-//                double cosAngle = dotProduct / (lengthi * lengthj);
-//
-//                if (cosAngle <= 0) {
-//                    i.next_velocity = i.velocity + j.velocity; // FIXME: 这里可以完善反弹方程
-//                } else {
-//                    i.next_velocity = i.velocity - j.velocity; // FIXME: 这里可以完善反弹方程
-//                }
-//            }
-//        }
-//    }
-//
-//    for (Sphere &i: particle_list) {
-//        i.velocity = i.next_velocity;
-//    }
-
-    for (Sphere &sp : particle_list) {
-        int isEdge = 1;
-
-        if (sp.predicted_position.y < 0){
-            isEdge = 0;
-//            cout << "pred1: " << sp.predicted_position << endl;
-
-            Vector3D local_origin = Vector3D(0, 0, 0);
-            double delta_x = sp.predicted_position.x - sp.origin.x;
-            double delta_z = sp.predicted_position.z - sp.origin.z;
-            double ratio = (sp.origin.y - y_bounce) / (sp.origin.y - sp.predicted_position.y);
-            double dx_offset = delta_x * ratio;
-            double dz_offset = delta_z * ratio;
-            local_origin.x = sp.origin.x + dx_offset;
-            local_origin.z = sp.origin.z + dz_offset;
-
-//            cout << "velocity1: " << sp.velocity << endl;
-            sp.velocity.y = -sp.velocity.y * bounce_rate;
-//            cout << "velocity2: " << sp.velocity << endl;
-            sp.predicted_position = local_origin + delta_t * sp.velocity;
-
-//            cout << "pred2: " << sp.predicted_position << endl;
-
-        }
-
-        if (sp.predicted_position.x < -x_bounce || sp.predicted_position.x > x_bounce) {
-            isEdge = 0;
-
-            Vector3D local_origin = Vector3D(0, 0, 0);
-            double delta_y = sp.predicted_position.y - sp.origin.y;
-            double delta_z = sp.predicted_position.z - sp.origin.z;
-            double ratio;
-            if (sp.predicted_position.x < -0.35) {
-                ratio = (sp.origin.x + x_bounce)/ (sp.origin.x - sp.predicted_position.x);
-                local_origin.x = -0.35;
-            } else {
-                ratio = (sp.origin.x - x_bounce)/ (sp.origin.x - sp.predicted_position.x);
-                local_origin.x = 0.35;
-            }
-            double dy_offset = delta_y * ratio;
-            double dz_offset = delta_z * ratio;
-            local_origin.y = sp.origin.y + dy_offset;
-            local_origin.z = sp.origin.z + dz_offset;
-
-            sp.velocity.x = -sp.velocity.x * bounce_rate;
-            sp.predicted_position = local_origin + delta_t * sp.velocity;
-        }
-
-        if (sp.predicted_position.z < -z_bounce || sp.predicted_position.z > z_bounce) {
-            isEdge = 0;
-
-            Vector3D local_origin = Vector3D(0, 0, 0);
-            double delta_y = sp.predicted_position.y - sp.origin.y;
-            double delta_x = sp.predicted_position.x - sp.origin.x;
-            double ratio;
-            if (sp.predicted_position.z < -0.35) {
-                ratio = (sp.origin.z + z_bounce) / (sp.origin.z - sp.predicted_position.z);
-                local_origin.z = -0.35;
-            } else {
-                ratio = (sp.origin.z - z_bounce) / (sp.origin.z - sp.predicted_position.z);
-                local_origin.z = 0.35;
-            }
-            double dy_offset = delta_y * ratio;
-            double dx_offset = delta_x * ratio;
-            local_origin.y = sp.origin.y + dy_offset;
-            local_origin.x = sp.origin.x + dx_offset;
-
-            sp.velocity.z = -sp.velocity.z * bounce_rate;
-            sp.predicted_position = local_origin + delta_t * sp.velocity;
-        }
-
-
-        if (isEdge) {
-            sp.velocity = (sp.predicted_position - sp.origin) / delta_t;
-        }
+    //cout<<endl<<endl;
+    
+    for (Sphere &sp: particle_list) {
         sp.last_origin = sp.origin;
         sp.origin = sp.predicted_position;
-//        cout << "next_origin: " << sp.origin << "\n" << endl;
+        sp.velocity = (sp.origin-sp.last_origin)/delta_t;
     }
 
 //    build_spatial_map();
