@@ -33,8 +33,8 @@ particles::particles(double width, double height, double length, int num_width_p
 }
 
 void particles::buildGrid() {
-    //origin =Vector3D(-0.09,0.2,-0.09);// This is the origin of the middle sphere of the base layer
-    origin =Vector3D(0,0.2,0);
+    origin =Vector3D(-0.09,0.2,-0.09);// This is the origin of the middle sphere of the base layer
+    //origin =Vector3D(0,0.2,0);
     num_length_points = 5;//5;
     num_width_points  = 10;//10;
     num_height_points = 5;//5;
@@ -53,7 +53,6 @@ void particles::buildGrid() {
 particles::~particles() {
 }
 void particles::buildExtraGrid() {
-    //origin =Vector3D(-0.09,0.2,-0.09);// This is the origin of the middle sphere of the base layer
     origin =Vector3D(-0.03,0.55,0.03);
     num_length_points = 3;//5;
     num_width_points  = 3;//10;
@@ -75,30 +74,15 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
     double box_x = 0.35;
     double box_z = 0.35;
     
-    //cout<<x<<' '<<y<<endl;
-    //timing
-    //std::clock_t start;
-    //double duration;
-    //start = std::clock();
-    //
-    
     double x_NDC = (x - 256.0)/256.0 - 0.00390625;//tune
     double y_NDC = (200.0 - y)/200.0 + 0.17;//tune
     Vector3D mouse_pos = Vector3D(x_NDC,y_NDC,0.0);
-    //cout<<mouse_pos<<endl;
-    
-    //if (concentrated)
-    {
-        
-        
-        
-    }
-    
     
     for (Sphere &sp : particle_list) {
         if (concat)
         {
-            sp.velocity += delta_t * (mouse_pos-sp.origin)*intensity;//tune
+            Vector3D dist_mouse = mouse_pos-sp.origin;
+            sp.velocity += delta_t * dist_mouse/pow(dist_mouse.norm(),1.5) *intensity;//tune
         }
         
         
@@ -117,7 +101,7 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
                     sp.velocity.z = sp.velocity.z / abs(sp.velocity.z) * (abs(sp.velocity.z) + 0.2 * abs(sp.velocity.y))*0.99999;
                     // apply more velocity and friction
                 }
-                sp.velocity.y = 0.0;
+                sp.velocity.y = abs(sp.velocity.y)*0.1;
             }
         }
         sp.predicted_position   = sp.origin + delta_t * sp.velocity;

@@ -1,8 +1,8 @@
-# Install script for directory: /Users/xingyifei1998/desktop/cs/test/CS_184_Final_Project
+# Install script for directory: /Users/user/CS184/test/May1/CS_184_Final_Project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/xingyifei1998/desktop/cs/test/CS_184_Final_Project/")
+  set(CMAKE_INSTALL_PREFIX "/Users/user/CS184/test/May1/CS_184_Final_Project/")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -27,16 +27,11 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/xingyifei1998/desktop/cs/test/CS_184_Final_Project/build/ext/nanogui/cmake_install.cmake")
-  include("/Users/xingyifei1998/desktop/cs/test/CS_184_Final_Project/build/CGL/cmake_install.cmake")
-  include("/Users/xingyifei1998/desktop/cs/test/CS_184_Final_Project/build/src/cmake_install.cmake")
+  include("/Users/user/CS184/test/May1/CS_184_Final_Project/build/ext/nanogui/cmake_install.cmake")
+  include("/Users/user/CS184/test/May1/CS_184_Final_Project/build/CGL/cmake_install.cmake")
+  include("/Users/user/CS184/test/May1/CS_184_Final_Project/build/src/cmake_install.cmake")
 
 endif()
 
@@ -48,5 +43,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/xingyifei1998/desktop/cs/test/CS_184_Final_Project/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/user/CS184/test/May1/CS_184_Final_Project/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
