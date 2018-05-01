@@ -34,9 +34,9 @@ particles::particles(double width, double height, double length, int num_width_p
 
 void particles::buildGrid() {
     origin =Vector3D(-0.09,0.2,-0.09);
-    num_length_points = 5;
-    num_width_points  = 10;
-    num_height_points = 5;
+    num_length_points = 3;
+    num_width_points  = 1;
+    num_height_points = 3;
     bounce_rate = 0.8;
     x_bounce = 0.35;
     z_bounce = 0.35;
@@ -52,7 +52,7 @@ void particles::buildGrid() {
             }
         }
     }
-}
+} 
 
 particles::~particles() {
 }
@@ -97,6 +97,7 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
         //cout<<sp.origin<<"     "<<sp.velocity<<endl;
     }
     
+    build_spatial_map();
 
 
     // Brute force finding neighbor and find C
@@ -118,6 +119,21 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
         i.rho = pow(pow(h,2.0),3.0) * 315.0/(64.0*PI*pow(h,9.0));
         i.C = i.C / i.rho - 1;
     }
+//    for (Sphere &i : particle_list){
+//        i.C = 0.0;
+//        i.neighbors.clear();
+//        i.neighbors = find_neighbors(i);
+//        
+//        for (Sphere *j: i.neighbors){
+//            Vector3D distij = (i.predicted_position - j->origin);
+//            double   r      = distij.norm();
+//            i.C += pow((pow(h,2.0) - pow(r,2.0)),3.0) * 315.0 / (64.0 * PI * pow(h, 9.0));
+//        }
+//        i.rho = pow(pow(h,2.0),3.0) * 315.0/(64.0*PI*pow(h,9.0));
+//        i.C = i.C / i.rho - 1;
+//    }
+//    
+    
     
     duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
     
@@ -272,25 +288,6 @@ void perform_Collision_Detection(Sphere sp){
     return;
 }
 
-void particles::build_spatial_map() {
-    for (const auto &entry : map) {
-        delete(entry.second);
-    }
-    map.clear();
-
-    for (Sphere &sp : particle_list) {
-
-        float position = hash_position(sp.origin);
-
-        if (map.find(position) == map.end()) {
-            auto * new_position = new vector<Sphere *>();
-            new_position->push_back(&sp);
-            map[position] = new_position;
-        } else {
-            map[position]->push_back(&sp);
-        }
-    }
-}
 
 float getHash(std::array<float, 3> array) {
     float hash = 0;
@@ -314,6 +311,44 @@ float particles::hash_position(Vector3D pos) {
     return getHash(array);
 }
 
+vector<Sphere*> particles::find_neighbors(Sphere &sp) {
+    vector<Sphere*> res;
+    float pos = 21600*floor(sp.origin.x/6/radius)+100*floor(sp.origin.y/6/radius)+floor(sp.origin.z/6/radius);
+    for (int i = -1; i <= 1; i++) {
+        for (int j =-1; j <= 1; j++) {
+            for (int k=-1; k <= 1; k++) {
+                float updated = pos+10000*i+100*j+k;
+                if (map.find(updated) != map.end()) {
+                    for (Sphere *sp: *map[updated]) {
+                        res.push_back(sp);
+                    }
+                }
+            }
+        }
+    }
+    cout<<res.size()<<endl;
+    return res;
+}
+
+void particles::build_spatial_map() {
+    for (const auto &entry : map) {
+        delete(entry.second);
+    }
+    map.clear();
+    // TODO (Part 4.2): Build a spatial map out of all of the point masses.
+    for (Sphere &sp : particle_list) {
+        float pos = 21600*floor(sp.origin.x/6/radius)+100*floor(sp.origin.y/6/radius)+floor(sp.origin.z/6/radius);
+        if (map.find(pos) == map.end()) {
+            vector<Sphere *> * s = new vector<Sphere *>();
+            s->push_back(&sp);
+            map[pos]=s;
+        }
+        else {
+            map[pos]->push_back(&sp);
+        }
+    }
+    
+}
 
 ///////////////////////////////////////////////////////
 /// YOU DO NOT NEED TO REFER TO ANY CODE BELOW THIS ///
