@@ -2,6 +2,9 @@
 #include <math.h>
 #include <random>
 #include <vector>
+#include <cstdio>
+#include <ctime>
+
 
 #include "particles.h"
 #include "sphere.h"
@@ -30,9 +33,9 @@ particles::particles(double width, double height, double length, int num_width_p
 }
 
 void particles::buildGrid() {
-    origin =Vector3D(-0.06,0.2,-0.06);
+    origin =Vector3D(-0.09,0.2,-0.09);
     num_length_points = 5;
-    num_width_points  = 5;
+    num_width_points  = 10;
     num_height_points = 5;
     bounce_rate = 0.8;
     x_bounce = 0.35;
@@ -42,7 +45,7 @@ void particles::buildGrid() {
     for (int i=0; i<num_height_points; i++) {
         for (int j=0; j<num_width_points; j++) {
             for (int k=0; k<num_length_points; k++) {
-                Sphere sp = Sphere(origin+Vector3D(3*radius*i, 3*radius*j, 3*radius*k), radius, friction);
+                Sphere sp = Sphere(origin+Vector3D(3*radius*i, 3*radius*j, 3*radius*k), radius, friction, Vector3D(0.0,-1,0.0));
                 sp.velocity = Vector3D(0,0,0);
                 particle_list.emplace_back(sp);
                 //cout<<sp.origin<<endl;
@@ -57,26 +60,50 @@ particles::~particles() {
 void particles::simulate(double frames_per_sec, double simulation_steps, vector<Vector3D> external_forces,
                          vector<CollisionObject *> *collision_objects) {
 
-    double delta_t = 1.0f / frames_per_sec / simulation_steps;
-
+    double delta_t = 1.0f / 90.0 / 30.0 ;
+    double box_x = 0.35;
+    double box_z = 0.35;
+    
+    //timing
+    std::clock_t start;
+    double duration;
+    
+    start = std::clock();
+    
+    //
+    
     for (Sphere &sp : particle_list) {
         for (const Vector3D &external_force : external_forces) {
-            sp.velocity += delta_t * external_force;
+            if (sp.origin.y>0){
+                sp.velocity += delta_t * external_force;
+                // only if over the board
+            }
+            else{
+                if (abs(sp.velocity.x)>0){
+                    sp.velocity.x = sp.velocity.x / abs(sp.velocity.x) * (abs(sp.velocity.x) + 0.2 * abs(sp.velocity.y))*0.99999;
+                    // apply more velocity and friction
+                }
+                if (abs(sp.velocity.z)>0){
+                    sp.velocity.z = sp.velocity.z / abs(sp.velocity.z) * (abs(sp.velocity.z) + 0.2 * abs(sp.velocity.y))*0.99999;
+                    // apply more velocity and friction
+                }
+                sp.velocity.y = 0.0;
+            }
         }
         sp.predicted_position   = sp.origin + delta_t * sp.velocity;
         if (sp.last_origin.y == 0 && sp.origin.y == 0) {
             sp.velocity.y = 0;
         }
-
+        //cout<<sp.origin<<"     "<<sp.velocity<<endl;
     }
+    
 
 
     // Brute force finding neighbor and find C
     // Set h=0.02, with r=0.01, m = 1
     double h = 2 * 3 * particle_list[0].radius;
-    double epsilon = pow(10,-10);
+    double epsilon = pow(10,-3);
     for (Sphere &i : particle_list){
-        //cout<<i.origin<<endl;
         i.C = 0.0;
         i.neighbors.clear();
         for (Sphere &j: particle_list){
@@ -90,9 +117,11 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
         }
         i.rho = pow(pow(h,2.0),3.0) * 315.0/(64.0*PI*pow(h,9.0));
         i.C = i.C / i.rho - 1;
-        //cout<<i.C<<"~~!"<<endl;
     }
-    //cout<<endl;
+    
+    duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+    
+    //std::cout<<"printf: "<< duration <<'\n';
     
 
     for (int iter=0;iter<1;iter++){  //<simulation_steps
@@ -113,7 +142,6 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
             }
             Sum_Gradient_Squared += pow((i.C_Gradient).norm(),2);
             i.lambda = -i.C / (Sum_Gradient_Squared + epsilon);
-
             //cout<<i.origin<<" "<<i.lambda<<" t: "<<i.C_Gradient<<endl;
         }
 
@@ -126,70 +154,72 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
                 double   r    = dist.norm();
                 
                 // Equation(13) k=0.1, delQ = 0.1*h, n=4
-                double S_corr = -0.001 * pow ( pow((h*h-r*r)/(h*h),3.0) ,4);
+                double S_corr = -0.1 * pow ( pow((h*h-r*r)/(h*h),3.0) ,4);
                 //cout<<S_corr<<endl;
                 //cout<<i.lambda<< "  ?  "<<j->lambda<<endl;
                 //S_corr has to be tuned!
                 
-                i.delta_p += (S_corr+i.lambda+j->lambda) * (-45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist);
+                i.delta_p += ((S_corr+i.lambda+j->lambda) * (-45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist))*0.5;
             }
             i.delta_p/=i.rho;
-            //cout<<"delta p!! "<<i.delta_p<<endl;
+            //cout<<i.origin<<"  \nC: "<<i.C<<" \n lambda:  "<<i.lambda<<"\ndelta p!! "<<i.delta_p<<"  \nv: "<<i.velocity<<endl<<endl;
+            //cout<<i.velocity<<endl;
             if (i.delta_p.y+i.predicted_position.y<0){
                 //double change = i.delta_p.norm();
-                i.delta_p.y   = -i.predicted_position.y; //thus final y is 0
+                i.delta_p.y   = -i.predicted_position.y;
             }
             if (i.delta_p.y+i.predicted_position.y>0.5){
                 //double change = i.delta_p.norm();
-                i.delta_p.y   = 0.5-i.predicted_position.y; //thus final y is 0
+                i.delta_p.y   = 0.5-i.predicted_position.y;
             }
-            if (i.delta_p.x+i.predicted_position.x>0.1){
-                i.delta_p.x   = 0.1-i.predicted_position.x; //thus final y is 0
+            if (i.delta_p.x+i.predicted_position.x>box_x){
+                i.delta_p.y  += (i.delta_p.x+i.predicted_position.x-box_x)*0.2;
+                i.delta_p.x   = box_x-i.predicted_position.x;
             }
-            if (i.delta_p.x+i.predicted_position.x<-0.1){
-                i.delta_p.x   = -0.1-i.predicted_position.x; //thus final y is 0
+            if (i.delta_p.x+i.predicted_position.x<-box_x){
+                i.delta_p.y  += abs(i.delta_p.x+i.predicted_position.x+box_x)*0.2;
+                i.delta_p.x   = -box_x-i.predicted_position.x;
             }
-            if (i.delta_p.z+i.predicted_position.z>0.1){
-                i.delta_p.z   = 0.1-i.predicted_position.z; //thus final y is 0
+            if (i.delta_p.z+i.predicted_position.z>box_z){
+                i.delta_p.y  += (i.delta_p.z+i.predicted_position.z-box_z)*0.2;
+                i.delta_p.z   = box_z-i.predicted_position.z;
             }
-            if (i.delta_p.z+i.predicted_position.z<-0.1){
-                i.delta_p.z   = -0.1-i.predicted_position.z; //thus final y is 0
+            if (i.delta_p.z+i.predicted_position.z<-box_z){
+                i.delta_p.y  += (abs(i.delta_p.z+i.predicted_position.z+box_z))*0.2;
+                i.delta_p.z   = -box_z-i.predicted_position.z;
             }
             //perform_Collision_Detection(i); // if collsion, change delta_p;
         }
+        //cout<<endl<<endl;
         for (Sphere &i: particle_list) {
-            i.predicted_position += i.delta_p*0.02;
+            i.predicted_position += i.delta_p;
         }
     }
     //cout<<endl<<endl;
     
-    for (Sphere &sp: particle_list) {
+    for (Sphere &i: particle_list) {
         // Now apply Vorticity Confinement and Viscosity!!! So excited!!
         Vector3D omega = Vector3D(0.0,0.0,0.0);
         for (Sphere* j:i.neighbors){
             Vector3D dist = i.predicted_position - j->predicted_position;
             double   r    = dist.norm();
             j->temp_Gradient =  -45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist;
-            omega += (j.velocity-i.velocity) * j->temp_Gradient;
+            omega += cross((j->velocity-i.velocity) , j->temp_Gradient);
         }
         // to be continued.... Sleep now
         
         
-        sp.last_origin = sp.origin;
-        sp.origin = sp.predicted_position;
-        sp.velocity = (sp.origin-sp.last_origin)/delta_t;
+        i.last_origin = i.origin;
+        i.origin = i.predicted_position;
+        i.velocity = (i.origin-i.last_origin)/delta_t;
+        //cout<<i.origin<<" "<<i.last_origin<<" "<<i.velocity<<endl;
     }
+    
+    duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+    
+    //std::cout<<"printf: end "<< duration <<'\n';
 
-//    build_spatial_map();
-//    for (Sphere &sp : particle_list) {
-//        self_collide(sp, simulation_steps);
-//    }
 
-//    for (Sphere &sp : particle_list) {
-//        for (CollisionObject *co : *collision_objects) {
-//            co->collide(sp);
-//        }
-//    }
 }
 
 double pow(double num, int index) {
