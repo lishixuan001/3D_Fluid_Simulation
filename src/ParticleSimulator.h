@@ -45,19 +45,19 @@ private:
   int simulation_steps = 30;
 
   CGL::Vector3D gravity = CGL::Vector3D(0, -9.05, 0);
-  nanogui::Color color = nanogui::Color(1.0f, 0.0f, 0.0f, 1.0f);
-
+  nanogui::Color color = nanogui::Color(0.0f, 0.0f, 1.0f, 1.0f);
+  float intensity = 10;
   particles *part;
   vector<CollisionObject *> *collision_objects;
 
   // OpenGL attributes
 
-  enum e_shader { WIREFRAME = 0, NORMALS = 1, PHONG = 2 };
-  e_shader activeShader = WIREFRAME;
+  enum e_shader { NORMALS = 0, PHONG = 1 };
+  e_shader activeShader = PHONG;
+  int activeDrop = 0;
 
   vector<GLShader> shaders;
 
-  GLShader wireframeShader;
   GLShader normalShader;
   GLShader phongShader;
 
@@ -72,6 +72,9 @@ private:
   double max_view_distance;
 
   double scroll_rate;
+
+  //Concatenation
+  int activeConcat = 0;
 
   // Screen methods
 

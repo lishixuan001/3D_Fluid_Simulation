@@ -10,8 +10,8 @@ using namespace nanogui;
 
 struct Sphere {
 public:
-  Sphere(const Vector3D &origin, double radius, double friction,Vector3D velocity)
-      : last_origin(origin), origin(origin), radius(radius), friction(friction), start_position(origin), velocity(velocity){
+  Sphere(const Vector3D &origin, double radius, Vector3D velocity)
+      : last_origin(origin), origin(origin), radius(radius), start_position(origin), velocity(velocity){
         
 }
   Vector3D start_position;
