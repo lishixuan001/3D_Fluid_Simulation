@@ -112,6 +112,7 @@ void Camera::compute_position() {
                                // directly using dirToCamera as
                                // column 2 of the matrix takes [0 0 -1]
                                // to the world space view direction
+  //cout<<c2w[0]<<"   "<<c2w[1]<<"    "<<c2w[2]<<endl;
 }
 
 void Camera::dump_settings(string filename) {

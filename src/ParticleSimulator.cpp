@@ -19,14 +19,12 @@ ParticleSimulator::ParticleSimulator(Screen *screen) {
 
   // Initialize OpenGL buffers and shaders
 
-  wireframeShader.initFromFiles("Wireframe", "../shaders/camera.vert",
-                                "../shaders/wireframe.frag");
+  
   normalShader.initFromFiles("Normal", "../shaders/camera.vert",
                              "../shaders/normal.frag");
   phongShader.initFromFiles("Phong", "../shaders/camera.vert",
                             "../shaders/phong.frag");
 
-  shaders.push_back(wireframeShader);
   shaders.push_back(normalShader);
   shaders.push_back(phongShader);
 
@@ -98,7 +96,7 @@ void ParticleSimulator::drawContents() {
     vector<Vector3D> external_forces = {gravity};
 
     for (int i = 0; i < simulation_steps; i++) {
-      part->simulate(frames_per_sec, simulation_steps, external_forces, collision_objects);
+      part->simulate(frames_per_sec, simulation_steps, external_forces, collision_objects, activeConcat, mouse_x, mouse_y);
     }
   }
 
@@ -121,9 +119,6 @@ void ParticleSimulator::drawContents() {
   shader.setUniform("viewProjection", viewProjection);
 
   switch (activeShader) {
-  case WIREFRAME:
-    shader.setUniform("in_color", nanogui::Color(1.0f, 1.0f, 1.0f, 1.0f));
-    break;
   case NORMALS:
     break;
   case PHONG:
@@ -424,15 +419,33 @@ void ParticleSimulator::initGUI(Screen *screen) {
     fb->setCallback([this](float value) { gravity.z = value; });
   }
 
+  //Initialization
+  new Label(window, "Initialization", "sans-bold");
+
+  {
+    Widget *panel = new Widget(window);
+    GridLayout *layout =
+        new GridLayout(Orientation::Horizontal, 2, Alignment::Middle, 5, 5);
+    layout->setColAlignment({Alignment::Maximum, Alignment::Fill});
+    layout->setSpacing(0, 10);
+    panel->setLayout(layout);
+
+
+    ComboBox *cb = new ComboBox(window, {"Concatenation OFF", "Concatenation ON"});
+    cb->setFontSize(14);
+    cb->setCallback(
+        [this, screen](int idx) { activeConcat = idx; });
+  }
+
   // Appearance
 
   new Label(window, "Appearance", "sans-bold");
 
   {
-    ComboBox *cb = new ComboBox(window, {"Wireframe", "Normals", "Shaded"});
+    ComboBox *cb = new ComboBox(window, {"Shaded, Normals"});
     cb->setFontSize(14);
     cb->setCallback(
-        [this, screen](int idx) { activeShader = static_cast<e_shader>(idx); });
+        [this, screen](int idx) { activeShader = static_cast<e_shader>(1-idx); });
   }
 
   new Label(window, "Color", "sans-bold");

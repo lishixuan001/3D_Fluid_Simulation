@@ -20,7 +20,7 @@ struct particles {
         int num_height_points, int num_length_points, float radius, float friction);
   ~particles();
 
-  void simulate(double frames_per_sec, double simulation_steps, vector<Vector3D> external_forces, vector<CollisionObject *> *collision_objects);
+  void simulate(double frames_per_sec, double simulation_steps, vector<Vector3D> external_forces, vector<CollisionObject *> *collision_objects, int concat, int x, int y);
 
   void self_collide(Sphere sp, double simulation_steps);
   void reset();
@@ -40,6 +40,7 @@ struct particles {
   float radius;
   float friction;
   e_orientation orientation;
+  double h;
 
     double bounce_rate;
     double x_bounce;
