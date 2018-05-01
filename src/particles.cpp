@@ -82,7 +82,7 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
         if (concat)
         {
             Vector3D dist_mouse = mouse_pos-sp.origin;
-            sp.velocity += delta_t * dist_mouse/pow(dist_mouse.norm(),1.5) *intensity;//tune
+            sp.velocity += delta_t * dist_mouse/pow(dist_mouse.norm(),1.5) *intensity / 10;//tune //may change default to bypass 10.
         }
         
         
