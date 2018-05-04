@@ -34,7 +34,7 @@ particles::particles(double width, double height, double length, int num_width_p
 
 void particles::buildGrid() {
     //origin =Vector3D(-0.09,0.2,-0.09);// This is the origin of the middle sphere of the base layer
-    origin =Vector3D(0,0.2,0);
+    origin =Vector3D(-0.12,0.2,0.12);
     num_length_points = 5;//5;
     num_width_points  = 10;//10;
     num_height_points = 5;//5;
@@ -53,7 +53,6 @@ void particles::buildGrid() {
 particles::~particles() {
 }
 void particles::buildExtraGrid() {
-    //origin =Vector3D(-0.09,0.2,-0.09);// This is the origin of the middle sphere of the base layer
     origin =Vector3D(-0.03,0.55,0.03);
     num_length_points = 3;//5;
     num_width_points  = 3;//10;
@@ -68,31 +67,17 @@ void particles::buildExtraGrid() {
         }
     }
 }
+
 void particles::simulate(double frames_per_sec, double simulation_steps, vector<Vector3D> external_forces,
                          vector<CollisionObject *> *collision_objects, int concat, int x, int y, float intensity, int drop) {
 
-    double delta_t = 1.0f / 90.0 / 30.0 ;
-    double box_x = 0.35;
-    double box_z = 0.35;
-    
-    //cout<<x<<' '<<y<<endl;
-    //timing
-    //std::clock_t start;
-    //double duration;
-    //start = std::clock();
-    //
+    double delta_t = 1.0f / frames_per_sec / simulation_steps ;
+    double box_x = 0.5;
+    double box_z = 0.5;
     
     double x_NDC = (x - 256.0)/256.0 - 0.00390625;//tune
     double y_NDC = (200.0 - y)/200.0 + 0.17;//tune
     Vector3D mouse_pos = Vector3D(x_NDC,y_NDC,0.0);
-    //cout<<mouse_pos<<endl;
-    
-    //if (concentrated)
-    {
-        
-        
-        
-    }
     
     
     for (Sphere &sp : particle_list) {
@@ -124,7 +109,6 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
         if (sp.last_origin.y == 0 && sp.origin.y == 0) {
             sp.velocity.y = 0;
         }
-        //cout<<sp.origin<<"     "<<sp.velocity<<endl;
     }
     
     build_spatial_map();
@@ -154,7 +138,7 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
                 if (j->origin == i.origin)continue; // if origin is the same, gradient will be zero.
                 Vector3D dist = i.predicted_position - j->predicted_position;
                 double   r    = dist.norm();
-                j->temp_Gradient =  -45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist;
+                j->temp_Gradient =  45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist;
                 i.C_Gradient -= j->temp_Gradient;
                 Sum_Gradient_Squared += pow((j->temp_Gradient).norm(), 2);
             }
@@ -205,18 +189,16 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
             i.predicted_position += i.delta_p;
         }
     }
-    //cout<<endl<<endl;
     
     for (Sphere &i: particle_list) {
-        // Now apply Vorticity Confinement and Viscosity!!! So excited!!
+        // Now apply Vorticity Confinement
         Vector3D omega = Vector3D(0.0,0.0,0.0);
         for (Sphere* j:i.neighbors){
             Vector3D dist = i.predicted_position - j->predicted_position;
             double   r    = dist.norm();
-            j->temp_Gradient =  -45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist;
+            j->temp_Gradient =  45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist;
             omega += cross((j->velocity-i.velocity) , j->temp_Gradient);
         }
-        //to be finished
         
         i.last_origin = i.origin;
         i.origin = i.predicted_position;
@@ -231,7 +213,6 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
         }
         i.velocity += 0.0000001 * viscosity;//tune
     }
-    //duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
 }
 
 double pow(double num, int index) {
