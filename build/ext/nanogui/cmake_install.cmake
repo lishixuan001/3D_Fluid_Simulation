@@ -1,4 +1,4 @@
-# Install script for directory: /Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui
+# Install script for directory: /Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +29,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/user/CS184/test/May4/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/cmake_install.cmake")
+  include("/Users/user/CS184/test/May5/CS_184_Final_Project/build/ext/nanogui/ext_build/glfw/cmake_install.cmake")
 
 endif()
 

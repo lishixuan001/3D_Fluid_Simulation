@@ -7,13 +7,13 @@ C_FLAGS =  -Wno-deprecated-declarations -g -fPIC
 
 C_DEFINES = -DCORO_SJLJ -DGLAD_GLAPI_EXPORT -DGLAD_GLAPI_EXPORT_BUILD -DNANOGUI_BUILD -DNANOGUI_GLAD -DNANOGUI_SHARED -DNVG_SHARED -D_GLFW_BUILD_DLL
 
-C_INCLUDES = -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/glad/include -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/eigen -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/glfw/include -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/nanovg/src -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/include -I/Users/user/CS184/test/May4/CS_184_Final_Project/build/ext/nanogui -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/coro 
+C_INCLUDES = -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/glad/include -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/eigen -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/glfw/include -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/nanovg/src -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/include -I/Users/user/CS184/test/May5/CS_184_Final_Project/build/ext/nanogui -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/coro 
 
 CXX_FLAGS =  -std=c++11 -m64 -g -Wall -Wextra -std=c++14 -stdlib=libc++ -g -fPIC  
 
 CXX_DEFINES = -DCORO_SJLJ -DGLAD_GLAPI_EXPORT -DGLAD_GLAPI_EXPORT_BUILD -DNANOGUI_BUILD -DNANOGUI_GLAD -DNANOGUI_SHARED -DNVG_SHARED -D_GLFW_BUILD_DLL
 
-CXX_INCLUDES = -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/glad/include -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/eigen -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/glfw/include -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/nanovg/src -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/include -I/Users/user/CS184/test/May4/CS_184_Final_Project/build/ext/nanogui -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/coro 
+CXX_INCLUDES = -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/glad/include -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/eigen -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/glfw/include -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/nanovg/src -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/include -I/Users/user/CS184/test/May5/CS_184_Final_Project/build/ext/nanogui -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/coro 
 
 # Custom defines: ext/nanogui/CMakeFiles/nanogui-obj.dir/ext/nanovg/src/nanovg.c.o_DEFINES = NVG_BUILD;NVG_SHARED
 

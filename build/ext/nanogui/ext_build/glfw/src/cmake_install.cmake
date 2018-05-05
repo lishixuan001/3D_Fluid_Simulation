@@ -1,4 +1,4 @@
-# Install script for directory: /Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/glfw/src
+# Install script for directory: /Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

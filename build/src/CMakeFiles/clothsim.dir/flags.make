@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -m64 -g -g   -Wno-deprecated-declarations -Wno-c++11-ext
 
 CXX_DEFINES = -DGLAD_GLAPI_EXPORT -DNANOGUI_GLAD -DNANOGUI_SHARED -DNVG_SHARED
 
-CXX_INCLUDES = -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/include -I/Users/user/CS184/test/May4/CS_184_Final_Project/CGL/include -I/usr/local/include/freetype2 -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/glad/include -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/glfw/include -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/nanovg/src -I/Users/user/CS184/test/May4/CS_184_Final_Project/ext/nanogui/ext/eigen 
+CXX_INCLUDES = -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/include -I/Users/user/CS184/test/May5/CS_184_Final_Project/CGL/include -I/usr/local/include/freetype2 -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/glad/include -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/glfw/include -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/nanovg/src -I/Users/user/CS184/test/May5/CS_184_Final_Project/ext/nanogui/ext/eigen 
 

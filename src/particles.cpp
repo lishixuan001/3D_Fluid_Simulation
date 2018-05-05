@@ -34,10 +34,14 @@ particles::particles(double width, double height, double length, int num_width_p
 
 void particles::buildGrid() {
     //origin =Vector3D(-0.09,0.2,-0.09);// This is the origin of the middle sphere of the base layer
-    origin =Vector3D(-0.12,0.2,0.12);
+    //origin =Vector3D(-0.12,0.2,0.12);
     num_length_points = 5;//5;
     num_width_points  = 10;//10;
     num_height_points = 5;//5;
+    box_x = 0.02*num_length_points;
+    box_z = 0.02*num_height_points;
+    origin = Vector3D(-0.03*(num_length_points-1)/2,0.2,-0.03*(num_height_points-1)/2);
+    
 
     for (int i=0; i<num_height_points; i++) {
         for (int j=0; j<num_width_points; j++) {
@@ -72,8 +76,6 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
                          vector<CollisionObject *> *collision_objects, int concat, int x, int y, float intensity, int drop) {
 
     double delta_t = 1.0f / frames_per_sec / simulation_steps ;
-    double box_x = 0.5;
-    double box_z = 0.5;
     
     double x_NDC = (x - 256.0)/256.0 - 0.00390625;//tune
     double y_NDC = (200.0 - y)/200.0 + 0.17;//tune
@@ -95,11 +97,11 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
             }
             else{
                 if (abs(sp.velocity.x)>0){
-                    sp.velocity.x = sp.velocity.x / abs(sp.velocity.x) * (abs(sp.velocity.x) + 0.2 * abs(sp.velocity.y))*0.99999;
+                    sp.velocity.x = sp.velocity.x / abs(sp.velocity.x) * (abs(sp.velocity.x) + 0.5 * abs(sp.velocity.y))*0.99999;
                     // apply more velocity and friction
                 }
                 if (abs(sp.velocity.z)>0){
-                    sp.velocity.z = sp.velocity.z / abs(sp.velocity.z) * (abs(sp.velocity.z) + 0.2 * abs(sp.velocity.y))*0.99999;
+                    sp.velocity.z = sp.velocity.z / abs(sp.velocity.z) * (abs(sp.velocity.z) + 0.5 * abs(sp.velocity.y))*0.99999;
                     // apply more velocity and friction
                 }
                 sp.velocity.y = 0.0;
@@ -111,9 +113,11 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
         }
     }
     
-    build_spatial_map();
     h = 2 * 3 * particle_list[0].radius;
+
+    build_spatial_map();
     double epsilon = pow(10,-4);//tune
+    double mass    = 0.2;
     for (Sphere &i : particle_list){
        i.C = 0.0;
        i.neighbors.clear();
@@ -122,10 +126,11 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
        for (Sphere *j: i.neighbors){
            Vector3D distij = (i.predicted_position - j->origin);
            double   r      = distij.norm();
-           i.C += pow((pow(h,2.0) - pow(r,2.0)),3.0) * 315.0 / (64.0 * PI * pow(h, 9.0));
+           i.C += pow((pow(h,2.0) - pow(r,2.0)),3.0) * 315.0 / (64.0 * PI * pow(h, 9.0))*mass;
        }
        i.rho = pow(pow(h,2.0),3.0) * 315.0/(64.0*PI*pow(h,9.0));
        i.C = i.C / i.rho - 1;
+       //cout<<i.origin<<" "<<i.C<<endl;
      }
      for (int iter=0;iter<1;iter++){  //<simulation_steps
         //find Lambda
@@ -153,8 +158,10 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
                 Vector3D dist = i.predicted_position - j->predicted_position;
                 double   r    = dist.norm();
                 // Equation(13) k=0.1, delQ = 0.1*h, n=4
-                double S_corr = -0.1 * pow ( pow((h*h-r*r)/(h*h),3.0) ,4);//S_corr has to be tuned!
-                i.delta_p += ((S_corr+i.lambda+j->lambda) * (-45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist))*0.3;
+                double S_corr = -0.001 * pow ( pow((h*h-r*r)/(h*h),3.0) ,4);//S_corr has to be tuned!
+                //makeS_corr=0;
+                //cout<<S_corr<<" "<<i.lambda<<" "<<j->lambda<<endl;
+                i.delta_p += ((S_corr+i.lambda+j->lambda) * (-45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist));
             }
             i.delta_p/=i.rho;
             if (i.delta_p.y+i.predicted_position.y<0){

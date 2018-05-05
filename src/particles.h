@@ -46,6 +46,8 @@ struct particles {
     double x_bounce;
     double y_bounce;
     double z_bounce;
+    double box_x;
+    double box_z;
 
 
 

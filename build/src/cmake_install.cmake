@@ -1,4 +1,4 @@
-# Install script for directory: /Users/user/CS184/test/May4/CS_184_Final_Project/src
+# Install script for directory: /Users/user/CS184/test/May5/CS_184_Final_Project/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,21 +29,21 @@ endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/Users/user/CS184/test/May4/CS_184_Final_Project/clothsim")
+   "/Users/user/CS184/test/May5/CS_184_Final_Project/clothsim")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/Users/user/CS184/test/May4/CS_184_Final_Project" TYPE EXECUTABLE FILES "/Users/user/CS184/test/May4/CS_184_Final_Project/build/clothsim")
-  if(EXISTS "$ENV{DESTDIR}/Users/user/CS184/test/May4/CS_184_Final_Project/clothsim" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/user/CS184/test/May4/CS_184_Final_Project/clothsim")
+file(INSTALL DESTINATION "/Users/user/CS184/test/May5/CS_184_Final_Project" TYPE EXECUTABLE FILES "/Users/user/CS184/test/May5/CS_184_Final_Project/build/clothsim")
+  if(EXISTS "$ENV{DESTDIR}/Users/user/CS184/test/May5/CS_184_Final_Project/clothsim" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/user/CS184/test/May5/CS_184_Final_Project/clothsim")
     execute_process(COMMAND /opt/local/bin/install_name_tool
-      -delete_rpath "/Users/user/CS184/test/May4/CS_184_Final_Project/build/ext/nanogui"
-      "$ENV{DESTDIR}/Users/user/CS184/test/May4/CS_184_Final_Project/clothsim")
+      -delete_rpath "/Users/user/CS184/test/May5/CS_184_Final_Project/build/ext/nanogui"
+      "$ENV{DESTDIR}/Users/user/CS184/test/May5/CS_184_Final_Project/clothsim")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/user/CS184/test/May4/CS_184_Final_Project/clothsim")
+      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/user/CS184/test/May5/CS_184_Final_Project/clothsim")
     endif()
   endif()
 endif()
