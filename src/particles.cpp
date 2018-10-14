@@ -35,13 +35,13 @@ particles::particles(double width, double height, double length, int num_width_p
 void particles::buildGrid() {
     //origin =Vector3D(-0.09,0.2,-0.09);// This is the origin of the middle sphere of the base layer
     //origin =Vector3D(-0.12,0.2,0.12);
-    num_length_points = 5;//5;
+    num_length_points = 10;//5;
     num_width_points  = 10;//10;
-    num_height_points = 5;//5;
+    num_height_points = 10;//5;
     box_x = 0.02*num_length_points;
     box_z = 0.02*num_height_points;
     origin = Vector3D(-0.03*(num_length_points-1)/2,0.2,-0.03*(num_height_points-1)/2);
-    
+
 
     for (int i=0; i<num_height_points; i++) {
         for (int j=0; j<num_width_points; j++) {
@@ -52,7 +52,7 @@ void particles::buildGrid() {
             }
         }
     }
-} 
+}
 
 particles::~particles() {
 }
@@ -61,7 +61,7 @@ void particles::buildExtraGrid() {
     num_length_points = 3;//5;
     num_width_points  = 3;//10;
     num_height_points = 3;//5;
-    
+
     for (int i=0; i<num_height_points; i++) {
         for (int j=0; j<num_width_points; j++) {
             for (int k=0; k<num_length_points; k++) {
@@ -76,20 +76,20 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
                          vector<CollisionObject *> *collision_objects, int concat, int x, int y, float intensity, int drop) {
 
     double delta_t = 1.0f / frames_per_sec / simulation_steps ;
-    
+
     double x_NDC = (x - 256.0)/256.0 - 0.00390625;//tune
     double y_NDC = (200.0 - y)/200.0 + 0.17;//tune
     Vector3D mouse_pos = Vector3D(x_NDC,y_NDC,0.0);
-    
-    
+
+
     for (Sphere &sp : particle_list) {
         if (concat)
         {
             sp.velocity += delta_t * (mouse_pos-sp.origin)*intensity;//tune
         }
-        
-        
-        
+
+
+
         for (const Vector3D &external_force : external_forces) {
             if (sp.origin.y>0){
                 sp.velocity += delta_t * external_force;
@@ -112,7 +112,7 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
             sp.velocity.y = 0;
         }
     }
-    
+
     h = 2 * 3 * particle_list[0].radius;
 
     build_spatial_map();
@@ -122,7 +122,7 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
        i.C = 0.0;
        i.neighbors.clear();
        i.neighbors = find_neighbors(i);
-       
+
        for (Sphere *j: i.neighbors){
            Vector3D distij = (i.predicted_position - j->origin);
            double   r      = distij.norm();
@@ -196,7 +196,7 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
             i.predicted_position += i.delta_p;
         }
     }
-    
+
     for (Sphere &i: particle_list) {
         // Now apply Vorticity Confinement
         Vector3D omega = Vector3D(0.0,0.0,0.0);
@@ -206,7 +206,7 @@ void particles::simulate(double frames_per_sec, double simulation_steps, vector<
             j->temp_Gradient =  45.0/(PI*pow(h,6.0)*i.rho*r)*(pow((h-r),2)) * dist;
             omega += cross((j->velocity-i.velocity) , j->temp_Gradient);
         }
-        
+
         i.last_origin = i.origin;
         i.origin = i.predicted_position;
         i.velocity = (i.origin-i.last_origin)/delta_t;
@@ -272,7 +272,7 @@ void particles::build_spatial_map() {
             map[pos]->push_back(&sp);
         }
     }
-    
+
 }
 
 ///////////////////////////////////////////////////////
@@ -288,4 +288,3 @@ void particles::reset() {
         pm++;
     }
 }
-

@@ -85,8 +85,8 @@ ext/nanogui/preinstall: ext/nanogui/ext_build/glfw/preinstall
 # Target rules for target ext/nanogui/CMakeFiles/nanogui.dir
 
 # All Build rule for target.
-ext/nanogui/CMakeFiles/nanogui.dir/all: ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/all
 ext/nanogui/CMakeFiles/nanogui.dir/all: ext/nanogui/CMakeFiles/nanogui-obj.dir/all
+ext/nanogui/CMakeFiles/nanogui.dir/all: ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/all
 	$(MAKE) -f ext/nanogui/CMakeFiles/nanogui.dir/build.make ext/nanogui/CMakeFiles/nanogui.dir/depend
 	$(MAKE) -f ext/nanogui/CMakeFiles/nanogui.dir/build.make ext/nanogui/CMakeFiles/nanogui.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/lishixuan/Documents/Classes/CS 184/Projects/CS_184_Final_Project/cmake-build-debug/CMakeFiles" --progress-num=36 "Built target nanogui"

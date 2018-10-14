@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "libglfw.pdb"
-  "libglfw.dylib"
   "libglfw.3.2.dylib"
+  "libglfw.dylib"
   "libglfw.3.dylib"
 )
 
