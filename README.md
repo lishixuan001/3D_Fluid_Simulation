@@ -1,3 +1,3 @@
-# Project 4: Cloth Simulation
+# 3D Fluid Simulation
 
-https://cs184.org/article/35
+http://shixuanli.com/2018/05/02/CS-184-Final-Report/
